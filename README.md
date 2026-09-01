@@ -6,7 +6,9 @@ Recogen tres cosas: los modelos que estructuran el oficio, cómo se organiza el 
 
 **125 fichas de herramientas · 13 notas de fundamentos y oficio · 4 cheatsheets.**
 
-Todo son ficheros Markdown, así que se leen directamente desde aquí.
+📖 **[kharonte09.github.io/cuaderno-de-guardia](https://kharonte09.github.io/cuaderno-de-guardia/)** — versión web, con buscador y esquemas.
+
+También son ficheros Markdown, así que se pueden leer directamente desde aquí.
 
 ---
 
@@ -75,7 +77,9 @@ Si encuentras un error o algo mal explicado, abre un *issue*. Si quieres escribi
 
 ## Versión web
 
-El repositorio incluye una interfaz para leer los apuntes con buscador, tema claro/oscuro e índice de página. No necesita compilarse; para verla en local:
+En **[kharonte09.github.io/cuaderno-de-guardia](https://kharonte09.github.io/cuaderno-de-guardia/)**, con buscador, tema claro/oscuro, índice de página y los esquemas, que GitHub no muestra al leer los Markdown aquí.
+
+No necesita compilarse. Para verla en local:
 
 ```bash
 node serve.js    # y abrir http://localhost:4321
