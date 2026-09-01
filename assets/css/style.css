@@ -189,13 +189,35 @@ main    { order:2; }
 .sidebar::-webkit-scrollbar, .toc::-webkit-scrollbar, .search-results::-webkit-scrollbar{ width:9px; }
 .sidebar::-webkit-scrollbar-thumb, .search-results::-webkit-scrollbar-thumb{ background:var(--line); border-radius:9px; }
 
-.nav-group + .nav-group{ margin-top:20px; }
-.nav-group > .nav-label{
-  display:flex; align-items:center; gap:7px;
+.nav-group + .nav-group{ margin-top:14px; }
+
+/* Cabecera desplegable de cada apartado */
+.nav-label{
+  display:flex; align-items:center; gap:7px; width:100%;
+  margin:0 0 6px; padding:6px 10px 6px 6px;
+  background:none; border:0; border-radius:var(--radius-sm);
   font-family:var(--mono); font-size:11px; letter-spacing:.09em; text-transform:uppercase;
-  color:var(--txt-faint); margin:0 0 8px 8px;
+  color:var(--txt-faint); text-align:left; cursor:pointer;
+  transition:color .15s, background .15s;
 }
-.nav-group > .nav-label::after{ content:""; flex:1; height:1px; background:var(--line); }
+.nav-label:hover{ color:var(--txt-dim); background:var(--bg-soft); }
+.nav-label:focus-visible{ outline:2px solid var(--accent); outline-offset:-2px; }
+.nav-label .chev{ width:14px; height:14px; flex:0 0 auto; stroke-width:2.2; transition:transform .22s ease; }
+.nav-label .nav-label-txt{ white-space:nowrap; }
+.nav-label .nav-rule{ flex:1; height:1px; background:var(--line); min-width:8px; }
+.nav-label .nav-count{
+  font-size:10px; padding:0 5px; border-radius:999px;
+  border:1px solid var(--line); color:var(--txt-faint);
+}
+.nav-group.cerrado .nav-label .chev{ transform:rotate(-90deg); }
+.nav-group.cerrado .nav-label .nav-count{ color:var(--accent); border-color:color-mix(in srgb,var(--accent) 40%,transparent); }
+
+/* Contenido plegable: se anima la fila de la rejilla, de 1fr a 0fr */
+.nav-items{ display:grid; grid-template-rows:1fr; transition:grid-template-rows .24s ease; }
+.nav-items > div{ overflow:hidden; min-height:0; }
+.nav-group.cerrado .nav-items{ grid-template-rows:0fr; }
+#nav.sin-transicion .nav-items,
+#nav.sin-transicion .chev{ transition:none; }
 .sidebar a{
   display:flex; align-items:center; gap:9px;
   padding:6px 10px; margin-bottom:1px;

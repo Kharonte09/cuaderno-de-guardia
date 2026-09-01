@@ -105,19 +105,64 @@
     }
     if (data.subtitulo) $('.brand-text small').textContent = data.subtitulo;
 
-    el.nav.innerHTML = state.nav.map((g) => `
-      <div class="nav-group">
-        <p class="nav-label">${esc(g.titulo)}</p>
-        ${g.paginas.map((p) => `
-          <a href="#/${p.ruta}" data-ruta="${p.ruta}">
-            <span class="nav-ico" aria-hidden="true">${p.icono || '•'}</span>
-            <span>${esc(p.titulo)}</span>
-          </a>`).join('')}
-      </div>`).join('');
+    el.nav.innerHTML = state.nav.map((g) => {
+      const id = slug(g.titulo);
+      return `
+      <div class="nav-group" data-grupo="${id}">
+        <button type="button" class="nav-label" aria-expanded="true" aria-controls="grupo-${id}">
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          <span class="nav-label-txt">${esc(g.titulo)}</span>
+          <span class="nav-rule" aria-hidden="true"></span>
+          <span class="nav-count">${g.paginas.length}</span>
+        </button>
+        <div class="nav-items" id="grupo-${id}"><div>
+          ${g.paginas.map((p) => `
+            <a href="#/${p.ruta}" data-ruta="${p.ruta}">
+              <span class="nav-ico" aria-hidden="true">${p.icono || '•'}</span>
+              <span>${esc(p.titulo)}</span>
+            </a>`).join('')}
+        </div></div>
+      </div>`;
+    }).join('');
+
+    // Estado inicial sin animación, para que no "salte" al cargar.
+    const estado = leerEstadoMenu();
+    el.nav.classList.add('sin-transicion');
+    $$('.nav-group', el.nav).forEach((grupo) => {
+      plegarGrupo(grupo, estado[grupo.dataset.grupo] !== false, false);
+      grupo.querySelector('.nav-label').addEventListener('click', () => {
+        plegarGrupo(grupo, grupo.classList.contains('cerrado'));
+      });
+    });
+    requestAnimationFrame(() => el.nav.classList.remove('sin-transicion'));
+  }
+
+  /* --- Apartados desplegables del menú --- */
+
+  function leerEstadoMenu() {
+    try { return JSON.parse(localStorage.getItem('apuntes-menu') || '{}'); }
+    catch (_) { return {}; }
+  }
+
+  function plegarGrupo(grupo, abierto, persistir = true) {
+    if (!grupo) return;
+    grupo.classList.toggle('cerrado', !abierto);
+    grupo.querySelector('.nav-label').setAttribute('aria-expanded', String(abierto));
+    // `inert` evita que el tabulador entre en un apartado plegado.
+    grupo.querySelector('.nav-items').inert = !abierto;
+    if (!persistir) return;
+    try {
+      const estado = leerEstadoMenu();
+      estado[grupo.dataset.grupo] = abierto;
+      localStorage.setItem('apuntes-menu', JSON.stringify(estado));
+    } catch (_) {}
   }
 
   function markActive(ruta) {
     $$('#nav a').forEach((a) => a.classList.toggle('active', a.dataset.ruta === ruta));
+    // El apartado de la página actual se abre siempre, aunque estuviera plegado.
+    const activo = $('#nav a.active');
+    if (activo) plegarGrupo(activo.closest('.nav-group'), true);
   }
 
   /* ---------------------------------------------------------
