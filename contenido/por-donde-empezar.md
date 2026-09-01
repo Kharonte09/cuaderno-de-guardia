@@ -5,155 +5,155 @@ subtitulo: true
 
 # Por dónde empezar
 
-Ruta para entrar en ciberseguridad defensiva: qué estudiar, en qué orden, dónde practicar y qué se pregunta en la entrevista de analista de SOC.
+Si has llegado hasta aquí porque quieres empezar en ciberseguridad y no sabes muy bien por dónde tirar, esta parte es para ti.
 
-## Qué hace un analista de SOC
+No necesitas aprenderlo todo antes de empezar. De hecho, probablemente te vas a encontrar muchas veces con algo que no sabes. Es normal.
 
-- Revisar alertas y decidir cuáles importan.
-- Investigar: si una IP es maliciosa, si un PowerShell es del administrador o de un atacante, si un correo es phishing.
-- Escribir tickets e informes justificando cada conclusión.
-- Trabajar a turnos, incluidas noches y fines de semana.
+La idea es que tengas una **ruta orientativa** para saber qué aprender, practicar y consultar según vayas avanzando.
 
-No es un puesto ofensivo: eso es pentesting, otro camino distinto.
+> [!NOTE]
+> Ten en cuenta una cosa: esto es mi cuaderno de notas, no un temario cerrado. Y como yo me dedico a la parte defensiva, casi todo lo que vas a encontrar aquí tira hacia el **Blue Team**: SOC, detección, análisis de alertas, respuesta a incidentes y forense.
+>
+> La ruta de aquí abajo te vale para cualquier camino que elijas, pero a partir del punto 2 los ejemplos y las herramientas son sobre todo de ese lado.
 
-## Base previa
+---
 
-No se puede detectar un proceso anómalo sin saber qué procesos son normales. Antes de la parte de seguridad:
+## 1. Antes de meterte en ciberseguridad
 
-| Área | Qué hay que saber |
+Primero necesitas una base de informática.
+
+No hace falta que seas administrador de sistemas, pero sí que entiendas qué está pasando cuando un equipo se conecta a una red, levanta un servicio o genera un log.
+
+Una buena forma de practicar es montar un pequeño laboratorio:
+
+- Una máquina virtual con **Windows**.
+- Una máquina virtual con **Ubuntu**.
+- Que ambas máquinas puedan comunicarse.
+- **DNS**
+- **DHCP**
+- Un servidor web: **IIS** o **Apache**.
+- **SMB** para compartir carpetas.
+- **SSH**
+- Un servidor de correo, si te apetece complicarlo un poco más.
+- Un firewall.
+
+La idea no es montar una infraestructura perfecta. Es **romper cosas, configurarlas de nuevo y mirar qué ocurre**.
+
+Para redes puedes utilizar:
+
+- **Cisco Packet Tracer**
+- **GNS3**
+
+Con ellos puedes montar routers, switches, VLANs y diferentes topologías sin necesidad de comprar hardware.
+
+---
+
+## 2. Ahora sí: empieza con seguridad
+
+Una vez tengas una base de IT, empieza a entender cómo funcionan los ataques y cómo se detectan.
+
+En esta Wiki tienes algunos conceptos que te recomiendo conocer:
+
+1. [Conceptos básicos](#/fundamentos/conceptos-basicos)
+2. [Cyber Kill Chain](#/fundamentos/cyber-kill-chain)
+3. [MITRE ATT&CK](#/fundamentos/mitre-attack)
+4. [Pirámide del Dolor](#/fundamentos/piramide-del-dolor)
+5. [Modelo del Diamante](#/fundamentos/modelo-diamante)
+6. [Qué es un SOC](#/blue-team/que-es-un-soc)
+
+No hace falta que memorices cada modelo ni que seas capaz de recitarlos.
+
+Lo importante es que empieces a entender **cómo piensa un atacante, qué evidencias deja y cómo puede detectarlo un equipo defensivo**.
+
+---
+
+## 3. Deja la teoría y empieza a tocar cosas
+
+Aquí es donde empieza lo interesante.
+
+Hay muchas plataformas donde puedes practicar sin tener que montar todo desde cero:
+
+| Plataforma | Coste |
 |---|---|
-| **Redes** | TCP/IP, DNS, DHCP, HTTP/HTTPS, NAT, VLAN, firewall |
-| **Windows** | Procesos, servicios, registro, permisos, tareas programadas, visor de eventos |
-| **Active Directory** | Usuarios, grupos, GPO, autenticación Kerberos y NTLM |
-| **Linux** | Terminal, permisos, procesos, systemd, logs en `/var/log`, `grep` y `awk` |
-| **Scripting** | PowerShell, y algo de Python o Bash |
-| **Virtualización** | VirtualBox o VMware, instantáneas, redes virtuales |
+| **TryHackMe — SOC Level 1** | Freemium |
+| **LetsDefend** | Freemium |
+| **Blue Team Labs Online** | Freemium |
+| **CyberDefenders** | Freemium |
+| **Malware-Traffic-Analysis.net** | Gratis |
 
-Con un FP de ASIR o DAM, o con experiencia en sistemas o soporte, esta parte ya está cubierta.
+No necesitas hacerlas todas.
 
-## Ruta por fases
+Puedes empezar por **TryHackMe SOC Level 1** y después ir probando otras plataformas.
 
-Plazos orientativos para unas 10-15 horas semanales.
+Una progresión bastante lógica sería:
 
-### Fase 0 · Base de IT (2-3 meses, o ninguno si ya la tienes)
+**Phishing → Logs de Windows → Tráfico de red → Análisis de memoria → Forense**
 
-Dos máquinas virtuales, un Windows y un Ubuntu. Instalar servicios, mirar logs, configurar un firewall, hacer que se vean entre ellas.
+Ahí empezarás a encontrarte con herramientas, logs y conceptos que seguramente al principio no conozcas.
 
-Gratis: módulos *Pre Security* y *Network Fundamentals* de TryHackMe, y Professor Messer para la teoría de redes.
+Es normal.
 
-### Fase 1 · Fundamentos de seguridad (1-2 meses)
+Cuando eso ocurra, vuelve a la Wiki, busca la herramienta o concepto que necesites y continúa.
 
-En este orden:
+---
 
-1. [Conceptos básicos](#/fundamentos/conceptos-basicos) — CIA, IOC vs IOA, tipos de malware, vocabulario.
-2. [Cyber Kill Chain](#/fundamentos/cyber-kill-chain) — las fases de un ataque.
-3. [MITRE ATT&CK](#/fundamentos/mitre-attack) — el lenguaje común del sector.
-4. [Pirámide del Dolor](#/fundamentos/piramide-del-dolor) — qué detecciones aguantan y cuáles caducan.
-5. [Modelo del Diamante](#/fundamentos/modelo-diamante) — cómo se relacionan los indicadores.
-6. [Qué es un SOC](#/blue-team/que-es-un-soc) — cómo está organizado el trabajo.
+## 4. No intentes aprender todas las herramientas
 
-### Fase 2 · Práctica guiada (2-3 meses)
+Este es probablemente uno de los errores más comunes cuando empiezas.
 
-| Plataforma | Qué es | Coste |
-|---|---|---|
-| **TryHackMe** — ruta *SOC Level 1* | Recorrido guiado con máquinas ya montadas | Freemium |
-| **LetsDefend** | Simulador de consola de SOC con alertas que hay que triar | Freemium |
-| **Blue Team Labs Online** | Retos defensivos: phishing, PCAP, memoria, incidentes | Freemium |
-| **CyberDefenders** | Retos DFIR con evidencias reales | Freemium |
-| **Malware-Traffic-Analysis.net** | Capturas de infecciones reales con ejercicios y soluciones | Gratis |
+No necesitas saber utilizar 50 herramientas.
 
-Orden recomendado, que es el orden en que aparecen en el trabajo: **phishing → logs de Windows → tráfico de red → memoria y forense**.
+Aprende **qué problema resuelve cada una** y profundiza en ellas cuando realmente las necesites.
 
-Las páginas de [herramientas](#/herramientas/threat-intelligence) se leen según hagan falta, no de golpe.
+Por ejemplo:
 
-### Fase 3 · Laboratorio propio (1-2 meses)
+> "Tengo que analizar una alerta de Windows."
 
-```text
-+------------------+     +------------------+
-|  Windows Server  |     |  Windows 10/11   |
-|  Domain Controller|<-->|  cliente unido   |
-|  Active Directory |     |  al dominio      |
-+--------+---------+     +--------+---------+
-         |    Sysmon + reenvío de logs      |
-         v                                  v
-    +------------------------------------------+
-    |   Wazuh (o Splunk Free) recogiendo todo  |
-    +------------------------------------------+
-                       ^
-                       |  ataca desde aquí
-              +--------+--------+
-              |      Kali       |
-              +-----------------+
-```
+Buscas qué logs necesitas, qué herramienta puedes utilizar y cómo analizarlos.
 
-El ejercicio: atacar desde Kali y buscar el ataque en los logs. Fuerza bruta por RDP → encontrar los 4625. PowerShell codificado → encontrarlo en el 4104. `net user /add` → localizar el 4720.
+> "Tengo una IP sospechosa."
 
-Herramientas: [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) para lanzar técnicas por identificador de ATT&CK, y la configuración de Sysmon de SwiftOnSecurity u Olaf Hartong.
+Buscas cómo obtener información sobre ella, qué IOCs puedes sacar y cómo comprobar si aparece en otros sistemas.
 
-### Fase 4 · Certificación y búsqueda (1-3 meses)
+La sección de [Herramientas](#/herramientas/threat-intelligence) está pensada precisamente para eso.
 
-La certificación acredita lo que ya sabes; no lo enseña. Va al final.
+**No está hecha para que te la estudies de principio a fin.**
 
-## Certificaciones
+---
 
-| Certificación | Qué es | Coste aprox. |
-|---|---|---|
-| **BTL1** (Security Blue Team) | Examen práctico de 24 h: phishing, logs, tráfico, memoria y forense sobre evidencias reales | ~400 £ |
-| **CompTIA Security+** | Teórica y generalista. La piden muchos departamentos de RR. HH. y las licitaciones públicas | ~400 € |
-| **Microsoft SC-200** | Sentinel y Defender. Útil si el SOC trabaja con el ecosistema Microsoft | ~165 € |
-| **Splunk Core Certified User** | SPL, que aparece en bastantes ofertas | ~130 € |
-| **CompTIA CySA+** | Siguiente escalón tras Security+, centrada en análisis y detección | ~450 € |
-| **BTL2 / GCIH / GCIA** | Para más adelante. Las GIAC son caras | 800 £ – 8.000 $ |
+## 5. ¿Y después qué?
 
-No hacen falta para empezar: CISSP (exige 5 años de experiencia) ni OSCP (es ofensiva).
+Cuando empieces a tener una base, probablemente descubras que alguna parte de la ciberseguridad te interesa más que otra.
 
-## La entrevista de L1
+Puedes tirar hacia:
 
-**Base técnica**
-- Qué pasa cuando escribes una URL en el navegador.
-- Diferencia entre TCP y UDP.
-- Qué es un puerto. Cinco puertos y su servicio.
-- Diferencia entre cifrado y hash.
-- Qué es una VPN y qué protege.
+**🔴 Red Team**
+Pentesting, explotación, adversary emulation, etc.
 
-**Seguridad**
-- La tríada CIA.
-- Diferencia entre amenaza, vulnerabilidad y riesgo.
-- Qué es MITRE ATT&CK y para qué se usa.
-- Qué es un IOC, con ejemplos.
-- Diferencia entre IDS e IPS, y entre EDR y antivirus.
-- Cómo analizarías un correo sospechoso.
+**🔵 Blue Team**
+SOC, detección, respuesta a incidentes, threat hunting, DFIR, etc.
 
-**Situacionales**
-- Salta una alerta de PowerShell codificado en un equipo. ¿Qué haces?
-- Un usuario ha hecho clic en un enlace raro. ¿Cuáles son tus pasos?
-- Cómo distingues un falso positivo de un positivo real.
-- Qué haces si no sabes resolver una alerta.
+**🟣 Purple Team**
+Trabajar entre ofensiva y defensiva para mejorar las detecciones y la respuesta.
 
-En las situacionales se evalúa el método, no la respuesta exacta: qué comprobarías y en qué orden. "No lo sé, lo buscaría aquí y lo escalaría" es una respuesta válida; inventarse una no.
+**⚪ White Team**
+Coordinación y gobierno de ejercicios de seguridad.
 
-Preguntan casi siempre qué haces para estar al día. Conviene tener una respuesta concreta: qué lees, qué laboratorio tienes montado, qué reto hiciste hace poco.
+**🟢 GRC**
+Gobierno, riesgos, cumplimiento, auditorías, políticas y controles.
 
-## Mantenerse al día
+No tienes que decidirlo ahora.
 
-| Fuente | Qué publica |
-|---|---|
-| **The DFIR Report** | Incidentes reales completos, con comandos, IOC y reglas Sigma |
-| **INCIBE-CERT** y **CCN-CERT** | Avisos y guías en español |
-| **Red Canary Threat Detection Report** | Informe anual de las técnicas más observadas |
-| **Talos, Mandiant, ESET, Microsoft MSTIC** | Análisis de campañas y actores |
-| **r/blueteamsec** y los Discord de las plataformas de práctica | Preguntas y comunidad |
+Empieza por aprender las bases, prueba diferentes cosas y deja que sea la práctica la que te diga qué camino te interesa más.
 
-## Errores comunes
+---
 
-1. Empezar por seguridad sin base de sistemas y redes.
-2. Acumular cursos sin practicar.
-3. Sacarse una certificación cara antes de tener el nivel.
-4. Enfocarse en reversing de malware: es un nicho pequeño, el trabajo está en el triaje.
-5. No escribir. Media jornada consiste en explicar por escrito lo investigado.
+### Una última cosa
 
-## Plazos
+**No te obsesiones con avanzar rápido.**
 
-Con base previa de IT: 6-9 meses de estudio. Empezando de cero: 12-18 meses.
+En ciberseguridad vas a encontrarte constantemente con conceptos que no conoces. Incluso después de años.
 
-Otra vía: entrar en soporte o sistemas en una empresa que tenga SOC y moverse internamente al cabo de un tiempo.
+La diferencia está en saber **buscar, entender y aplicar lo que necesitas en cada momento**.
+
+Esta Wiki pretende servir precisamente para eso.
