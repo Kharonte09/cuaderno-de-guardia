@@ -5,16 +5,105 @@ subtitulo: true
 
 # Apuntes de Ciberseguridad
 
-Una recopilación viva de **herramientas, conceptos y metodología** de ciberseguridad defensiva. Pensado para tenerlo abierto en la segunda pantalla mientras se analiza una alerta, un correo sospechoso o un indicador raro.
+Apuntes abiertos de ciberseguridad defensiva: **herramientas, fundamentos y cómo se trabaja en un SOC**. Sirven como referencia rápida para el día a día y como guía ordenada para quien está empezando.
 
 <div class="stats">
-  <div class="stat"><b>6</b><span>Categorías de herramientas</span></div>
   <div class="stat"><b>125</b><span>Herramientas fichadas</span></div>
-  <div class="stat"><b>11</b><span>Notas teóricas</span></div>
+  <div class="stat"><b>6</b><span>Modelos y fundamentos</span></div>
+  <div class="stat"><b>5</b><span>Guías del oficio</span></div>
   <div class="stat"><b>4</b><span>Cheatsheets</span></div>
 </div>
 
+> [!TIP]
+> **¿Empiezas ahora en ciberseguridad?** Ve directo a [Por dónde empezar](#/por-donde-empezar): qué estudiar y en qué orden, dónde practicar, qué laboratorio montar, qué certificaciones valen la pena y cómo va la entrevista de analista junior.
+
+## Quién escribe esto
+
+Me llamo **David Estauchez**. Soy analista de seguridad en un SOC, en Madrid, dedicado a monitorización y respuesta a incidentes: triaje de alertas, análisis de phishing, investigación de logs y tráfico, y algo de forense. Estoy certificado en **BTL1** (Security Blue Team), un examen práctico de 24 horas que consiste, básicamente, en hacer el trabajo de un analista con evidencias reales.
+
+Estos apuntes nacieron como mi cuaderno personal: lo que iba aprendiendo, las herramientas que acababa buscando dos veces, y las cosas que me habría gustado tener ordenadas cuando empecé. Los publico porque cuando yo estaba dando mis primeros pasos me costó mucho encontrar material en español que fuera **práctico y honesto**, sin vender humo ni suponer que ya sabías la mitad.
+
+Así que esto es dos cosas a la vez:
+
+- Una **referencia rápida** para tener abierta en la segunda pantalla mientras se analiza una alerta.
+- Una **guía de entrada** para quien quiere dedicarse a esto y no sabe por dónde empezar.
+
+Se actualiza según voy aprendiendo. Si encuentras un error o algo mal explicado, se agradece el aviso.
+
+## Empezar aquí
+
+<div class="card-grid">
+  <a class="card" href="#/por-donde-empezar">
+    <span class="card-ico">🚀</span><b>Por dónde empezar</b>
+    <span>De cero al primer empleo: ruta por fases, práctica, laboratorio, certificaciones y entrevista.</span>
+  </a>
+  <a class="card" href="#/como-usar">
+    <span class="card-ico">🧭</span><b>Cómo usar estos apuntes</b>
+    <span>Cómo está organizado, atajos de teclado y cómo añadir una nota nueva.</span>
+  </a>
+</div>
+
+## Fundamentos
+
+Los modelos que dan estructura al oficio. Se leen en este orden.
+
+<div class="card-grid">
+  <a class="card" href="#/fundamentos/conceptos-basicos">
+    <span class="card-ico">🧠</span><b>Conceptos básicos</b>
+    <span>CIA, amenaza vs. riesgo, IOC vs. IOA, TTP, tipos de malware, siglas.</span>
+  </a>
+  <a class="card" href="#/fundamentos/cyber-kill-chain">
+    <span class="card-ico">⛓️</span><b>Cyber Kill Chain</b>
+    <span>Las 7 fases de una intrusión y dónde romper la cadena.</span>
+  </a>
+  <a class="card" href="#/fundamentos/mitre-attack">
+    <span class="card-ico">🎯</span><b>MITRE ATT&CK</b>
+    <span>Tácticas, técnicas y procedimientos con lenguaje común.</span>
+  </a>
+  <a class="card" href="#/fundamentos/piramide-del-dolor">
+    <span class="card-ico">🔺</span><b>Pirámide del Dolor</b>
+    <span>Qué indicadores duelen de verdad al atacante.</span>
+  </a>
+  <a class="card" href="#/fundamentos/modelo-diamante">
+    <span class="card-ico">💎</span><b>Modelo del Diamante</b>
+    <span>Adversario, capacidad, infraestructura y víctima.</span>
+  </a>
+  <a class="card" href="#/fundamentos/inteligencia-de-amenazas">
+    <span class="card-ico">📡</span><b>Inteligencia de amenazas</b>
+    <span>Ciclo de inteligencia, niveles, TLP, STIX/TAXII y fuentes.</span>
+  </a>
+</div>
+
+## El trabajo en el SOC
+
+Cómo se aplica todo lo anterior en un turno real.
+
+<div class="card-grid">
+  <a class="card" href="#/blue-team/que-es-un-soc">
+    <span class="card-ico">🛡️</span><b>Qué es un SOC</b>
+    <span>Niveles, roles, turnos y métricas que se miran de verdad.</span>
+  </a>
+  <a class="card" href="#/blue-team/triaje-de-alertas">
+    <span class="card-ico">🔍</span><b>Triaje de alertas</b>
+    <span>Método para pasar de "salta una alerta" a una conclusión.</span>
+  </a>
+  <a class="card" href="#/blue-team/respuesta-a-incidentes">
+    <span class="card-ico">🚨</span><b>Respuesta a incidentes</b>
+    <span>Las seis fases, contención y qué no hacer nunca.</span>
+  </a>
+  <a class="card" href="#/blue-team/logs-y-telemetria">
+    <span class="card-ico">📊</span><b>Logs y telemetría</b>
+    <span>Event IDs de Windows, Sysmon y logs de Linux que importan.</span>
+  </a>
+  <a class="card" href="#/blue-team/deteccion-y-reglas">
+    <span class="card-ico">📝</span><b>Detección y reglas</b>
+    <span>Sigma, YARA y Suricata: escribir la regla, no sólo consumirla.</span>
+  </a>
+</div>
+
 ## Herramientas
+
+125 fichas con enlace, para qué sirve y uso básico.
 
 <div class="card-grid">
   <a class="card" href="#/herramientas/threat-intelligence">
@@ -43,61 +132,14 @@ Una recopilación viva de **herramientas, conceptos y metodología** de ciberseg
   </a>
 </div>
 
-## Conocimiento teórico
-
-<div class="card-grid">
-  <a class="card" href="#/fundamentos/conceptos-basicos">
-    <span class="card-ico">🧠</span><b>Conceptos básicos</b>
-    <span>CIA, amenaza vs. riesgo, IOC vs. IOA, TTP, tipos de malware.</span>
-  </a>
-  <a class="card" href="#/fundamentos/cyber-kill-chain">
-    <span class="card-ico">⛓️</span><b>Cyber Kill Chain</b>
-    <span>Las 7 fases de una intrusión y dónde romper la cadena.</span>
-  </a>
-  <a class="card" href="#/fundamentos/mitre-attack">
-    <span class="card-ico">🎯</span><b>MITRE ATT&CK</b>
-    <span>Tácticas, técnicas y procedimientos con lenguaje común.</span>
-  </a>
-  <a class="card" href="#/fundamentos/piramide-del-dolor">
-    <span class="card-ico">🔺</span><b>Pirámide del Dolor</b>
-    <span>Qué indicadores duelen de verdad al atacante.</span>
-  </a>
-  <a class="card" href="#/fundamentos/modelo-diamante">
-    <span class="card-ico">💎</span><b>Modelo del Diamante</b>
-    <span>Adversario, capacidad, infraestructura y víctima.</span>
-  </a>
-  <a class="card" href="#/fundamentos/inteligencia-de-amenazas">
-    <span class="card-ico">📡</span><b>Inteligencia de amenazas</b>
-    <span>Ciclo de inteligencia, niveles, TLP, STIX/TAXII y fuentes.</span>
-  </a>
-  <a class="card" href="#/blue-team/que-es-un-soc">
-    <span class="card-ico">🛡️</span><b>Qué es un SOC</b>
-    <span>Niveles, roles, turnos y métricas que se miran de verdad.</span>
-  </a>
-  <a class="card" href="#/blue-team/triaje-de-alertas">
-    <span class="card-ico">🔍</span><b>Triaje de alertas</b>
-    <span>Método para pasar de "salta una alerta" a una conclusión.</span>
-  </a>
-  <a class="card" href="#/blue-team/respuesta-a-incidentes">
-    <span class="card-ico">🚨</span><b>Respuesta a incidentes</b>
-    <span>Las seis fases, contención y qué no hacer nunca.</span>
-  </a>
-  <a class="card" href="#/blue-team/logs-y-telemetria">
-    <span class="card-ico">📊</span><b>Logs y telemetría</b>
-    <span>Event IDs de Windows, Sysmon y logs de Linux que importan.</span>
-  </a>
-  <a class="card" href="#/blue-team/deteccion-y-reglas">
-    <span class="card-ico">📝</span><b>Detección y reglas</b>
-    <span>Sigma, YARA y Suricata: escribir la regla, no sólo consumirla.</span>
-  </a>
-</div>
-
 ## Cheatsheets
+
+Sólo tablas y comandos, para consultar con el incidente delante.
 
 <div class="card-grid">
   <a class="card" href="#/cheatsheets/event-ids-windows">
     <span class="card-ico">🪟</span><b>Event IDs de Windows</b>
-    <span>Tablas de Security, System, PowerShell y Sysmon, sin explicaciones.</span>
+    <span>Security, System, PowerShell y Sysmon, con las combinaciones que alertan.</span>
   </a>
   <a class="card" href="#/cheatsheets/wireshark-y-red">
     <span class="card-ico">🦈</span><b>Wireshark y red</b>
@@ -112,13 +154,6 @@ Una recopilación viva de **herramientas, conceptos y metodología** de ciberseg
     <span>Checklist de ocho pasos, de la cabecera al cierre del ticket.</span>
   </a>
 </div>
-
-## Cómo está montado esto
-
-Cada nota es un fichero **Markdown** dentro de `contenido/`. La web no tiene compilación: el navegador carga el `.md` y lo pinta. Eso significa que se puede leer igual de bien desde GitHub que desde la web, y que añadir una nota es crear un fichero.
-
-> [!TIP]
-> Pulsa <kbd>/</kbd> en cualquier momento para saltar al buscador. Busca por herramienta ("*volatility*"), por concepto ("*pirámide*") o por lo que recuerdes del texto.
 
 > [!WARNING]
 > Estos apuntes son de **seguridad defensiva**. Muchas herramientas listadas son de doble uso: úsalas sólo sobre sistemas propios o con autorización expresa por escrito.

@@ -9,11 +9,17 @@ Una nota rápida sobre cómo está organizado esto y cómo se amplía, para que 
 
 ## Organización
 
-Tres bloques, de lo práctico a lo inmediato:
+El menú sigue el orden en que tiene sentido aprenderlo: de la teoría al oficio, del oficio a las herramientas, y de ahí a la referencia rápida. Se puede leer de arriba abajo como un curso, o saltar directo a lo que necesites.
 
-- **Herramientas** — fichas agrupadas por categoría. Cada ficha responde a tres cosas: qué es, para qué sirve y cómo se usa lo básico.
-- **Conocimiento teórico** — los modelos que dan estructura al oficio (Kill Chain, ATT&CK, Pirámide del Dolor, Diamante, CTI) y cómo se aplican en el trabajo real de un SOC.
-- **Cheatsheets** — sólo tablas y comandos, sin explicación, para consultar con el incidente delante. Lo que hay que entender está en el bloque teórico; aquí sólo se copia y pega.
+| Bloque | Qué contiene | Cuándo se usa |
+|---|---|---|
+| **Empezar aquí** | Presentación y la guía de entrada al sector | La primera vez |
+| **Fundamentos** | Los modelos que estructuran el oficio: Kill Chain, ATT&CK, Pirámide del Dolor, Diamante, CTI | Para entender el porqué |
+| **El trabajo en el SOC** | Cómo es un turno real: triaje, respuesta, logs, escribir detecciones | Para saber cómo se aplica |
+| **Herramientas** | Fichas por categoría: qué es, para qué sirve, uso básico | Cuando necesitas una concreta |
+| **Cheatsheets** | Sólo tablas y comandos, sin explicación | Con el incidente delante |
+
+La diferencia entre las dos últimas: las **herramientas** te dicen con qué se hace algo; las **cheatsheets** son para copiar y pegar sin leer.
 
 El contenido cubre lo que se ha ido viendo, no todo lo que existe. Si un tema no está, es que aún no toca.
 

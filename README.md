@@ -1,6 +1,8 @@
 # Apuntes de Ciberseguridad
 
-Apuntes abiertos de **ciberseguridad defensiva y Blue Team**: herramientas por categoría, marcos y modelos, y cómo se aplica todo en el trabajo real de un SOC.
+Apuntes abiertos de **ciberseguridad defensiva y Blue Team**: herramientas por categoría, los modelos que estructuran el oficio, y cómo se trabaja de verdad en un SOC.
+
+Sirven para dos cosas: como **referencia rápida** en el día a día, y como **guía de entrada** para quien empieza en el sector.
 
 🔗 **[kharonte09.github.io/apuntes](https://kharonte09.github.io/apuntes/)**
 
@@ -10,11 +12,13 @@ Apuntes abiertos de **ciberseguridad defensiva y Blue Team**: herramientas por c
 
 | Bloque | Contenido |
 |---|---|
+| **Empezar aquí** | Por dónde empezar (de cero al primer empleo en un SOC) · Cómo usar estos apuntes |
+| **Fundamentos** | Conceptos básicos · Cyber Kill Chain · MITRE ATT&CK · Pirámide del Dolor · Modelo del Diamante · Inteligencia de amenazas |
+| **El trabajo en el SOC** | Qué es un SOC · Triaje de alertas · Respuesta a incidentes · Logs y telemetría · Detección y reglas |
 | **Herramientas** | Threat Intelligence · OSINT · Phishing y correo · Red y tráfico · DFIR y forense · Utilidades |
-| **Conocimiento teórico** | Conceptos básicos · Cyber Kill Chain · MITRE ATT&CK · Pirámide del Dolor · Modelo del Diamante · Inteligencia de amenazas · Qué es un SOC · Triaje de alertas · Respuesta a incidentes · Logs y telemetría · Detección y reglas |
 | **Cheatsheets** | Event IDs de Windows · Wireshark y red · Comandos de triaje · Análisis de phishing |
 
-Cada ficha de herramienta responde a tres cosas: **qué es**, **para qué sirve** y **cómo se usa lo básico**. Las cheatsheets son sólo tablas y comandos, para consultar con el incidente delante.
+El orden del menú es el orden en que tiene sentido aprenderlo. Cada ficha de herramienta responde a tres cosas: **qué es**, **para qué sirve** y **cómo se usa lo básico**. Las cheatsheets son sólo tablas y comandos, para consultar con el incidente delante.
 
 ## Cómo está montado
 

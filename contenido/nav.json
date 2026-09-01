@@ -7,7 +7,29 @@
       "titulo": "Empezar aquí",
       "paginas": [
         { "ruta": "inicio", "titulo": "Inicio", "icono": "🏠" },
+        { "ruta": "por-donde-empezar", "titulo": "Por dónde empezar", "icono": "🚀" },
         { "ruta": "como-usar", "titulo": "Cómo usar estos apuntes", "icono": "🧭" }
+      ]
+    },
+    {
+      "titulo": "Fundamentos",
+      "paginas": [
+        { "ruta": "fundamentos/conceptos-basicos", "titulo": "Conceptos básicos", "icono": "🧠" },
+        { "ruta": "fundamentos/cyber-kill-chain", "titulo": "Cyber Kill Chain", "icono": "⛓️" },
+        { "ruta": "fundamentos/mitre-attack", "titulo": "MITRE ATT&CK", "icono": "🎯" },
+        { "ruta": "fundamentos/piramide-del-dolor", "titulo": "Pirámide del Dolor", "icono": "🔺" },
+        { "ruta": "fundamentos/modelo-diamante", "titulo": "Modelo del Diamante", "icono": "💎" },
+        { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" }
+      ]
+    },
+    {
+      "titulo": "El trabajo en el SOC",
+      "paginas": [
+        { "ruta": "blue-team/que-es-un-soc", "titulo": "Qué es un SOC", "icono": "🛡️" },
+        { "ruta": "blue-team/triaje-de-alertas", "titulo": "Triaje de alertas", "icono": "🔍" },
+        { "ruta": "blue-team/respuesta-a-incidentes", "titulo": "Respuesta a incidentes", "icono": "🚨" },
+        { "ruta": "blue-team/logs-y-telemetria", "titulo": "Logs y telemetría", "icono": "📊" },
+        { "ruta": "blue-team/deteccion-y-reglas", "titulo": "Detección y reglas", "icono": "📝" }
       ]
     },
     {
@@ -19,22 +41,6 @@
         { "ruta": "herramientas/red-y-trafico", "titulo": "Red y tráfico", "icono": "🌐" },
         { "ruta": "herramientas/dfir-y-forense", "titulo": "DFIR y forense", "icono": "🧪" },
         { "ruta": "herramientas/utilidades", "titulo": "Utilidades del día a día", "icono": "🧰" }
-      ]
-    },
-    {
-      "titulo": "Conocimiento teórico",
-      "paginas": [
-        { "ruta": "fundamentos/conceptos-basicos", "titulo": "Conceptos básicos", "icono": "🧠" },
-        { "ruta": "fundamentos/cyber-kill-chain", "titulo": "Cyber Kill Chain", "icono": "⛓️" },
-        { "ruta": "fundamentos/mitre-attack", "titulo": "MITRE ATT&CK", "icono": "🎯" },
-        { "ruta": "fundamentos/piramide-del-dolor", "titulo": "Pirámide del Dolor", "icono": "🔺" },
-        { "ruta": "fundamentos/modelo-diamante", "titulo": "Modelo del Diamante", "icono": "💎" },
-        { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" },
-        { "ruta": "blue-team/que-es-un-soc", "titulo": "Qué es un SOC", "icono": "🛡️" },
-        { "ruta": "blue-team/triaje-de-alertas", "titulo": "Triaje de alertas", "icono": "🔍" },
-        { "ruta": "blue-team/respuesta-a-incidentes", "titulo": "Respuesta a incidentes", "icono": "🚨" },
-        { "ruta": "blue-team/logs-y-telemetria", "titulo": "Logs y telemetría", "icono": "📊" },
-        { "ruta": "blue-team/deteccion-y-reglas", "titulo": "Detección y reglas", "icono": "📝" }
       ]
     },
     {
