@@ -19,7 +19,7 @@ Apuntes abiertos de ciberseguridad defensiva: **herramientas, fundamentos y cóm
 
 ## Quién escribe esto
 
-Me llamo **David Estauchez**. Soy analista de seguridad en un SOC, en Madrid, dedicado a monitorización y respuesta a incidentes: triaje de alertas, análisis de phishing, investigación de logs y tráfico, y algo de forense. Estoy certificado en **BTL1** (Security Blue Team), un examen práctico de 24 horas que consiste, básicamente, en hacer el trabajo de un analista con evidencias reales.
+Me llamo **David** y soy analista de seguridad en un SOC, dedicado a monitorización y respuesta a incidentes: triaje de alertas, análisis de phishing, investigación de logs y tráfico, y algo de forense. Estoy certificado en **BTL1** (Security Blue Team), un examen práctico de 24 horas que consiste, básicamente, en hacer el trabajo de un analista con evidencias reales.
 
 Estos apuntes nacieron como mi cuaderno personal: lo que iba aprendiendo, las herramientas que acababa buscando dos veces, y las cosas que me habría gustado tener ordenadas cuando empecé. Los publico porque cuando yo estaba dando mis primeros pasos me costó mucho encontrar material en español que fuera **práctico y honesto**, sin vender humo ni suponer que ya sabías la mitad.
 
