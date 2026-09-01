@@ -1,18 +1,14 @@
 ---
 titulo: Inicio
-subtitulo: true
 ---
 
-# Apuntes de Ciberseguridad
+# Cuaderno de Guardia
 
-Apuntes abiertos de ciberseguridad defensiva: **herramientas, fundamentos y cómo se trabaja en un SOC**. Sirven como referencia rápida para el día a día y como guía ordenada para quien está empezando.
+## ¿Dónde estoy?
 
-<div class="stats">
-  <div class="stat"><b>125</b><span>Herramientas fichadas</span></div>
-  <div class="stat"><b>6</b><span>Modelos y fundamentos</span></div>
-  <div class="stat"><b>5</b><span>Guías del oficio</span></div>
-  <div class="stat"><b>4</b><span>Cheatsheets</span></div>
-</div>
+En unos apuntes abiertos de **ciberseguridad defensiva**. Hay tres cosas dentro: los modelos que estructuran el oficio, cómo se trabaja de verdad en un SOC, y fichas de las herramientas que se usan a diario. Más unas cuantas chuletas para consultar con prisa.
+
+Se puede leer de arriba abajo, como un curso, o ir directo a lo que necesites con el buscador (tecla <kbd>/</kbd>).
 
 ## Quién escribe esto
 
@@ -148,4 +144,4 @@ Sólo tablas y comandos, para consultar con el incidente delante.
 </div>
 
 > [!WARNING]
-> Estos apuntes son de **seguridad defensiva**. Muchas herramientas listadas son de doble uso: úsalas sólo sobre sistemas propios o con autorización expresa por escrito.
+> Usa estas herramientas sólo sobre sistemas tuyos o con permiso por escrito.

@@ -1,4 +1,4 @@
-# Apuntes de Ciberseguridad
+# Cuaderno de Guardia
 
 Apuntes abiertos de **ciberseguridad defensiva y Blue Team**: herramientas por categoría, los modelos que estructuran el oficio, y cómo se trabaja de verdad en un SOC.
 

@@ -1,5 +1,5 @@
 /* =============================================================
-   Apuntes de Ciberseguridad — motor del sitio
+   Cuaderno de Guardia — motor del sitio
    Sin build: carga ficheros .md de /contenido y los renderiza.
    ============================================================= */
 (() => {
@@ -27,6 +27,7 @@
 
   /** Estado global */
   const state = {
+    titulo: 'Apuntes',
     nav: [],        // grupos del menú
     flat: [],       // páginas en orden lineal (para prev/next)
     index: null,    // índice de búsqueda (perezoso)
@@ -100,10 +101,10 @@
       el.ghLink.hidden = false;
     }
     if (data.titulo) {
-      $('.brand-text b').textContent = data.titulo;
+      state.titulo = data.titulo;
+      $('.brand-text').textContent = data.titulo;
       document.title = data.titulo;
     }
-    if (data.subtitulo) $('.brand-text small').textContent = data.subtitulo;
 
     el.nav.innerHTML = state.nav.map((g) => {
       const id = slug(g.titulo);
@@ -366,9 +367,10 @@
 
   function renderCrumbs(ruta) {
     const page = state.flat.find((p) => p.ruta === ruta);
-    if (!page) { el.crumbs.innerHTML = ''; return; }
+    // En la portada las migas sobran: dirían "Inicio / Empezar aquí / Inicio".
+    if (!page || ruta === DEFAULT_PAGE) { el.crumbs.innerHTML = ''; return; }
     el.crumbs.innerHTML = `<div class="crumbs">
-      <a href="#/${DEFAULT_PAGE}">Apuntes</a>
+      <a href="#/${DEFAULT_PAGE}">Inicio</a>
       <span class="sep">/</span><span>${esc(page.grupo)}</span>
       <span class="sep">/</span><span>${esc(page.titulo)}</span>
     </div>`;
@@ -403,7 +405,7 @@
         <p>Puede que el enlace esté mal escrito o que esa nota aún esté por escribir.
            Vuelve al <a href="#/${DEFAULT_PAGE}">índice</a> o usa el buscador de arriba.</p>`;
       el.toc.innerHTML = ''; el.pager.innerHTML = ''; el.crumbs.innerHTML = '';
-      document.title = 'No encontrado · Apuntes de Ciberseguridad';
+      document.title = `No encontrado · ${state.titulo}`;
       return;
     }
 
@@ -428,7 +430,7 @@
     buildToc();
 
     const page = state.flat.find((p) => p.ruta === ruta);
-    document.title = `${page ? page.titulo : meta.titulo || 'Apuntes'} · Apuntes de Ciberseguridad`;
+    document.title = `${page ? page.titulo : meta.titulo || 'Apuntes'} · ${state.titulo}`;
 
     if (frag) {
       setTimeout(() => document.getElementById(frag)?.scrollIntoView({ block: 'start' }), 40);

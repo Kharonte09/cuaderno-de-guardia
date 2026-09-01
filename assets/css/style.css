@@ -1,21 +1,21 @@
 /* ============================================================
-   Apuntes de Ciberseguridad — hoja de estilo
-   Paleta oscura por defecto (consola SOC) + tema claro.
+   Cuaderno de Guardia — hoja de estilo
+   Paleta azul oscura por defecto + tema claro.
    ============================================================ */
 
 :root{
-  --bg:          #0c1117;
-  --bg-soft:     #111823;
-  --bg-elev:     #151e2b;
-  --bg-inset:    #0a0f15;
-  --line:        #202c3c;
-  --line-soft:   #1a2431;
-  --txt:         #d7e0ea;
-  --txt-dim:     #8fa1b6;
-  --txt-faint:   #61738a;
-  --accent:      #35d6c3;
-  --accent-2:    #4d9dff;
-  --accent-ink:  #04231f;
+  --bg:          #0a0f19;
+  --bg-soft:     #101827;
+  --bg-elev:     #141d30;
+  --bg-inset:    #070c14;
+  --line:        #1e2b42;
+  --line-soft:   #182236;
+  --txt:         #d6e1f2;
+  --txt-dim:     #8ba0bd;
+  --txt-faint:   #5e7391;
+  --accent:      #4d9dff;
+  --accent-2:    #38bdf8;
+  --accent-ink:  #04152b;
   --warn:        #f7b955;
   --danger:      #ff6b6b;
   --ok:          #52d17f;
@@ -33,17 +33,17 @@
 }
 
 [data-theme="light"]{
-  --bg:          #f7f9fc;
+  --bg:          #f4f8fd;
   --bg-soft:     #ffffff;
   --bg-elev:     #ffffff;
-  --bg-inset:    #eef2f7;
-  --line:        #dde4ee;
-  --line-soft:   #e8edf5;
-  --txt:         #1b2733;
-  --txt-dim:     #55677c;
-  --txt-faint:   #7d8ea3;
-  --accent:      #0e8f80;
-  --accent-2:    #1d6fd8;
+  --bg-inset:    #e9f0fa;
+  --line:        #d7e2f1;
+  --line-soft:   #e5edf8;
+  --txt:         #14202f;
+  --txt-dim:     #4d6178;
+  --txt-faint:   #76889f;
+  --accent:      #1668d6;
+  --accent-2:    #0b7ab5;
   --accent-ink:  #ffffff;
   --warn:        #b76e00;
   --danger:      #cc3333;
@@ -100,25 +100,15 @@ a:hover{ text-decoration:underline; text-underline-offset:3px; }
   height:var(--topbar-h);
   display:flex; align-items:center; gap:12px;
   padding:0 16px;
-  background:color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter:blur(12px);
+  /* Fondo sólido a propósito: con backdrop-filter, Chrome compone la barra
+     sobre un backdrop oscuro y en tema claro se veía negra. */
+  background:var(--bg);
   border-bottom:1px solid var(--line);
 }
 
-.brand{ display:flex; align-items:center; gap:10px; color:var(--txt); text-decoration:none; min-width:0; }
-.brand:hover{ text-decoration:none; }
-.brand-mark{
-  display:grid; place-items:center;
-  width:34px; height:34px; flex:0 0 auto;
-  border-radius:10px;
-  background:linear-gradient(145deg, color-mix(in srgb,var(--accent) 24%,transparent), color-mix(in srgb,var(--accent-2) 18%,transparent));
-  border:1px solid color-mix(in srgb, var(--accent) 32%, transparent);
-  color:var(--accent);
-}
-.brand-mark svg{ width:19px; height:19px; }
-.brand-text{ display:flex; flex-direction:column; line-height:1.15; min-width:0; }
-.brand-text b{ font-size:14.5px; letter-spacing:-.01em; white-space:nowrap; }
-.brand-text small{ font-size:11px; color:var(--txt-faint); font-family:var(--mono); letter-spacing:.02em; white-space:nowrap; }
+.brand{ display:flex; align-items:center; color:var(--txt); text-decoration:none; min-width:0; }
+.brand:hover{ color:var(--accent); text-decoration:none; }
+.brand-text{ font-size:15.5px; font-weight:650; letter-spacing:-.015em; white-space:nowrap; }
 
 .icon-btn{
   display:grid; place-items:center;
@@ -170,21 +160,16 @@ a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .sr-item .sr-snip mark{ background:transparent; color:var(--accent); font-weight:600; }
 .sr-empty{ padding:16px; text-align:center; color:var(--txt-dim); font-size:13.5px; }
 
-/* ---------------- Layout ----------------
-   El menú principal va a la DERECHA y la tabla de contenidos a la izquierda,
-   así que el orden visual se invierte respecto al orden del HTML.           */
+/* ---------------- Layout ---------------- */
 .layout{ display:flex; align-items:flex-start; }
-.toc    { order:1; }
-main    { order:2; }
-.sidebar{ order:3; }
 
 .sidebar{
   position:sticky; top:var(--topbar-h);
   width:var(--sidebar-w); flex:0 0 var(--sidebar-w);
   height:calc(100vh - var(--topbar-h));
   overflow-y:auto; overscroll-behavior:contain;
-  border-left:1px solid var(--line);
-  padding:20px 20px 28px 12px;
+  border-right:1px solid var(--line);
+  padding:20px 12px 28px 20px;
 }
 .sidebar::-webkit-scrollbar, .toc::-webkit-scrollbar, .search-results::-webkit-scrollbar{ width:9px; }
 .sidebar::-webkit-scrollbar-thumb, .search-results::-webkit-scrollbar-thumb{ background:var(--line); border-radius:9px; }
@@ -223,12 +208,12 @@ main    { order:2; }
   padding:6px 10px; margin-bottom:1px;
   border-radius:var(--radius-sm);
   color:var(--txt-dim); font-size:14px; line-height:1.4;
-  border-right:2px solid transparent;
+  border-left:2px solid transparent;
 }
 .sidebar a:hover{ background:var(--bg-soft); color:var(--txt); text-decoration:none; }
 .sidebar a.active{
   background:color-mix(in srgb,var(--accent) 12%,transparent);
-  border-right-color:var(--accent);
+  border-left-color:var(--accent);
   color:var(--accent); font-weight:600;
 }
 .sidebar a .nav-ico{ font-size:14px; width:18px; text-align:center; flex:0 0 auto; }
@@ -247,7 +232,7 @@ main{
   width:var(--toc-w); flex:0 0 var(--toc-w);
   max-height:calc(100vh - var(--topbar-h));
   overflow-y:auto;
-  padding:34px 0 40px 24px;
+  padding:34px 24px 40px 0;
   font-size:13px;
 }
 .toc-title{
@@ -463,18 +448,18 @@ a.tag.link:hover{ background:color-mix(in srgb,var(--accent) 14%,transparent); t
   .toc{ display:none; }
 }
 @media (max-width:900px){
-  .nav-toggle{ display:grid; order:9; }   /* el botón acompaña al panel: a la derecha */
-  .brand-text small{ display:none; }
+  .nav-toggle{ display:grid; }
+  .brand-text{ font-size:14px; }
   .sidebar{
-    position:fixed; top:var(--topbar-h); right:0; left:auto; z-index:36;
-    transform:translateX(102%); transition:transform .22s ease;
+    position:fixed; top:var(--topbar-h); left:0; z-index:36;
+    transform:translateX(-102%); transition:transform .22s ease;
     background:var(--bg); box-shadow:var(--shadow);
   }
   .sidebar.open{ transform:none; }
   main{ padding:24px 18px 70px; }
   .search-wrap{ width:auto; flex:1 1 auto; }
   .search-kbd{ display:none; }
-  .brand-text b{ font-size:13.5px; }
+
 }
 @media (max-width:560px){
   .brand-text{ display:none; }
