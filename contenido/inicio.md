@@ -14,28 +14,20 @@ Apuntes abiertos de ciberseguridad defensiva: **herramientas, fundamentos y cóm
   <div class="stat"><b>4</b><span>Cheatsheets</span></div>
 </div>
 
-> [!TIP]
-> **¿Empiezas ahora en ciberseguridad?** Ve directo a [Por dónde empezar](#/por-donde-empezar): qué estudiar y en qué orden, dónde practicar, qué laboratorio montar, qué certificaciones valen la pena y cómo va la entrevista de analista junior.
-
 ## Quién escribe esto
 
-Me llamo **David** y soy analista de seguridad en un SOC, dedicado a monitorización y respuesta a incidentes: triaje de alertas, análisis de phishing, investigación de logs y tráfico, y algo de forense. Estoy certificado en **BTL1** (Security Blue Team), un examen práctico de 24 horas que consiste, básicamente, en hacer el trabajo de un analista con evidencias reales.
+Me llamo **David** y trabajo en seguridad defensiva. Esto empezó siendo mi cuaderno: lo que iba aprendiendo, las herramientas que acababa buscando dos veces y las cosas que me habría gustado tener ordenadas cuando empecé.
 
-Estos apuntes nacieron como mi cuaderno personal: lo que iba aprendiendo, las herramientas que acababa buscando dos veces, y las cosas que me habría gustado tener ordenadas cuando empecé. Los publico porque cuando yo estaba dando mis primeros pasos me costó mucho encontrar material en español que fuera **práctico y honesto**, sin vender humo ni suponer que ya sabías la mitad.
-
-Así que esto es dos cosas a la vez:
-
-- Una **referencia rápida** para tener abierta en la segunda pantalla mientras se analiza una alerta.
-- Una **guía de entrada** para quien quiere dedicarse a esto y no sabe por dónde empezar.
-
-Se actualiza según voy aprendiendo. Si encuentras un error o algo mal explicado, se agradece el aviso.
+Lo publico porque me costó encontrar material en español que fuera **práctico y honesto**, sin vender humo ni dar por sabida la mitad. Se actualiza según voy aprendiendo, así que habrá huecos y cosas por pulir. Si ves un error, se agradece el aviso.
 
 ## Empezar aquí
+
+Si acabas de llegar al sector, empieza por la primera.
 
 <div class="card-grid">
   <a class="card" href="#/por-donde-empezar">
     <span class="card-ico">🚀</span><b>Por dónde empezar</b>
-    <span>De cero al primer empleo: ruta por fases, práctica, laboratorio, certificaciones y entrevista.</span>
+    <span>De cero al primer empleo: qué estudiar y en qué orden, dónde practicar, qué laboratorio montar, certificaciones y entrevista.</span>
   </a>
   <a class="card" href="#/como-usar">
     <span class="card-ico">🧭</span><b>Cómo usar estos apuntes</b>
