@@ -9,6 +9,57 @@ Cuando el triaje confirma que hay algo real, se abre un incidente. El marco de r
 
 ## Las seis fases
 
+<figure class="diagrama">
+<svg viewBox="0 0 760 176" role="img" aria-label="Ciclo PICERL de respuesta a incidentes: preparación, identificación, contención, erradicación, recuperación y lecciones aprendidas, que realimentan la preparación.">
+  <defs>
+    <marker id="ri-punta" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0.5 0.5 L7.5 4 L0.5 7.5 Z" class="punta"/>
+    </marker>
+  </defs>
+  <g>
+    <rect x="20"  y="26" width="106" height="52" rx="8" class="caja" style="fill:color-mix(in srgb, var(--accent) 16%, var(--bg-inset))"/>
+    <text class="tenue" x="73"  y="49" text-anchor="middle">1 · Prepa-</text>
+    <text class="tenue" x="73"  y="65" text-anchor="middle">ración</text>
+  </g>
+  <g>
+    <rect x="143" y="26" width="106" height="52" rx="8" class="caja"/>
+    <text class="tenue" x="196" y="49" text-anchor="middle">2 · Identifi-</text>
+    <text class="tenue" x="196" y="65" text-anchor="middle">cación</text>
+  </g>
+  <g>
+    <rect x="266" y="26" width="106" height="52" rx="8" class="caja"/>
+    <text class="tenue" x="319" y="49" text-anchor="middle">3 · Conten-</text>
+    <text class="tenue" x="319" y="65" text-anchor="middle">ción</text>
+  </g>
+  <g>
+    <rect x="389" y="26" width="106" height="52" rx="8" class="caja"/>
+    <text class="tenue" x="442" y="49" text-anchor="middle">4 · Erradi-</text>
+    <text class="tenue" x="442" y="65" text-anchor="middle">cación</text>
+  </g>
+  <g>
+    <rect x="512" y="26" width="106" height="52" rx="8" class="caja"/>
+    <text class="tenue" x="565" y="49" text-anchor="middle">5 · Recupe-</text>
+    <text class="tenue" x="565" y="65" text-anchor="middle">ración</text>
+  </g>
+  <g>
+    <rect x="635" y="26" width="106" height="52" rx="8" class="caja" style="fill:color-mix(in srgb, var(--accent) 16%, var(--bg-inset))"/>
+    <text class="tenue" x="688" y="49" text-anchor="middle">6 · Lecciones</text>
+    <text class="tenue" x="688" y="65" text-anchor="middle">aprendidas</text>
+  </g>
+  <g class="flecha" marker-end="url(#ri-punta)">
+    <line x1="128" y1="52" x2="139" y2="52"/>
+    <line x1="251" y1="52" x2="262" y2="52"/>
+    <line x1="374" y1="52" x2="385" y2="52"/>
+    <line x1="497" y1="52" x2="508" y2="52"/>
+    <line x1="620" y1="52" x2="631" y2="52"/>
+  </g>
+  <path d="M688 82 L688 122 Q688 132 678 132 L83 132 Q73 132 73 122 L73 84"
+        class="flecha" marker-end="url(#ri-punta)"/>
+  <text class="eje" x="380" y="152" text-anchor="middle">Lo aprendido vuelve a la preparación</text>
+</svg>
+<figcaption>PICERL. La fase 6 sólo sirve si sus conclusiones cambian la fase 1.</figcaption>
+</figure>
+
 ### 1. Preparación
 
 Todo lo que se hace **antes** de que pase nada, y lo que realmente determina cómo saldrá el incidente:

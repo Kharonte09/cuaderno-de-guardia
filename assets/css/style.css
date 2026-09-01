@@ -349,6 +349,43 @@ pre:hover .copy-btn, .copy-btn:focus{ opacity:1; }
 .callout.danger { --c:var(--danger); }
 .callout.info   { --c:var(--tip); }
 
+/* ---------------- Esquemas SVG ----------------
+   Van en línea dentro del Markdown para poder usar las variables del tema.
+   El `svg` global fuerza fill:none, y fill se hereda, así que aquí hay que
+   devolver el relleno a textos y formas.                                  */
+.diagrama{
+  margin:0 0 22px;
+  padding:20px 18px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--bg-soft);
+  overflow-x:auto;
+}
+.diagrama svg{
+  width:100%; height:auto; max-width:100%; display:block;
+  min-width:520px;
+  fill:none; stroke:none;
+}
+.diagrama svg text{
+  fill:var(--txt); stroke:none;
+  font-family:var(--sans); font-size:13px;
+}
+.diagrama svg text.tenue{ fill:var(--txt-dim); font-size:11.5px; }
+.diagrama svg text.eje{
+  fill:var(--txt-faint); font-family:var(--mono); font-size:10.5px;
+  letter-spacing:.09em; text-transform:uppercase;
+}
+.diagrama svg text.num{ fill:var(--accent-ink); font-weight:700; font-size:12px; }
+.diagrama svg .caja{ fill:var(--bg-inset); stroke:var(--line); stroke-width:1; }
+.diagrama svg .linea{ stroke:var(--line); stroke-width:1.5; fill:none; }
+.diagrama svg .flecha{ stroke:var(--txt-faint); stroke-width:1.5; fill:none; }
+.diagrama svg .punta{ fill:var(--txt-faint); stroke:none; }
+.diagrama svg .nodo{ fill:var(--accent); stroke:none; }
+.diagrama figcaption{
+  margin-top:14px; padding-top:12px; border-top:1px solid var(--line-soft);
+  font-size:12.5px; color:var(--txt-faint); text-align:center;
+}
+
 /* ---------------- Tarjetas de herramienta ---------------- */
 .tool-card{
   border:1px solid var(--line); border-radius:var(--radius);

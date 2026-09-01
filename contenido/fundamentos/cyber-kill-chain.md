@@ -9,6 +9,50 @@ Modelo publicado por **Lockheed Martin en 2011** que describe una intrusión com
 
 ## Las siete fases
 
+<figure class="diagrama">
+<svg viewBox="0 0 760 132" role="img" aria-label="Las siete fases de la Cyber Kill Chain: reconocimiento, preparación, distribución, explotación, instalación, mando y control, y acciones sobre objetivos.">
+  <line x1="56" y1="42" x2="704" y2="42" class="linea"/>
+  <g>
+    <circle cx="56"  cy="42" r="19" class="nodo"/><text class="num" x="56"  y="47" text-anchor="middle">1</text>
+    <text class="tenue" x="56"  y="84" text-anchor="middle">Reconoci-</text>
+    <text class="tenue" x="56"  y="99" text-anchor="middle">miento</text>
+  </g>
+  <g>
+    <circle cx="164" cy="42" r="19" class="nodo"/><text class="num" x="164" y="47" text-anchor="middle">2</text>
+    <text class="tenue" x="164" y="84" text-anchor="middle">Prepa-</text>
+    <text class="tenue" x="164" y="99" text-anchor="middle">ración</text>
+  </g>
+  <g>
+    <circle cx="272" cy="42" r="19" class="nodo"/><text class="num" x="272" y="47" text-anchor="middle">3</text>
+    <text class="tenue" x="272" y="84" text-anchor="middle">Distri-</text>
+    <text class="tenue" x="272" y="99" text-anchor="middle">bución</text>
+  </g>
+  <g>
+    <circle cx="380" cy="42" r="19" class="nodo"/><text class="num" x="380" y="47" text-anchor="middle">4</text>
+    <text class="tenue" x="380" y="84" text-anchor="middle">Explo-</text>
+    <text class="tenue" x="380" y="99" text-anchor="middle">tación</text>
+  </g>
+  <g>
+    <circle cx="488" cy="42" r="19" class="nodo"/><text class="num" x="488" y="47" text-anchor="middle">5</text>
+    <text class="tenue" x="488" y="84" text-anchor="middle">Insta-</text>
+    <text class="tenue" x="488" y="99" text-anchor="middle">lación</text>
+  </g>
+  <g>
+    <circle cx="596" cy="42" r="19" class="nodo"/><text class="num" x="596" y="47" text-anchor="middle">6</text>
+    <text class="tenue" x="596" y="84" text-anchor="middle">Mando y</text>
+    <text class="tenue" x="596" y="99" text-anchor="middle">control</text>
+  </g>
+  <g>
+    <circle cx="704" cy="42" r="19" class="nodo"/><text class="num" x="704" y="47" text-anchor="middle">7</text>
+    <text class="tenue" x="704" y="84" text-anchor="middle">Acciones</text>
+    <text class="tenue" x="704" y="99" text-anchor="middle">sobre objetivos</text>
+  </g>
+  <text class="eje" x="56" y="126">Fuera de tu red</text>
+  <text class="eje" x="704" y="126" text-anchor="end">Dentro de tu red</text>
+</svg>
+<figcaption>El atacante necesita completar las siete; al defensor le basta con romper una.</figcaption>
+</figure>
+
 ### 1. Reconocimiento
 
 El atacante recopila información sobre el objetivo: empleados en LinkedIn, direcciones de correo, tecnologías expuestas, proveedores, dominios.

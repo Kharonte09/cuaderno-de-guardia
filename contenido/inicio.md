@@ -56,6 +56,10 @@ Lo publico por si le sirve a alguien más. Se actualiza según voy aprendiendo, 
     <span class="card-ico">📡</span><b>Inteligencia de amenazas</b>
     <span>Ciclo de inteligencia, niveles, TLP, STIX/TAXII y fuentes.</span>
   </a>
+  <a class="card" href="#/fundamentos/ia-y-ciberseguridad">
+    <span class="card-ico">🤖</span><b>IA y ciberseguridad</b>
+    <span>La IA como herramienta del defensor, del atacante, y como objetivo.</span>
+  </a>
 </div>
 
 ## El trabajo en el SOC
@@ -80,6 +84,10 @@ Lo publico por si le sirve a alguien más. Se actualiza según voy aprendiendo, 
   <a class="card" href="#/blue-team/deteccion-y-reglas">
     <span class="card-ico">📝</span><b>Detección y reglas</b>
     <span>Escribir reglas Sigma, YARA y Suricata.</span>
+  </a>
+  <a class="card" href="#/blue-team/soft-skills">
+    <span class="card-ico">🗣️</span><b>Soft skills</b>
+    <span>Diferencia con las hard skills, cuáles importan y cómo se evalúan.</span>
   </a>
 </div>
 

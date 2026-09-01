@@ -7,15 +7,26 @@ subtitulo: true
 
 Publicado en 2013 por Caltagirone, Pendergast y Betz. Sostiene que todo evento de intrusión puede describirse con **cuatro vértices** y las relaciones entre ellos:
 
-```
-              ADVERSARIO
-             /          \
-            /            \
-    INFRAESTRUCTURA -- CAPACIDAD
-            \            /
-             \          /
-              VÍCTIMA
-```
+<figure class="diagrama">
+<svg viewBox="0 0 660 330" role="img" aria-label="Modelo del Diamante: adversario arriba, víctima abajo, infraestructura a la izquierda y capacidad a la derecha, unidos entre sí. El eje vertical es socio-político y el horizontal, técnico.">
+  <!-- Aristas del rombo -->
+  <path d="M330 66 L150 165 M330 66 L510 165 M150 165 L330 264 M510 165 L330 264" class="linea"/>
+  <!-- Ejes -->
+  <line x1="330" y1="66" x2="330" y2="264" class="linea" stroke-dasharray="5 5"/>
+  <line x1="150" y1="165" x2="510" y2="165" class="linea" stroke-dasharray="5 5"/>
+  <rect x="240" y="26"  width="180" height="52" rx="8" class="caja" style="fill:color-mix(in srgb, var(--accent) 16%, var(--bg-inset))"/>
+  <text x="330" y="57" text-anchor="middle">Adversario</text>
+  <rect x="40"  y="139" width="200" height="52" rx="8" class="caja"/>
+  <text x="140" y="170" text-anchor="middle">Infraestructura</text>
+  <rect x="420" y="139" width="200" height="52" rx="8" class="caja"/>
+  <text x="520" y="170" text-anchor="middle">Capacidad</text>
+  <rect x="240" y="252" width="180" height="52" rx="8" class="caja" style="fill:color-mix(in srgb, var(--accent) 16%, var(--bg-inset))"/>
+  <text x="330" y="283" text-anchor="middle">Víctima</text>
+  <text class="eje" x="342" y="114">Socio-político · motivación</text>
+  <text class="eje" x="248" y="156">Técnico · el cómo</text>
+</svg>
+<figcaption>Un adversario usa una capacidad sobre una infraestructura contra una víctima.</figcaption>
+</figure>
 
 Un evento es: *un **adversario** usa una **capacidad** sobre una **infraestructura** contra una **víctima***.
 

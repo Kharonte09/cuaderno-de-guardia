@@ -18,7 +18,8 @@
         { "ruta": "fundamentos/mitre-attack", "titulo": "MITRE ATT&CK", "icono": "🎯" },
         { "ruta": "fundamentos/piramide-del-dolor", "titulo": "Pirámide del Dolor", "icono": "🔺" },
         { "ruta": "fundamentos/modelo-diamante", "titulo": "Modelo del Diamante", "icono": "💎" },
-        { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" }
+        { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" },
+        { "ruta": "fundamentos/ia-y-ciberseguridad", "titulo": "IA y ciberseguridad", "icono": "🤖" }
       ]
     },
     {
@@ -28,7 +29,8 @@
         { "ruta": "blue-team/triaje-de-alertas", "titulo": "Triaje de alertas", "icono": "🔍" },
         { "ruta": "blue-team/respuesta-a-incidentes", "titulo": "Respuesta a incidentes", "icono": "🚨" },
         { "ruta": "blue-team/logs-y-telemetria", "titulo": "Logs y telemetría", "icono": "📊" },
-        { "ruta": "blue-team/deteccion-y-reglas", "titulo": "Detección y reglas", "icono": "📝" }
+        { "ruta": "blue-team/deteccion-y-reglas", "titulo": "Detección y reglas", "icono": "📝" },
+        { "ruta": "blue-team/soft-skills", "titulo": "Soft skills", "icono": "🗣️" }
       ]
     },
     {

@@ -11,23 +11,52 @@ Responde a por qué bloquear IPs deja de servir a los pocos días.
 
 ## La pirámide
 
-```text
-   MÁS DOLOR PARA EL ATACANTE
-   ^
-   |   +---------------------------------------+
-   |   |  TTPs                     ¡Brutal!    |  <- Rediseñar su forma de operar
-   |   +---------------------------------------+
-   |   |  Herramientas             Difícil     |  <- Buscar o desarrollar otra
-   |   +---------------------------------------+
-   |   |  Artefactos de red/host   Molesto     |  <- Rehacer el implante
-   |   +---------------------------------------+
-   |   |  Nombres de dominio       Fastidioso  |  <- Registrar y propagar otro
-   |   +---------------------------------------+
-   |   |  Direcciones IP           Fácil       |  <- Cambiar de VPS
-   |   +---------------------------------------+
-   |   |  Valores hash             Trivial     |  <- Recompilar: hash nuevo
-   |   +---------------------------------------+
-```
+<figure class="diagrama">
+<svg viewBox="0 0 700 358" role="img" aria-label="Pirámide del Dolor: de abajo arriba, hashes (trivial), direcciones IP (fácil), nombres de dominio (fastidioso), artefactos de red y host (molesto), herramientas (difícil) y TTP (brutal).">
+  <defs>
+    <!-- El marcador se dibuja apuntando a la derecha; orient="auto" lo gira
+         según la dirección de la línea. -->
+    <marker id="pd-punta" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0.5 0.5 L8.5 4.5 L0.5 8.5 Z" class="punta"/>
+    </marker>
+  </defs>
+  <!-- Eje de dolor creciente -->
+  <line x1="46" y1="342" x2="46" y2="26" class="flecha" marker-end="url(#pd-punta)"/>
+  <text class="eje" x="30" y="184" transform="rotate(-90 30 184)" text-anchor="middle">Más dolor para el atacante</text>
+  <!-- Escalones, de la cúspide a la base -->
+  <g>
+    <rect x="300" y="26"  width="220" height="46" rx="6" class="caja" fill-opacity="1" style="fill:color-mix(in srgb, var(--accent) 34%, var(--bg-inset))"/>
+    <text x="318" y="55">TTP</text>
+    <text class="tenue" x="502" y="55" text-anchor="end">¡Brutal!</text>
+  </g>
+  <g>
+    <rect x="270" y="78"  width="280" height="46" rx="6" class="caja" style="fill:color-mix(in srgb, var(--accent) 26%, var(--bg-inset))"/>
+    <text x="288" y="107">Herramientas</text>
+    <text class="tenue" x="532" y="107" text-anchor="end">Difícil</text>
+  </g>
+  <g>
+    <rect x="240" y="130" width="340" height="46" rx="6" class="caja" style="fill:color-mix(in srgb, var(--accent) 19%, var(--bg-inset))"/>
+    <text x="258" y="159">Artefactos de red y host</text>
+    <text class="tenue" x="562" y="159" text-anchor="end">Molesto</text>
+  </g>
+  <g>
+    <rect x="210" y="182" width="400" height="46" rx="6" class="caja" style="fill:color-mix(in srgb, var(--accent) 13%, var(--bg-inset))"/>
+    <text x="228" y="211">Nombres de dominio</text>
+    <text class="tenue" x="592" y="211" text-anchor="end">Fastidioso</text>
+  </g>
+  <g>
+    <rect x="180" y="234" width="460" height="46" rx="6" class="caja" style="fill:color-mix(in srgb, var(--accent) 8%, var(--bg-inset))"/>
+    <text x="198" y="263">Direcciones IP</text>
+    <text class="tenue" x="622" y="263" text-anchor="end">Fácil</text>
+  </g>
+  <g>
+    <rect x="150" y="286" width="520" height="46" rx="6" class="caja"/>
+    <text x="168" y="315">Valores hash</text>
+    <text class="tenue" x="652" y="315" text-anchor="end">Trivial</text>
+  </g>
+</svg>
+<figcaption>Cuanto más arriba detectas, más caro le sale al atacante seguir operando.</figcaption>
+</figure>
 
 ## Nivel a nivel
 
