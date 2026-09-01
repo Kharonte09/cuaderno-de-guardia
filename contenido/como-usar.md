@@ -9,9 +9,13 @@ Una nota rápida sobre cómo está organizado esto y cómo se amplía, para que 
 
 ## Organización
 
-- **Herramientas** — fichas prácticas agrupadas por categoría. Cada ficha responde a tres cosas: qué es, para qué sirve y cómo se usa lo básico.
-- **Fundamentos** — los modelos y marcos que dan estructura al oficio: Kill Chain, ATT&CK, Pirámide del Dolor, Diamante, NIST, normativa.
-- **Blue Team** — cómo se aplica todo lo anterior en el trabajo real de un SOC.
+Tres bloques, de lo práctico a lo inmediato:
+
+- **Herramientas** — fichas agrupadas por categoría. Cada ficha responde a tres cosas: qué es, para qué sirve y cómo se usa lo básico.
+- **Conocimiento teórico** — los modelos que dan estructura al oficio (Kill Chain, ATT&CK, Pirámide del Dolor, Diamante, CTI) y cómo se aplican en el trabajo real de un SOC.
+- **Cheatsheets** — sólo tablas y comandos, sin explicación, para consultar con el incidente delante. Lo que hay que entender está en el bloque teórico; aquí sólo se copia y pega.
+
+El contenido cubre lo que se ha ido viendo, no todo lo que existe. Si un tema no está, es que aún no toca.
 
 ## Atajos de teclado
 

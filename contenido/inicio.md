@@ -8,13 +8,13 @@ subtitulo: true
 Una recopilación viva de **herramientas, conceptos y metodología** de ciberseguridad defensiva. Pensado para tenerlo abierto en la segunda pantalla mientras se analiza una alerta, un correo sospechoso o un indicador raro.
 
 <div class="stats">
-  <div class="stat"><b>8</b><span>Categorías de herramientas</span></div>
-  <div class="stat"><b>170</b><span>Herramientas fichadas</span></div>
-  <div class="stat"><b>7</b><span>Marcos y modelos</span></div>
-  <div class="stat"><b>5</b><span>Guías de Blue Team</span></div>
+  <div class="stat"><b>6</b><span>Categorías de herramientas</span></div>
+  <div class="stat"><b>125</b><span>Herramientas fichadas</span></div>
+  <div class="stat"><b>11</b><span>Notas teóricas</span></div>
+  <div class="stat"><b>4</b><span>Cheatsheets</span></div>
 </div>
 
-## Herramientas por categoría
+## Herramientas
 
 <div class="card-grid">
   <a class="card" href="#/herramientas/threat-intelligence">
@@ -29,10 +29,6 @@ Una recopilación viva de **herramientas, conceptos y metodología** de ciberseg
     <span class="card-ico">🎣</span><b>Phishing y correo</b>
     <span>Cabeceras, URL, adjuntos, SPF/DKIM/DMARC y simulación.</span>
   </a>
-  <a class="card" href="#/herramientas/analisis-malware">
-    <span class="card-ico">🦠</span><b>Análisis de malware</b>
-    <span>Estático, dinámico, sandbox e ingeniería inversa.</span>
-  </a>
   <a class="card" href="#/herramientas/red-y-trafico">
     <span class="card-ico">🌐</span><b>Red y tráfico</b>
     <span>PCAP, IDS, escaneo y monitorización de red.</span>
@@ -41,17 +37,13 @@ Una recopilación viva de **herramientas, conceptos y metodología** de ciberseg
     <span class="card-ico">🧪</span><b>DFIR y forense</b>
     <span>Adquisición, artefactos de Windows, memoria y línea temporal.</span>
   </a>
-  <a class="card" href="#/herramientas/siem-edr-y-labs">
-    <span class="card-ico">🖥️</span><b>SIEM, EDR y labs</b>
-    <span>Plataformas de detección, SOAR, emulación y máquinas de práctica.</span>
-  </a>
   <a class="card" href="#/herramientas/utilidades">
     <span class="card-ico">🧰</span><b>Utilidades</b>
     <span>Decodificar, convertir, comprobar y no perder tiempo.</span>
   </a>
 </div>
 
-## Fundamentos y modelos
+## Conocimiento teórico
 
 <div class="card-grid">
   <a class="card" href="#/fundamentos/conceptos-basicos">
@@ -74,15 +66,10 @@ Una recopilación viva de **herramientas, conceptos y metodología** de ciberseg
     <span class="card-ico">💎</span><b>Modelo del Diamante</b>
     <span>Adversario, capacidad, infraestructura y víctima.</span>
   </a>
-  <a class="card" href="#/fundamentos/marcos-y-normativa">
-    <span class="card-ico">📐</span><b>Marcos y normativa</b>
-    <span>NIST CSF, NIST 800-61, ISO 27001, CIS Controls, NIS2.</span>
+  <a class="card" href="#/fundamentos/inteligencia-de-amenazas">
+    <span class="card-ico">📡</span><b>Inteligencia de amenazas</b>
+    <span>Ciclo de inteligencia, niveles, TLP, STIX/TAXII y fuentes.</span>
   </a>
-</div>
-
-## Blue Team en la práctica
-
-<div class="card-grid">
   <a class="card" href="#/blue-team/que-es-un-soc">
     <span class="card-ico">🛡️</span><b>Qué es un SOC</b>
     <span>Niveles, roles, turnos y métricas que se miran de verdad.</span>
@@ -102,6 +89,27 @@ Una recopilación viva de **herramientas, conceptos y metodología** de ciberseg
   <a class="card" href="#/blue-team/deteccion-y-reglas">
     <span class="card-ico">📝</span><b>Detección y reglas</b>
     <span>Sigma, YARA y Suricata: escribir la regla, no sólo consumirla.</span>
+  </a>
+</div>
+
+## Cheatsheets
+
+<div class="card-grid">
+  <a class="card" href="#/cheatsheets/event-ids-windows">
+    <span class="card-ico">🪟</span><b>Event IDs de Windows</b>
+    <span>Tablas de Security, System, PowerShell y Sysmon, sin explicaciones.</span>
+  </a>
+  <a class="card" href="#/cheatsheets/wireshark-y-red">
+    <span class="card-ico">🦈</span><b>Wireshark y red</b>
+    <span>Filtros, tshark, tcpdump, nmap, dig y puertos de memoria.</span>
+  </a>
+  <a class="card" href="#/cheatsheets/comandos-de-triaje">
+    <span class="card-ico">⌨️</span><b>Comandos de triaje</b>
+    <span>PowerShell y Linux para mirar un equipo sospechoso. Volatility y KAPE.</span>
+  </a>
+  <a class="card" href="#/cheatsheets/analisis-de-phishing">
+    <span class="card-ico">📧</span><b>Análisis de phishing</b>
+    <span>Checklist de ocho pasos, de la cabecera al cierre del ticket.</span>
   </a>
 </div>
 

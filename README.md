@@ -10,11 +10,11 @@ Apuntes abiertos de **ciberseguridad defensiva y Blue Team**: herramientas por c
 
 | Bloque | Contenido |
 |---|---|
-| **Herramientas** | Threat Intelligence · OSINT · Phishing y correo · Análisis de malware · Red y tráfico · DFIR y forense · SIEM, EDR y laboratorios · Utilidades |
-| **Fundamentos** | Conceptos básicos · Cyber Kill Chain · MITRE ATT&CK · Pirámide del Dolor · Modelo del Diamante · Marcos y normativa · Inteligencia de amenazas |
-| **Blue Team** | Qué es un SOC · Triaje de alertas · Respuesta a incidentes · Logs y telemetría · Detección y reglas |
+| **Herramientas** | Threat Intelligence · OSINT · Phishing y correo · Red y tráfico · DFIR y forense · Utilidades |
+| **Conocimiento teórico** | Conceptos básicos · Cyber Kill Chain · MITRE ATT&CK · Pirámide del Dolor · Modelo del Diamante · Inteligencia de amenazas · Qué es un SOC · Triaje de alertas · Respuesta a incidentes · Logs y telemetría · Detección y reglas |
+| **Cheatsheets** | Event IDs de Windows · Wireshark y red · Comandos de triaje · Análisis de phishing |
 
-Cada ficha de herramienta responde a tres cosas: **qué es**, **para qué sirve** y **cómo se usa lo básico**.
+Cada ficha de herramienta responde a tres cosas: **qué es**, **para qué sirve** y **cómo se usa lo básico**. Las cheatsheets son sólo tablas y comandos, para consultar con el incidente delante.
 
 ## Cómo está montado
 
@@ -27,11 +27,12 @@ apuntes/
 │   ├── css/style.css       Tema oscuro/claro
 │   └── js/app.js           Router, render, buscador
 ├── contenido/
-│   ├── nav.json            Menú lateral
+│   ├── nav.json            Menú (panel derecho)
 │   ├── inicio.md
 │   ├── herramientas/
-│   ├── fundamentos/
-│   └── blue-team/
+│   ├── fundamentos/        \
+│   ├── blue-team/           } bloque "Conocimiento teórico"
+│   └── cheatsheets/
 ├── serve.js                Servidor local para previsualizar
 └── .github/workflows/      Despliegue a GitHub Pages
 ```

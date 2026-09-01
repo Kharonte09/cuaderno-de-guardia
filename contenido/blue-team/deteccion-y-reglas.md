@@ -142,7 +142,7 @@ alert http $HOME_NET any -> $EXTERNAL_NET any ( \
 3. **Escríbela lo más específica que puedas sin atarla a un artefacto desechable.**
 4. **Mídela contra datos históricos** antes de activarla: si sobre 30 días genera 4.000 aciertos, no está lista.
 5. **Documenta los falsos positivos esperados** dentro de la propia regla.
-6. **Pruébala de verdad** con [Atomic Red Team](#/herramientas/siem-edr-y-labs) — que la técnica salte, no que "debería saltar".
+6. **Pruébala de verdad** con [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) — que la técnica salte, no que "debería saltar".
 7. **Escribe el playbook a la vez que la regla.** Una alerta sin instrucciones de qué hacer es una alerta que se cerrará mal.
 8. **Revísala periódicamente.** Las detecciones caducan: cambian las versiones, los productos y los atacantes.
 

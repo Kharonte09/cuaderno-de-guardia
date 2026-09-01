@@ -170,16 +170,21 @@ a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .sr-item .sr-snip mark{ background:transparent; color:var(--accent); font-weight:600; }
 .sr-empty{ padding:16px; text-align:center; color:var(--txt-dim); font-size:13.5px; }
 
-/* ---------------- Layout ---------------- */
+/* ---------------- Layout ----------------
+   El menú principal va a la DERECHA y la tabla de contenidos a la izquierda,
+   así que el orden visual se invierte respecto al orden del HTML.           */
 .layout{ display:flex; align-items:flex-start; }
+.toc    { order:1; }
+main    { order:2; }
+.sidebar{ order:3; }
 
 .sidebar{
   position:sticky; top:var(--topbar-h);
   width:var(--sidebar-w); flex:0 0 var(--sidebar-w);
   height:calc(100vh - var(--topbar-h));
   overflow-y:auto; overscroll-behavior:contain;
-  border-right:1px solid var(--line);
-  padding:20px 12px 28px 20px;
+  border-left:1px solid var(--line);
+  padding:20px 20px 28px 12px;
 }
 .sidebar::-webkit-scrollbar, .toc::-webkit-scrollbar, .search-results::-webkit-scrollbar{ width:9px; }
 .sidebar::-webkit-scrollbar-thumb, .search-results::-webkit-scrollbar-thumb{ background:var(--line); border-radius:9px; }
@@ -196,12 +201,12 @@ a:hover{ text-decoration:underline; text-underline-offset:3px; }
   padding:6px 10px; margin-bottom:1px;
   border-radius:var(--radius-sm);
   color:var(--txt-dim); font-size:14px; line-height:1.4;
-  border-left:2px solid transparent;
+  border-right:2px solid transparent;
 }
 .sidebar a:hover{ background:var(--bg-soft); color:var(--txt); text-decoration:none; }
 .sidebar a.active{
   background:color-mix(in srgb,var(--accent) 12%,transparent);
-  border-left-color:var(--accent);
+  border-right-color:var(--accent);
   color:var(--accent); font-weight:600;
 }
 .sidebar a .nav-ico{ font-size:14px; width:18px; text-align:center; flex:0 0 auto; }
@@ -220,7 +225,7 @@ main{
   width:var(--toc-w); flex:0 0 var(--toc-w);
   max-height:calc(100vh - var(--topbar-h));
   overflow-y:auto;
-  padding:34px 22px 40px 0;
+  padding:34px 0 40px 24px;
   font-size:13px;
 }
 .toc-title{
@@ -436,11 +441,11 @@ a.tag.link:hover{ background:color-mix(in srgb,var(--accent) 14%,transparent); t
   .toc{ display:none; }
 }
 @media (max-width:900px){
-  .nav-toggle{ display:grid; }
+  .nav-toggle{ display:grid; order:9; }   /* el botón acompaña al panel: a la derecha */
   .brand-text small{ display:none; }
   .sidebar{
-    position:fixed; top:var(--topbar-h); left:0; z-index:36;
-    transform:translateX(-102%); transition:transform .22s ease;
+    position:fixed; top:var(--topbar-h); right:0; left:auto; z-index:36;
+    transform:translateX(102%); transition:transform .22s ease;
     background:var(--bg); box-shadow:var(--shadow);
   }
   .sidebar.open{ transform:none; }

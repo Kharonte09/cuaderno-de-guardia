@@ -16,33 +16,34 @@
         { "ruta": "herramientas/threat-intelligence", "titulo": "Threat Intelligence", "icono": "🛰️" },
         { "ruta": "herramientas/osint", "titulo": "OSINT", "icono": "🔎" },
         { "ruta": "herramientas/phishing", "titulo": "Phishing y correo", "icono": "🎣" },
-        { "ruta": "herramientas/analisis-malware", "titulo": "Análisis de malware", "icono": "🦠" },
         { "ruta": "herramientas/red-y-trafico", "titulo": "Red y tráfico", "icono": "🌐" },
         { "ruta": "herramientas/dfir-y-forense", "titulo": "DFIR y forense", "icono": "🧪" },
-        { "ruta": "herramientas/siem-edr-y-labs", "titulo": "SIEM, EDR y laboratorios", "icono": "🖥️" },
         { "ruta": "herramientas/utilidades", "titulo": "Utilidades del día a día", "icono": "🧰" }
       ]
     },
     {
-      "titulo": "Fundamentos",
+      "titulo": "Conocimiento teórico",
       "paginas": [
         { "ruta": "fundamentos/conceptos-basicos", "titulo": "Conceptos básicos", "icono": "🧠" },
         { "ruta": "fundamentos/cyber-kill-chain", "titulo": "Cyber Kill Chain", "icono": "⛓️" },
         { "ruta": "fundamentos/mitre-attack", "titulo": "MITRE ATT&CK", "icono": "🎯" },
         { "ruta": "fundamentos/piramide-del-dolor", "titulo": "Pirámide del Dolor", "icono": "🔺" },
         { "ruta": "fundamentos/modelo-diamante", "titulo": "Modelo del Diamante", "icono": "💎" },
-        { "ruta": "fundamentos/marcos-y-normativa", "titulo": "Marcos y normativa", "icono": "📐" },
-        { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" }
-      ]
-    },
-    {
-      "titulo": "Blue Team / SOC",
-      "paginas": [
+        { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" },
         { "ruta": "blue-team/que-es-un-soc", "titulo": "Qué es un SOC", "icono": "🛡️" },
         { "ruta": "blue-team/triaje-de-alertas", "titulo": "Triaje de alertas", "icono": "🔍" },
         { "ruta": "blue-team/respuesta-a-incidentes", "titulo": "Respuesta a incidentes", "icono": "🚨" },
         { "ruta": "blue-team/logs-y-telemetria", "titulo": "Logs y telemetría", "icono": "📊" },
         { "ruta": "blue-team/deteccion-y-reglas", "titulo": "Detección y reglas", "icono": "📝" }
+      ]
+    },
+    {
+      "titulo": "Cheatsheets",
+      "paginas": [
+        { "ruta": "cheatsheets/event-ids-windows", "titulo": "Event IDs de Windows", "icono": "🪟" },
+        { "ruta": "cheatsheets/wireshark-y-red", "titulo": "Wireshark y red", "icono": "🦈" },
+        { "ruta": "cheatsheets/comandos-de-triaje", "titulo": "Comandos de triaje", "icono": "⌨️" },
+        { "ruta": "cheatsheets/analisis-de-phishing", "titulo": "Análisis de phishing", "icono": "📧" }
       ]
     }
   ]
