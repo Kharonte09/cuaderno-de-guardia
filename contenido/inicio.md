@@ -6,7 +6,7 @@ titulo: Inicio
 
 ## ¿Dónde estoy?
 
-En unos apuntes abiertos de **ciberseguridad defensiva**. Hay tres cosas dentro: los modelos que estructuran el oficio, cómo se trabaja de verdad en un SOC, y fichas de las herramientas que se usan a diario. Más unas cuantas chuletas para consultar con prisa.
+En unos apuntes de **ciberseguridad defensiva**. Hay cuatro bloques: los modelos que estructuran el oficio, cómo se organiza el trabajo en un SOC, fichas de herramientas y chuletas de consulta rápida.
 
 Se puede leer de arriba abajo, como un curso, o ir directo a lo que necesites con el buscador (tecla <kbd>/</kbd>).
 
@@ -14,16 +14,14 @@ Se puede leer de arriba abajo, como un curso, o ir directo a lo que necesites co
 
 Me llamo **David** y trabajo en seguridad defensiva. Esto empezó siendo mi cuaderno: lo que iba aprendiendo, las herramientas que acababa buscando dos veces y las cosas que me habría gustado tener ordenadas cuando empecé.
 
-Lo publico porque me costó encontrar material en español que fuera **práctico y honesto**, sin vender humo ni dar por sabida la mitad. Se actualiza según voy aprendiendo, así que habrá huecos y cosas por pulir. Si ves un error, se agradece el aviso.
+Lo publico por si le sirve a alguien más. Se actualiza según voy aprendiendo, así que hay huecos y cosas sin pulir. Si ves un error, se agradece el aviso.
 
 ## Empezar aquí
-
-Si acabas de llegar al sector, empieza por la primera.
 
 <div class="card-grid">
   <a class="card" href="#/por-donde-empezar">
     <span class="card-ico">🚀</span><b>Por dónde empezar</b>
-    <span>De cero al primer empleo: qué estudiar y en qué orden, dónde practicar, qué laboratorio montar, certificaciones y entrevista.</span>
+    <span>Qué estudiar y en qué orden, dónde practicar, qué laboratorio montar, certificaciones y entrevista.</span>
   </a>
   <a class="card" href="#/como-usar">
     <span class="card-ico">🧭</span><b>Cómo usar estos apuntes</b>
@@ -32,8 +30,6 @@ Si acabas de llegar al sector, empieza por la primera.
 </div>
 
 ## Fundamentos
-
-Los modelos que dan estructura al oficio. Se leen en este orden.
 
 <div class="card-grid">
   <a class="card" href="#/fundamentos/conceptos-basicos">
@@ -50,7 +46,7 @@ Los modelos que dan estructura al oficio. Se leen en este orden.
   </a>
   <a class="card" href="#/fundamentos/piramide-del-dolor">
     <span class="card-ico">🔺</span><b>Pirámide del Dolor</b>
-    <span>Qué indicadores duelen de verdad al atacante.</span>
+    <span>Qué indicadores le cuestan más al atacante.</span>
   </a>
   <a class="card" href="#/fundamentos/modelo-diamante">
     <span class="card-ico">💎</span><b>Modelo del Diamante</b>
@@ -64,20 +60,18 @@ Los modelos que dan estructura al oficio. Se leen en este orden.
 
 ## El trabajo en el SOC
 
-Cómo se aplica todo lo anterior en un turno real.
-
 <div class="card-grid">
   <a class="card" href="#/blue-team/que-es-un-soc">
     <span class="card-ico">🛡️</span><b>Qué es un SOC</b>
-    <span>Niveles, roles, turnos y métricas que se miran de verdad.</span>
+    <span>Niveles, roles, turnos y métricas.</span>
   </a>
   <a class="card" href="#/blue-team/triaje-de-alertas">
     <span class="card-ico">🔍</span><b>Triaje de alertas</b>
-    <span>Método para pasar de "salta una alerta" a una conclusión.</span>
+    <span>De la alerta a una conclusión documentada.</span>
   </a>
   <a class="card" href="#/blue-team/respuesta-a-incidentes">
     <span class="card-ico">🚨</span><b>Respuesta a incidentes</b>
-    <span>Las seis fases, contención y qué no hacer nunca.</span>
+    <span>Las seis fases, contención y playbooks.</span>
   </a>
   <a class="card" href="#/blue-team/logs-y-telemetria">
     <span class="card-ico">📊</span><b>Logs y telemetría</b>
@@ -85,13 +79,11 @@ Cómo se aplica todo lo anterior en un turno real.
   </a>
   <a class="card" href="#/blue-team/deteccion-y-reglas">
     <span class="card-ico">📝</span><b>Detección y reglas</b>
-    <span>Sigma, YARA y Suricata: escribir la regla, no sólo consumirla.</span>
+    <span>Escribir reglas Sigma, YARA y Suricata.</span>
   </a>
 </div>
 
 ## Herramientas
-
-125 fichas con enlace, para qué sirve y uso básico.
 
 <div class="card-grid">
   <a class="card" href="#/herramientas/threat-intelligence">
@@ -116,13 +108,11 @@ Cómo se aplica todo lo anterior en un turno real.
   </a>
   <a class="card" href="#/herramientas/utilidades">
     <span class="card-ico">🧰</span><b>Utilidades</b>
-    <span>Decodificar, convertir, comprobar y no perder tiempo.</span>
+    <span>Decodificar, convertir y comprobar.</span>
   </a>
 </div>
 
 ## Cheatsheets
-
-Sólo tablas y comandos, para consultar con el incidente delante.
 
 <div class="card-grid">
   <a class="card" href="#/cheatsheets/event-ids-windows">

@@ -56,7 +56,7 @@ El modelo define dos ejes que estructuran la investigación:
 
 Cada evento se anota además con: marca de tiempo, fase de la [Kill Chain](#/fundamentos/cyber-kill-chain), resultado, dirección, metodología y **confianza** en el dato. Esa última es clave: obliga a separar lo que sabes de lo que supones.
 
-## Para qué sirve de verdad: pivotar
+## Pivotar entre vértices
 
 Su valor práctico es el **pivote analítico**. Conoces un vértice y desde ahí descubres los demás:
 

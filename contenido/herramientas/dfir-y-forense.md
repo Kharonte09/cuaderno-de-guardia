@@ -46,7 +46,7 @@ kape.exe --tsource C: --tdest C:\triaje --target !SANS_Triage --mdest C:\salida 
 **Para qué sirve:** desplegar un agente en toda la flota y **consultar los endpoints como si fueran una base de datos** con su lenguaje VQL. Permite hacer *hunts* masivos ("¿en qué equipos existe este fichero?") y recoger artefactos remotos en un incidente.
 
 > [!TIP]
-> Velociraptor es, con diferencia, la mejor relación valor/coste para DFIR a escala en un SOC sin presupuesto. Combina EDR ligero, caza y recolección forense.
+> Velociraptor cubre EDR ligero, caza y recolección forense en una sola herramienta libre, sin licencias.
 
 ### Guymager / dd / dcfldd
 `Imagen Linux` `Open source` [guymager.sourceforge.io](https://guymager.sourceforge.io/)
@@ -63,7 +63,7 @@ sha256sum /dev/sda /mnt/evidencia/disco.dd   # deben coincidir
 ### Volatility 3
 `Memoria` `Open source` [github.com/volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3)
 
-**Para qué sirve:** el marco de referencia para analizar volcados de RAM: procesos ocultos, conexiones de red, código inyectado, comandos ejecutados y credenciales en memoria.
+**Para qué sirve:** analizar volcados de RAM: procesos ocultos, conexiones de red, código inyectado, comandos ejecutados y credenciales en memoria.
 
 **Plugins que se usan siempre:**
 ```bash
@@ -87,7 +87,7 @@ vol -f memoria.raw windows.filescan      # ficheros referenciados en memoria
 ### Eric Zimmerman Tools
 `Artefactos` `Gratis` [ericzimmerman.github.io](https://ericzimmerman.github.io/)
 
-**Para qué sirve:** la colección imprescindible para parsear artefactos de Windows. Cada herramienta saca un artefacto y todas exportan a CSV para Timeline Explorer.
+**Para qué sirve:** colección de utilidades para parsear artefactos de Windows. Cada herramienta saca un artefacto y todas exportan a CSV para Timeline Explorer.
 
 | Herramienta | Artefacto | Qué demuestra |
 |---|---|---|
@@ -153,12 +153,12 @@ chainsaw hunt ./Logs -s sigma/ --mapping mappings/sigma-event-logs-all.yml
 ### THOR Lite
 `IOC scanner` `Gratis (Lite)` [nextron-systems.com/thor-lite](https://www.nextron-systems.com/thor-lite/)
 
-**Para qué sirve:** escáner de compromiso profesional con miles de reglas de detección propias. La versión Lite es gratuita para uso no comercial y es de lo mejor que se puede pasar a un equipo sospechoso.
+**Para qué sirve:** escáner de compromiso profesional con miles de reglas de detección propias. La versión Lite es gratuita para uso no comercial.
 
 ### Sysinternals Suite
 `Diagnóstico` `Gratis` [learn.microsoft.com/sysinternals](https://learn.microsoft.com/en-us/sysinternals/)
 
-**Para qué sirve:** el conjunto que todo analista de Windows debe tener. Los cuatro que más se usan en incidente:
+**Para qué sirve:** utilidades de diagnóstico para Windows. Las cuatro que más se usan en incidente:
 - **Autoruns**: todos los puntos de arranque automático. Filtra por *Hide Microsoft entries* y aparece la persistencia.
 - **Process Explorer**: árbol de procesos con verificación de firma y consulta a VirusTotal integrada.
 - **TCPView**: conexiones activas por proceso.
@@ -174,4 +174,4 @@ chainsaw hunt ./Logs -s sigma/ --mapping mappings/sigma-event-logs-all.yml
 6. **Zona horaria en UTC** en todos los informes, y consistente entre fuentes.
 
 > [!CAUTION]
-> Si el incidente puede acabar en juzgado o en denuncia, para y llama a alguien con experiencia forense antes de tocar nada. Un volcado hecho con prisa puede invalidar la prueba.
+> Si el incidente puede acabar en denuncia o en juzgado, consulta con alguien con experiencia forense antes de tocar nada: un volcado mal hecho puede invalidar la prueba.

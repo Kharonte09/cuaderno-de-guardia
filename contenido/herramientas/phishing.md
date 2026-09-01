@@ -31,7 +31,7 @@ El análisis de correos sospechosos es, con diferencia, el ticket más repetido 
 ### Learn and Test DMARC
 `SPF/DKIM/DMARC` `Gratis` [learndmarc.com](https://www.learndmarc.com/)
 
-**Para qué sirve:** aprender de verdad cómo se evalúan SPF, DKIM y DMARC: mandas un correo a la dirección que te dan y te dibuja todo el proceso de validación paso a paso.
+**Para qué sirve:** ver cómo se evalúan SPF, DKIM y DMARC paso a paso: mandas un correo a la dirección que te dan y te dibuja todo el proceso de validación paso a paso.
 
 > [!NOTE]
 > Los tres conceptos, en corto:
@@ -56,14 +56,14 @@ El análisis de correos sospechosos es, con diferencia, el ticket más repetido 
 ### urlscan.io
 `Sandbox web` `Gratis + API` [urlscan.io](https://urlscan.io/)
 
-**Para qué sirve:** abrir la URL sospechosa desde una máquina remota aislada y ver captura de pantalla, dominios contactados, redirecciones y DOM. Es *la* herramienta de phishing.
+**Para qué sirve:** abrir la URL sospechosa desde una máquina remota aislada y ver captura de pantalla, dominios contactados, redirecciones y DOM. Es la herramienta central del análisis de phishing.
 
 **Uso básico:** pega la URL → revisa la captura (¿imita a Microsoft 365?), la lista de *Domains* (¿hay algún dominio de exfiltración?) y el veredicto de la comunidad. Busca por `page.domain` para encontrar el resto de la campaña.
 
 ### PhishTool
 `Análisis integral` `Gratis (Community)` [phishtool.com](https://www.phishtool.com/)
 
-**Para qué sirve:** subes el `.eml` y te da un análisis completo en una sola pantalla: cabeceras interpretadas, autenticación, URLs, adjuntos con hashes y una plantilla de informe. Ahorra muchísimo tiempo en el triaje.
+**Para qué sirve:** se sube el `.eml` y devuelve en una pantalla las cabeceras interpretadas, la autenticación, las URLs, los adjuntos con sus hashes y una plantilla de informe.
 
 ### CheckPhish / Phishtank / OpenPhish
 `Listas` `Gratis` [phishtank.org](https://phishtank.org/)
@@ -155,4 +155,4 @@ pdf-parser.py -s JavaScript documento.pdf
 | Tono | Urgencia, secreto, amenaza | "Responde en 2 h o se bloquea la cuenta" |
 
 > [!TIP]
-> Los adjuntos `.html` son ahora el vector estrella: no los detectan los antivirus y contienen el formulario de robo de credenciales embebido, sin salir a internet hasta que el usuario escribe. Ábrelos siempre en un editor de texto, nunca en un navegador.
+> Los adjuntos `.html` llevan el formulario de robo de credenciales embebido y no salen a internet hasta que el usuario escribe, así que los antivirus apenas los detectan. Ábrelos en un editor de texto, nunca en un navegador.

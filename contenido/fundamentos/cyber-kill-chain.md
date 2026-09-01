@@ -5,9 +5,7 @@ subtitulo: true
 
 # Cyber Kill Chain
 
-Modelo publicado por **Lockheed Martin en 2011** que describe una intrusión como una cadena de siete fases. Su idea central es sencilla y potente: el atacante necesita completar **todas** las fases; al defensor le basta con **romper una**.
-
-Es el primer modelo que se enseña en cualquier curso, y aparece en entrevistas casi siempre.
+Modelo publicado por **Lockheed Martin en 2011** que describe una intrusión como una cadena de siete fases. Su idea central: el atacante necesita completar todas las fases; al defensor le basta con romper una.
 
 ## Las siete fases
 
@@ -67,7 +65,7 @@ Lo que venía a hacer: robar datos, cifrar, moverse lateralmente, escalar a Doma
 - **Detección:** volumen anómalo de salida, accesos masivos a ficheros, borrado de copias de seguridad (`vssadmin delete shadows`), creación de cuentas de administrador.
 - **Defensa:** segmentación, DLP, copias inmutables y fuera de línea, monitorización de cuentas privilegiadas.
 
-## Cómo se usa de verdad
+## Cómo se usa
 
 La utilidad práctica no es recitarla, sino **mapear tus controles a cada fase** y ver dónde tienes agujeros:
 
@@ -80,7 +78,6 @@ La utilidad práctica no es recitarla, sino **mapear tus controles a cada fase**
 | C2 | Proxy, DNS | Bloqueo de salida | **No** |
 | Acciones | DLP, SIEM | Segmentación | **No** |
 
-Ese ejercicio, hecho honestamente, es más valioso que cualquier auditoría.
 
 La doctrina de acciones defensivas asociada al modelo es: **detectar, denegar, interrumpir, degradar, engañar y contener**.
 

@@ -32,7 +32,7 @@ Seis fases, y es circular por diseño:
 6. **Retroalimentación** — ¿le sirvió a quien lo recibió? Ajustar y volver a empezar.
 
 > [!IMPORTANT]
-> La fase que más se salta y más duele saltarse es la **1**. Un programa de CTI sin requisitos definidos produce ruido caro. La pregunta fundacional es: *"¿qué decisiones vamos a tomar con esto?"*.
+> La fase 1 es la que más se salta. Un programa de CTI sin requisitos definidos produce ruido caro; la pregunta previa es qué decisiones se van a tomar con la información.
 
 ## Traffic Light Protocol (TLP)
 
@@ -99,12 +99,12 @@ El **protocolo de transporte** para intercambiar STIX: colecciones a las que sus
 | Ransomware | Ransomware.live, ecrime.ch, blogs de filtraciones |
 
 > [!TIP]
-> **The DFIR Report** merece mención aparte: publica incidentes reales completos, con timeline, comandos exactos, IOC y reglas Sigma. Leer uno entero al mes enseña más de intrusiones reales que casi cualquier curso.
+> **The DFIR Report** publica incidentes reales completos: cronología, comandos exactos, IOC y reglas Sigma listas para usar.
 
 ## Errores típicos de un programa de CTI
 
 - **Coleccionismo de IOC.** Meter 3 millones de indicadores en el SIEM sin criterio: sólo se consigue ruido y coste de licencia.
 - **No caducar los indicadores.** Un IOC de hace dos años genera falsos positivos, no detecciones.
 - **Confundir atribución con acción.** Saber que "es APT28" es interesante; no cambia lo que hay que parchear esta tarde.
-- **Producir informes que nadie lee.** Si nadie toma una decisión con tu informe, no era inteligencia.
-- **Ignorar la inteligencia propia.** Tus incidentes pasados son la mejor fuente de amenazas que te afectan de verdad.
+- **Producir informes que nadie lee.** Si nadie toma una decisión a partir del informe, sobra.
+- **Ignorar la inteligencia propia.** Tus incidentes pasados indican qué amenazas te afectan realmente.

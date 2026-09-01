@@ -7,7 +7,7 @@ subtitulo: true
 
 *Adversarial Tactics, Techniques and Common Knowledge*. Una base de conocimiento pública, mantenida por MITRE desde 2013, con el comportamiento real observado de adversarios, organizado y con identificador único.
 
-Es **el lenguaje común** de la ciberseguridad defensiva actual: cuando alguien dice "hemos visto T1059.001", todo el mundo sabe exactamente de qué habla.
+Es el lenguaje común de la ciberseguridad defensiva: al decir "T1059.001" todos los equipos entienden lo mismo.
 
 📎 [attack.mitre.org](https://attack.mitre.org/)
 

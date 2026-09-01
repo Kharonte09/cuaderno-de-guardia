@@ -13,9 +13,9 @@ Análisis de PCAP, detección en red, escaneo y monitorización. El tráfico no 
 ### Wireshark
 `PCAP` `Open source` [wireshark.org](https://www.wireshark.org/)
 
-**Para qué sirve:** el analizador de protocolos de referencia. Abre una captura y permite diseccionar cada paquete, seguir conversaciones y exportar objetos transferidos.
+**Para qué sirve:** analizador de protocolos. Abre una captura y permite diseccionar cada paquete, seguir conversaciones y exportar objetos transferidos.
 
-**Filtros de display imprescindibles:**
+**Filtros de display más usados:**
 
 | Filtro | Para qué |
 |---|---|
@@ -28,7 +28,7 @@ Análisis de PCAP, detección en red, escaneo y monitorización. El tráfico no 
 | `http.request.method == "POST"` | Posible exfiltración |
 | `!(arp || icmp || stp)` | Quitar ruido de fondo |
 
-**Menús que ahorran horas:**
+**Menús más usados:**
 - *Statistics → Conversations*: quién habla con quién y cuántos bytes. Ordena por bytes para ver exfiltración.
 - *Statistics → Protocol Hierarchy*: qué protocolos hay. Un porcentaje raro de "Data" es señal de túnel.
 - *File → Export Objects → HTTP*: extrae los ficheros descargados directamente de la captura.
@@ -62,7 +62,7 @@ tcpdump -i eth0 -nn -s0 -w captura.pcap host 10.0.0.5
 ### NetworkMiner
 `Forense de red` `Gratis (versión libre)` [netresec.com/?page=NetworkMiner](https://www.netresec.com/?page=NetworkMiner)
 
-**Para qué sirve:** análisis **orientado a hosts**, no a paquetes. Abre un PCAP y te presenta directamente los equipos, sistemas operativos detectados, ficheros extraídos, credenciales en claro e imágenes. Para un triaje rápido es más útil que Wireshark.
+**Para qué sirve:** análisis orientado a hosts, no a paquetes. Abre un PCAP y presenta los equipos, sistemas operativos detectados, ficheros extraídos, credenciales en claro e imágenes.
 
 ### Brim / Zui
 `PCAP a escala` `Open source` [zui.brimdata.io](https://zui.brimdata.io/)
@@ -98,7 +98,7 @@ Los conjuntos de reglas habituales son **Emerging Threats Open** (gratis) y ET P
 ### Zeek (antes Bro)
 `Monitor de red` `Open source` [zeek.org](https://zeek.org/)
 
-**Para qué sirve:** no busca firmas, sino que **describe** todo lo que pasa en la red en logs estructurados (`conn.log`, `dns.log`, `http.log`, `ssl.log`, `files.log`). Es la mejor fuente de telemetría de red para cazar amenazas.
+**Para qué sirve:** no busca firmas, sino que **describe** todo lo que pasa en la red en logs estructurados (`conn.log`, `dns.log`, `http.log`, `ssl.log`, `files.log`). Es la base de telemetría de red sobre la que se caza.
 
 > [!TIP]
 > `conn.log` de Zeek contiene la duración y bytes de cada conexión: es el fichero perfecto para buscar beaconing con un simple análisis de intervalos.
@@ -111,7 +111,7 @@ Los conjuntos de reglas habituales son **Emerging Threats Open** (gratis) y ET P
 ### Security Onion
 `Distribución` `Open source` [securityonion.net](https://securityonion.net/)
 
-**Para qué sirve:** distribución completa que integra Zeek, Suricata, Elastic, Kibana y herramientas de caso en un solo despliegue. Es la forma más rápida de tener un NSM funcional (y un laboratorio de aprendizaje excelente).
+**Para qué sirve:** distribución que integra Zeek, Suricata, Elastic, Kibana y herramientas de caso en un solo despliegue. Sirve tanto para producción como para laboratorio.
 
 ## Escaneo y diagnóstico
 
@@ -157,7 +157,7 @@ nc -nv 10.0.0.5 445
 ### mtr / traceroute / dig
 `Diagnóstico` `Open source` [linux.die.net/man/8/mtr](https://linux.die.net/man/8/mtr)
 
-**Para qué sirve:** el básico del básico. `dig` resuelve y muestra la respuesta DNS completa (clave para verificar registros SPF/DMARC y detectar cambios de infraestructura del atacante).
+**Para qué sirve:** diagnóstico de resolución. `dig` resuelve y muestra la respuesta DNS completa (clave para verificar registros SPF/DMARC y detectar cambios de infraestructura del atacante).
 
 ```bash
 dig empresa.com TXT +short          # ver SPF y verificaciones

@@ -13,7 +13,7 @@ Las herramientas pequeñas que se usan veinte veces al día: decodificar, conver
 ### CyberChef
 `Navaja suiza` `Open source` [gchq.github.io/CyberChef](https://gchq.github.io/CyberChef/)
 
-**Para qué sirve:** la herramienta más útil de todo el arsenal. Encadena operaciones ("recetas") para decodificar, descifrar, extraer y analizar datos: Base64, hex, XOR, gzip, URL encoding, JWT, regex, entropía…
+**Para qué sirve:** encadena operaciones ("recetas") para decodificar, descifrar, extraer y analizar datos: Base64, hex, XOR, gzip, URL encoding, JWT, regex, entropía.
 
 **Recetas que se usan constantemente:**
 
@@ -28,7 +28,7 @@ Las herramientas pequeñas que se usan veinte veces al día: decodificar, conver
 | Deshacer varias capas | `Magic` (adivina la codificación y la deshace) |
 
 > [!TIP]
-> La operación **Magic** con *Intensive mode* resuelve sola la mayoría de ofuscaciones de una capa. Empieza siempre por ahí antes de pelearte a mano.
+> La operación **Magic** con *Intensive mode* resuelve la mayoría de ofuscaciones de una capa. Conviene probarla antes de deshacerlas a mano.
 
 ### Base64Decode / URLDecode
 `Rápido` `Gratis` [base64decode.org](https://www.base64decode.org/)
@@ -57,7 +57,7 @@ Las herramientas pequeñas que se usan veinte veces al día: decodificar, conver
 ### VirusTotal
 `Multimotor` `Gratis + API` [virustotal.com](https://www.virustotal.com/)
 
-**Para qué sirve:** ya está en [Threat Intelligence](#/herramientas/threat-intelligence), pero merece estar también aquí: es el reflejo automático ante cualquier hash, URL, IP o dominio.
+**Para qué sirve:** consulta de hash, URL, IP o dominio. Ficha completa en [Threat Intelligence](#/herramientas/threat-intelligence).
 
 ### Calculadora de hashes
 `Hashes` `Gratis` [emn178.github.io/online-tools/sha256_checksum.html](https://emn178.github.io/online-tools/sha256_checksum.html)
@@ -124,12 +124,12 @@ hashcat --identify hashes.txt        # ¿qué tipo de hash es esto?
 ### Obsidian
 `Notas` `Gratis` [obsidian.md](https://obsidian.md/)
 
-**Para qué sirve:** tomar notas en Markdown con enlaces entre ellas. Es la forma más práctica de mantener unos apuntes personales de investigación y de casos, y encaja perfectamente con un repositorio como este.
+**Para qué sirve:** notas en Markdown enlazadas entre sí, en local. Sirve para mantener apuntes de investigación y de casos.
 
 ### draw.io / Excalidraw
 `Diagramas` `Gratis` [app.diagrams.net](https://app.diagrams.net/)
 
-**Para qué sirve:** dibujar la topología del incidente, la cadena de ataque o el flujo de datos. Un diagrama en el informe vale por tres páginas de texto.
+**Para qué sirve:** dibujar la topología del incidente, la cadena de ataque o el flujo de datos para el informe.
 
 ### Timeline Explorer
 `Tablas` `Gratis` [ericzimmerman.github.io](https://ericzimmerman.github.io/)
@@ -139,7 +139,7 @@ hashcat --identify hashes.txt        # ¿qué tipo de hash es esto?
 ### Notion / Markdown + Git
 `Documentación` `Freemium` [notion.so](https://www.notion.so/)
 
-**Para qué sirve:** mantener los playbooks y procedimientos del SOC vivos. Lo importante no es la herramienta sino que el playbook esté **actualizado y accesible a las 3 de la mañana**.
+**Para qué sirve:** mantener actualizados los playbooks y procedimientos del SOC, y accesibles fuera de horario.
 
 ## Trucos de línea de comandos
 
@@ -164,4 +164,4 @@ find / -mtime -1 -type f 2>/dev/null   # ficheros modificados en 24 h
 ```
 
 > [!TIP]
-> Ese último `grep` de `auth.log` resuelve el 90 % de los casos de "nos están haciendo fuerza bruta por SSH": te da directamente el ranking de IPs atacantes.
+> El último `grep` de `auth.log` devuelve el ranking de IPs con más intentos fallidos, que es lo que se necesita ante una fuerza bruta por SSH.

@@ -9,7 +9,7 @@ Una nota rápida sobre cómo está organizado esto y cómo se amplía, para que 
 
 ## Organización
 
-El menú sigue el orden en que tiene sentido aprenderlo: de la teoría al oficio, del oficio a las herramientas, y de ahí a la referencia rápida. Se puede leer de arriba abajo como un curso, o saltar directo a lo que necesites.
+El menú sigue el orden en que se aprende: teoría, oficio, herramientas y referencia rápida.
 
 | Bloque | Qué contiene | Cuándo se usa |
 |---|---|---|
@@ -19,7 +19,7 @@ El menú sigue el orden en que tiene sentido aprenderlo: de la teoría al oficio
 | **Herramientas** | Fichas por categoría: qué es, para qué sirve, uso básico | Cuando necesitas una concreta |
 | **Cheatsheets** | Sólo tablas y comandos, sin explicación | Con el incidente delante |
 
-La diferencia entre las dos últimas: las **herramientas** te dicen con qué se hace algo; las **cheatsheets** son para copiar y pegar sin leer.
+Diferencia entre las dos últimas: las herramientas explican con qué se hace algo; las cheatsheets son para copiar y pegar.
 
 El contenido cubre lo que se ha ido viendo, no todo lo que existe. Si un tema no está, es que aún no toca.
 
@@ -112,6 +112,6 @@ Hace falta un servidor porque el sitio carga los `.md` con `fetch()`, y abrir `i
 
 ## Aviso
 
-Estos son apuntes personales de estudio y consulta rápida, orientados a **seguridad defensiva**. Pueden contener errores y quedarse desactualizados: ante una decisión importante, contrasta con la documentación oficial.
+Apuntes personales de estudio, orientados a seguridad defensiva. Pueden contener errores o estar desactualizados: ante una decisión importante, contrasta con la documentación oficial.
 
-Muchas de las herramientas listadas son de **doble uso**. Utilizarlas contra sistemas que no son tuyos, sin autorización expresa y por escrito, es un delito. Aquí se recogen para entender cómo funciona un ataque y poder defenderse de él.
+Usar las herramientas listadas contra sistemas ajenos sin autorización por escrito es un delito.

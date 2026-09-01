@@ -22,14 +22,14 @@ Todo lo que se hace **antes** de que pase nada, y lo que realmente determina có
 - Formación y simulacros. Un plan sin ensayar no es un plan.
 
 > [!IMPORTANT]
-> Es la fase más importante y la única que se puede hacer con calma. Todo lo que no esté preparado antes se improvisará a las tres de la mañana, mal.
+> Es la única fase que se puede hacer con calma. Lo que no esté preparado antes se improvisará durante el incidente.
 
 ### 2. Identificación
 
 Confirmar que hay incidente, determinar su alcance y clasificarlo.
 
 - ¿Qué ha pasado, desde cuándo y qué sistemas están afectados?
-- ¿Cuál es el vector inicial? (Sin esto no se puede erradicar de verdad.)
+- ¿Cuál es el vector inicial? Sin esto no se puede erradicar.
 - ¿Hay datos personales implicados? → arranca el reloj del RGPD.
 - Clasificar severidad y activar el nivel de escalado correspondiente.
 - **Abrir el registro del incidente**: bitácora cronológica de todo lo que se hace, con hora UTC y quién lo hizo.
@@ -75,12 +75,12 @@ Reunión en caliente (menos de dos semanas después) con todos los implicados:
 
 - Cronología definitiva de qué pasó y cuándo.
 - Qué funcionó, qué falló y **qué habría reducido el impacto**.
-- Acciones concretas, con responsable y fecha. Sin eso, la reunión no sirve para nada.
+- Acciones concretas, con responsable y fecha.
 - Nuevas detecciones a escribir a partir de este incidente.
 - Actualizar el playbook con lo aprendido.
 
 > [!TIP]
-> La cultura importa: la reunión es *blameless*. Si la gente teme que se busque un culpable, dejará de reportar incidentes a tiempo, y eso cuesta mucho más que cualquier error.
+> La reunión es *blameless*: si se busca culpable, la gente deja de reportar incidentes a tiempo.
 
 ## Clasificación de severidad
 
@@ -126,4 +126,4 @@ Se abre al principio y se rellena en tiempo real. Como mínimo:
 | 09:22 | analista2 | Volcado de memoria con WinPMEM | `mem.raw` SHA256 `ab12…` |
 | 09:40 | analista1 | Bloqueada IP 203.0.113.45 en perímetro | Cambio FW-882 |
 
-Es lo que sostiene el informe final, la notificación legal y, si llega el caso, el procedimiento judicial.
+Sostiene el informe final, la notificación legal y, si llega el caso, el procedimiento judicial.

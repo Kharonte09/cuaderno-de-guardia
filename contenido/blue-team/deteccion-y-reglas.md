@@ -5,7 +5,7 @@ subtitulo: true
 
 # Detección y reglas
 
-Consumir reglas de otros está bien; escribirlas es lo que convierte a un analista en ingeniero de detección. Los tres lenguajes que hay que conocer son **Sigma** (logs), **YARA** (ficheros y memoria) y **Suricata** (red).
+Los tres lenguajes de detección que hay que conocer: **Sigma** (logs), **YARA** (ficheros y memoria) y **Suricata** (red).
 
 ## Sigma — reglas para SIEM
 
@@ -67,7 +67,7 @@ sigma convert -t kusto regla.yml                      # Sentinel / Defender
 ```
 
 > [!TIP]
-> Aunque no uses Sigma en producción, **escribe la regla primero en Sigma**. Obliga a pensar en la lógica en vez de en la sintaxis del SIEM, y la regla sobrevive a un cambio de plataforma.
+> Escribir la regla primero en Sigma, aunque no se use en producción, separa la lógica de la sintaxis del SIEM y sobrevive a un cambio de plataforma.
 
 ## YARA — reglas para ficheros y memoria
 
@@ -102,8 +102,8 @@ rule Stealer_Generico_Config
 ```
 
 **Puntos importantes:**
-- `ascii wide` cubre las dos codificaciones de cadena de Windows; olvidarlo hace fallar la mitad de las reglas.
-- `uint16(0) == 0x5A4D` y un `filesize` acotado hacen la regla **mucho más rápida** sobre una flota entera.
+- `ascii wide` cubre las dos codificaciones de cadena de Windows; sin eso, muchas reglas no casan.
+- `uint16(0) == 0x5A4D` y un `filesize` acotado aceleran mucho el escaneo sobre una flota entera.
 - Pide **varias cadenas** (`2 of`), no una sola: una cadena aislada genera falsos positivos.
 - Evita cadenas genéricas (`http://`, `kernel32.dll`) y prefiere lo único de la muestra: mutex, rutas PDB del desarrollador, claves de cifrado, URIs concretas.
 
@@ -113,7 +113,7 @@ yara -s reglas.yar muestra.exe             # mostrar qué cadenas casaron
 ```
 
 > [!TIP]
-> Repositorios de referencia para aprender: las reglas de **Florian Roth** (Neo23x0/signature-base) son el mejor material de estudio que existe sobre cómo se escribe una regla YARA seria.
+> Para ver reglas YARA bien escritas: el repositorio **signature-base** de Florian Roth (Neo23x0).
 
 ## Suricata — reglas de red
 
@@ -132,7 +132,7 @@ alert http $HOME_NET any -> $EXTERNAL_NET any ( \
 **Estructura:** acción · protocolo · origen · puerto · dirección · destino · puerto · (opciones).
 
 - `sid` por encima de 1000000 para reglas propias, para no chocar con las de Emerging Threats.
-- `flow:established,to_server` evita evaluar tráfico irrelevante y mejora mucho el rendimiento.
+- `flow:established,to_server` evita evaluar tráfico irrelevante y mejora el rendimiento.
 - Usa los *sticky buffers* modernos (`http.uri`, `http.user_agent`, `tls.sni`) en vez de `content` a pelo.
 
 ## Cómo se construye una detección buena
@@ -142,8 +142,8 @@ alert http $HOME_NET any -> $EXTERNAL_NET any ( \
 3. **Escríbela lo más específica que puedas sin atarla a un artefacto desechable.**
 4. **Mídela contra datos históricos** antes de activarla: si sobre 30 días genera 4.000 aciertos, no está lista.
 5. **Documenta los falsos positivos esperados** dentro de la propia regla.
-6. **Pruébala de verdad** con [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) — que la técnica salte, no que "debería saltar".
-7. **Escribe el playbook a la vez que la regla.** Una alerta sin instrucciones de qué hacer es una alerta que se cerrará mal.
+6. **Pruébala** con [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team): lanzar la técnica y comprobar que la alerta dispara.
+7. **Escribe el playbook a la vez que la regla.** Una alerta sin instrucciones se cierra mal.
 8. **Revísala periódicamente.** Las detecciones caducan: cambian las versiones, los productos y los atacantes.
 
 > [!IMPORTANT]
@@ -160,8 +160,8 @@ El ciclo:
 1. **Hipótesis** — basada en CTI, en ATT&CK o en el conocimiento del entorno.
 2. **Datos** — ¿dónde lo vería? ¿Sysmon 7? ¿`conn.log`?
 3. **Búsqueda** — consulta amplia, sin filtrar de más al principio.
-4. **Análisis** — separar lo normal de lo anómalo. Aquí es donde importa conocer tu entorno.
-5. **Resultado** — o encuentras algo (→ incidente), o no (→ igualmente valioso: ahora sabes que ahí no está).
+4. **Análisis** — separar lo normal de lo anómalo, lo que exige conocer el entorno.
+5. **Resultado** — o encuentras algo, y es un incidente, o descartas esa hipótesis para el entorno.
 6. **Automatizar** — toda caza que valga la pena repetirse se convierte en una regla.
 
 **Hipótesis de caza para empezar:**
@@ -176,4 +176,4 @@ El ciclo:
 - Cuentas que se autentican contra un número inusual de equipos.
 
 > [!TIP]
-> El mejor recurso gratuito para aprender a cazar es leer los informes de **The DFIR Report**: cada uno trae los comandos exactos del atacante y las reglas Sigma correspondientes. Coge uno, y busca en tu entorno lo que describe.
+> Los informes de **The DFIR Report** traen los comandos exactos del atacante y las reglas Sigma correspondientes: sirven directamente como hipótesis de caza.

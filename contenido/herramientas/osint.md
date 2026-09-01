@@ -26,7 +26,7 @@ OSINT es **inteligencia a partir de fuentes abiertas**: todo lo que se puede ave
 - `product:"Apache" version:"2.4.49"` — servicios en versión vulnerable.
 
 > [!TIP]
-> Para revisar tu propia superficie de ataque, empieza por `org:` y `ssl:` y ordena por *last seen*. Lo que más sorprende siempre son los entornos de preproducción.
+> Para revisar la superficie de ataque propia: `org:` y `ssl:`, ordenando por *last seen*. Suelen aparecer entornos de preproducción olvidados.
 
 ### Censys
 `Buscador` `Freemium` [search.censys.io](https://search.censys.io/)
@@ -55,7 +55,7 @@ OSINT es **inteligencia a partir de fuentes abiertas**: todo lo que se puede ave
 ### ViewDNS.info
 `DNS` `Gratis` [viewdns.info](https://viewdns.info/)
 
-**Para qué sirve:** navaja suiza de consultas DNS y WHOIS desde el navegador: DNS histórico, IP compartida (*reverse IP lookup*), propagación, whois inverso.
+**Para qué sirve:** consultas DNS y WHOIS desde el navegador: DNS histórico, IP compartida (*reverse IP lookup*), propagación, whois inverso.
 
 **Uso básico:** *Reverse IP Lookup* sobre la IP de un dominio de phishing suele revelar decenas de dominios hermanos de la misma campaña.
 
@@ -87,7 +87,7 @@ subfinder -d empresa.com -silent | httpx -title -status-code
 ### Whois
 `Registro` `Gratis` [whois.domaintools.com](https://whois.domaintools.com/)
 
-**Para qué sirve:** datos de registro de un dominio. Con GDPR casi todo está anonimizado, pero **la fecha de creación sigue siendo oro**: un dominio registrado hace 3 días que te manda una factura es phishing casi seguro.
+**Para qué sirve:** datos de registro de un dominio. Con GDPR casi todo está anonimizado, pero la **fecha de creación** sigue visible: un dominio registrado hace tres días que envía una factura es casi con certeza phishing.
 
 ## Personas, correos y filtraciones
 
@@ -144,7 +144,7 @@ python3 sherlock.py nombre_usuario
 ### Google Dorks
 `Técnica` `Gratis` [exploit-db.com/google-hacking-database](https://www.exploit-db.com/google-hacking-database)
 
-**Para qué sirve:** exprimir buscadores con operadores para encontrar exposiciones no intencionadas.
+**Para qué sirve:** usar operadores de búsqueda para encontrar exposiciones no intencionadas.
 
 **Operadores esenciales:**
 
@@ -184,7 +184,7 @@ curl "http://web.archive.org/cdx/search/cdx?url=empresa.com*&output=text&fl=orig
 ### OSINT Framework
 `Índice` `Gratis` [osintframework.com](https://osintframework.com/)
 
-**Para qué sirve:** árbol navegable con cientos de recursos OSINT clasificados por tipo de dato. Cuando no sabes por dónde empezar, se empieza aquí.
+**Para qué sirve:** árbol navegable con cientos de recursos OSINT clasificados por tipo de dato.
 
 ### Maltego
 `Grafos` `Freemium` [maltego.com](https://www.maltego.com/)
@@ -224,4 +224,4 @@ exiftool -gps:all -o limpio.jpg foto.jpg   # quitar GPS
 ### Búsqueda inversa de imágenes
 `Imágenes` `Gratis` [images.google.com](https://images.google.com/)
 
-**Para qué sirve:** comprobar si una foto de perfil es robada (típico en cuentas falsas y fraude del CEO). **Yandex** suele dar mejores resultados que Google para caras, y **TinEye** para encontrar la primera aparición de una imagen.
+**Para qué sirve:** comprobar si una foto de perfil está reutilizada, habitual en cuentas falsas y fraude del CEO. Yandex funciona mejor con caras; TinEye, para localizar la primera aparición de una imagen.

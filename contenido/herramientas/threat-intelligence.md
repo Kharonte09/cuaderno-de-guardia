@@ -16,7 +16,7 @@ Todo lo que sirve para responder a la pregunta que más veces se hace en un SOC:
 ### VirusTotal
 `Multimotor` `Gratis + API` [virustotal.com](https://www.virustotal.com/)
 
-**Para qué sirve:** analizar ficheros, hashes, URLs, dominios e IPs contra ~70 motores antivirus, y ver relaciones entre indicadores. Es la primera parada de casi cualquier análisis.
+**Para qué sirve:** analizar ficheros, hashes, URLs, dominios e IPs contra ~70 motores antivirus, y ver relaciones entre indicadores. Suele ser la primera consulta de cualquier análisis.
 
 **Uso básico:**
 1. Pega el **hash SHA256** antes de subir nada. Si ya está analizado, tienes el veredicto sin exponer el fichero.
@@ -26,7 +26,7 @@ Todo lo que sirve para responder a la pregunta que más veces se hace en un SOC:
 5. Pestaña **Community**: comentarios de analistas, a veces con el nombre de la familia.
 
 > [!TIP]
-> El nombre que da cada motor (`Trojan.GenericKD.12345`) es basura para clasificar. Fíjate mejor en los nombres de familias concretas de Kaspersky, ESET o Microsoft.
+> Los nombres genéricos de motor (`Trojan.GenericKD.12345`) no sirven para clasificar. Fíjate en los nombres de familia concretos de Kaspersky, ESET o Microsoft.
 
 ### Hybrid Analysis
 `Sandbox` `Gratis con registro` [hybrid-analysis.com](https://www.hybrid-analysis.com/)
@@ -62,12 +62,12 @@ Todo lo que sirve para responder a la pregunta que más veces se hace en un SOC:
 ### GreyNoise
 `Contexto` `Gratis limitado` [viz.greynoise.io](https://viz.greynoise.io/)
 
-**Para qué sirve:** distinguir el **ruido de fondo de internet** (escáneres masivos, Shodan, Censys, bots) de un ataque dirigido contra ti. Es el mejor reductor de falsos positivos que existe para alertas perimetrales.
+**Para qué sirve:** distinguir el **ruido de fondo de internet** (escáneres masivos, Shodan, Censys, bots) de un ataque dirigido contra ti. Reduce mucho los falsos positivos en alertas perimetrales.
 
 **Uso básico:** si GreyNoise clasifica la IP como *Benign* (Google, Cloudflare) o como escáner masivo, tu alerta baja de prioridad al instante. Si dice *unknown*, presta atención: puede ser dirigido.
 
 > [!TIP]
-> "Esta IP nos ha escaneado el puerto 443" + GreyNoise = *Internet scanner, visto por 3.000 sensores* → no es un ataque contra vosotros, es internet siendo internet.
+> Si GreyNoise marca la IP como escáner visto por miles de sensores, no es un ataque dirigido: es ruido de fondo de internet.
 
 ## Bases de datos de muestras e IOC
 
@@ -116,7 +116,7 @@ Todo lo que sirve para responder a la pregunta que más veces se hace en un SOC:
 3. Exporta en formatos listos para consumir: Suricata, Snort, STIX, CSV, OpenIOC.
 
 > [!NOTE]
-> Si trabajas en un SOC con clientes de un mismo sector, MISP es lo que convierte "lo vi en el cliente A" en "lo bloqueo en los clientes B, C y D".
+> En un SOC con varios clientes del mismo sector, MISP permite propagar a los demás lo detectado en uno.
 
 ### OpenCTI
 `Plataforma` `Open source` [opencti.io](https://www.opencti.io/)
@@ -138,7 +138,7 @@ Todo lo que sirve para responder a la pregunta que más veces se hace en un SOC:
 ### Recorded Future / Mandiant Advantage / Anomali
 `Comercial` `De pago` [recordedfuture.com](https://www.recordedfuture.com/)
 
-**Para qué sirve:** inteligencia comercial con analistas propios, informes de actores y puntuación de riesgo integrable en el SIEM. Se mencionan porque son los nombres que aparecen en las ofertas de empleo; su valor está en el contexto y el análisis humano, no en la lista de IOC.
+**Para qué sirve:** inteligencia comercial con analistas propios, informes de actores y puntuación de riesgo integrable en el SIEM. Aportan contexto y análisis humano, no sólo listas de IOC.
 
 ## Sandboxes públicos
 
@@ -180,12 +180,12 @@ Todo lo que sirve para responder a la pregunta que más veces se hace en un SOC:
 ### NVD / CVE
 `Referencia` `Gratis` [nvd.nist.gov](https://nvd.nist.gov/)
 
-**Para qué sirve:** ficha oficial de cada vulnerabilidad: descripción, CVSS, productos afectados y referencias. Es la fuente de verdad para "¿qué es CVE-2024-XXXX?".
+**Para qué sirve:** ficha oficial de cada vulnerabilidad: descripción, CVSS, productos afectados y referencias. Es la referencia oficial de cada CVE.
 
 ### CISA KEV
 `Priorización` `Gratis` [cisa.gov/known-exploited-vulnerabilities-catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 
-**Para qué sirve:** catálogo de vulnerabilidades **explotadas de verdad en el mundo real**. Si un CVE está en KEV, se parchea ya, tenga el CVSS que tenga.
+**Para qué sirve:** catálogo de vulnerabilidades con explotación confirmada en entornos reales. Si un CVE está en KEV, se parchea con prioridad, sea cual sea su CVSS.
 
 > [!TIP]
 > Para priorizar parches: KEV primero, luego EPSS (probabilidad de explotación), y sólo después CVSS. El CVSS mide gravedad teórica, no urgencia.

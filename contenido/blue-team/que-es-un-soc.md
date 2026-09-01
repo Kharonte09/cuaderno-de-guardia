@@ -7,7 +7,7 @@ subtitulo: true
 
 Un **Security Operations Center** es el equipo (y el conjunto de procesos y tecnología) responsable de vigilar, detectar, analizar y responder a incidentes de seguridad de forma continua. Suele operar 24×7 en turnos.
 
-Lo importante: un SOC no es un SIEM. Es **personas + procesos + tecnología**, y el orden importa: un SIEM caro con procesos malos y un equipo quemado no detecta nada.
+Un SOC no es un SIEM: es personas, procesos y tecnología, en ese orden de importancia.
 
 ## Niveles y roles
 
@@ -29,7 +29,7 @@ Lo importante: un SOC no es un SIEM. Es **personas + procesos + tecnología**, y
 
 - **Interno**: la empresa lo monta y lo opera. Máximo conocimiento del negocio, coste alto (un 24×7 real requiere unas 8-10 personas mínimo).
 - **MSSP / SOC gestionado**: se contrata a un proveedor que vigila a muchos clientes. Más barato, menos contexto del negocio.
-- **MDR** (*Managed Detection and Response*): como el MSSP pero con capacidad de **responder**, no sólo avisar. Es el modelo que más crece.
+- **MDR** (*Managed Detection and Response*): como el MSSP pero con capacidad de responder, no sólo avisar.
 - **Híbrido**: el proveedor cubre noches y fines de semana; el equipo interno el horario laboral y la respuesta.
 - **Virtual / bajo demanda**: sin turnos permanentes, con retenedor de respuesta a incidentes.
 
@@ -55,11 +55,11 @@ Lo importante: un SOC no es un SIEM. Es **personas + procesos + tecnología**, y
                                               +--------------+
 ```
 
-## Métricas que se miran de verdad
+## Métricas
 
 | Métrica | Qué mide | Por qué importa |
 |---|---|---|
-| **MTTD** | Tiempo medio hasta detectar | Es la métrica reina; cada hora cuenta |
+| **MTTD** | Tiempo medio hasta detectar | Cuanto antes se detecta, menor es el impacto |
 | **MTTA** | Tiempo medio hasta que alguien coge la alerta | Detecta problemas de dimensionamiento |
 | **MTTR** | Tiempo medio hasta contener/resolver | Mide la eficacia de la respuesta |
 | **Tasa de falsos positivos** | % de alertas sin valor | Por encima del 90 % el equipo se quema |
@@ -68,13 +68,13 @@ Lo importante: un SOC no es un SIEM. Es **personas + procesos + tecnología**, y
 | **Escalados correctos** | Calidad del triaje de L1 | Mide formación, no castiga |
 
 > [!WARNING]
-> Cuidado con optimizar el **número de alertas cerradas**. Es la métrica que más rápido degrada un SOC: incentiva cerrar rápido y mal. Mejor medir calidad de la investigación y tiempo de detección.
+> Medir el **número de alertas cerradas** incentiva cerrar rápido y mal. Mejor medir tiempo de detección y calidad de la investigación.
 
 ## Fatiga de alertas
 
-Es el problema estructural del sector. Un SOC recibe miles de alertas al día y la mayoría no valen nada. Lo que funciona contra ello:
+Un SOC recibe miles de alertas al día y la mayoría no aportan nada. Qué funciona:
 
-1. **Afinar en origen.** Cada falso positivo recurrente es una regla que hay que arreglar, no una molestia que tolerar.
+1. **Afinar en origen.** Cada falso positivo recurrente es una regla que hay que corregir.
 2. **Automatizar el enriquecimiento.** Que la alerta llegue ya con reputación de la IP, contexto del usuario y hash consultado. Ahorra el 70 % del tiempo de triaje.
 3. **Agrupar.** 300 alertas del mismo equipo son **un** incidente, no 300.
 4. **Suprimir con criterio y con fecha.** Toda excepción debe tener dueño y caducidad, o el SIEM acaba ciego.
@@ -93,10 +93,10 @@ Si hay que montar detección desde cero, este es un orden razonable por relació
 7. Servicios y tareas programadas nuevas (7045, 4698).
 8. Acceso a memoria de LSASS.
 9. Conexiones salientes a dominios recién registrados o a IPs de C2 conocidas.
-10. Detecciones del antivirus/EDR **no remediadas** (la que más se ignora y más duele).
+10. Detecciones del antivirus/EDR **no remediadas**.
 
 > [!TIP]
-> Las cinco primeras cubren la mayoría de intrusiones reales que empiezan por phishing o credenciales. Si tu SOC sólo tuviera cinco reglas, que sean ésas.
+> Las cinco primeras cubren la mayoría de intrusiones que empiezan por phishing o por credenciales robadas.
 
 ## Un turno realista
 
@@ -104,5 +104,5 @@ Si hay que montar detección desde cero, este es un orden razonable por relació
 - **Cola de alertas**: triar por prioridad, no por antigüedad.
 - **Casos abiertos**: seguimiento de lo escalado.
 - **Vigilancia**: avisos de CTI, boletines, vulnerabilidades críticas del día.
-- **Mejora**: si sobra tiempo, afinar una regla o documentar un playbook. Este apartado es el que distingue un SOC que mejora de uno que sólo aguanta.
-- **Traspaso**: dejar por escrito lo que queda pendiente. Un buen traspaso es la mitad de un buen SOC.
+- **Mejora**: si sobra tiempo, afinar una regla o documentar un playbook.
+- **Traspaso**: dejar por escrito lo que queda pendiente.

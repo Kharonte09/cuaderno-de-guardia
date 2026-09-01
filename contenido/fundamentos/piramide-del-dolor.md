@@ -7,7 +7,7 @@ subtitulo: true
 
 Modelo de **David Bianco (2013)**. Ordena los tipos de indicador según **cuánto le duele al atacante** que se los detectes y bloquees. Cuanto más arriba, más caro le resulta adaptarse.
 
-Es la mejor respuesta corta a la pregunta "¿por qué bloquear IPs no nos está sirviendo de nada?".
+Responde a por qué bloquear IPs deja de servir a los pocos días.
 
 ## La pirámide
 
@@ -48,7 +48,7 @@ MD5, SHA1, SHA256 de un fichero concreto.
 ### Nombres de dominio — Fastidioso
 
 - **Al atacante le cuesta:** registrar, pagar, esperar propagación DNS y actualizar sus implantes. Horas o días.
-- **Sirve para:** filtrado DNS, que es una de las medidas con mejor relación coste/beneficio que existe.
+- **Sirve para:** filtrado DNS, barato de desplegar y efectivo mientras el dominio siga activo.
 - **Nota:** los DGA (algoritmos generadores de dominios) están pensados justo para abaratar este nivel; se contrarrestan detectando el **patrón** de consultas, no los dominios uno a uno.
 
 ### Artefactos de red y host — Molesto
@@ -65,14 +65,14 @@ Detectar la herramienta en sí, con independencia de su configuración: Mimikatz
 
 - **Al atacante le cuesta:** buscar una alternativa, aprenderla y reconstruir su flujo de trabajo. Semanas.
 - **Sirve para:** reglas YARA sólidas, detección por comportamiento del EDR, control de aplicaciones.
-- **Ejemplo:** detectar cualquier acceso al proceso `lsass.exe` con permisos de lectura de memoria mata a Mimikatz **y** a todas sus variantes, sin importar cómo estén ofuscadas.
+- **Ejemplo:** detectar cualquier acceso al proceso `lsass.exe` con permisos de lectura de memoria detecta Mimikatz y sus variantes, estén ofuscadas o no.
 
 ### TTP — ¡Brutal!
 
 El comportamiento: cómo entra, cómo escala, cómo se mueve, en qué orden.
 
 - **Al atacante le cuesta:** rediseñar su forma de operar y volver a entrenarse. Meses, y a veces le sale más rentable buscar otra víctima.
-- **Sirve para:** detecciones duraderas. Son las que siguen funcionando el año que viene.
+- **Sirve para:** detecciones que siguen funcionando meses o años después.
 - **Ejemplos:**
   - Un proceso de Office lanzando un intérprete de comandos.
   - Un binario firmado cargando una DLL desde `%APPDATA%` (*sideloading*).
@@ -105,6 +105,5 @@ Llega un aviso: *"IP 203.0.113.45 es C2 de un stealer"*.
 2. **Dominio** → paso resolución inversa y DNS pasivo: la IP aloja 12 dominios de la campaña. Los bloqueo todos en el DNS.
 3. **Artefacto** → analizo una muestra: el implante usa el user-agent `Mozilla/5.0 (Windows NT 6.1) Custom` y pide `/api/gate.php`. Escribo una regla Suricata.
 4. **Herramienta** → identifico la familia (RedLine). Aplico una regla YARA de la familia sobre memoria en toda la flota con Velociraptor.
-5. **TTP** → veo que llega siempre como adjunto ISO con LNK que lanza PowerShell. Escribo una regla Sigma: *proceso hijo de `explorer.exe` ejecutando `powershell.exe` con `-enc` desde un volumen montado*. **Ésta detecta la próxima campaña, sea de quien sea.**
+5. **TTP** → veo que llega siempre como adjunto ISO con LNK que lanza PowerShell. Escribo una regla Sigma: *proceso hijo de `explorer.exe` ejecutando `powershell.exe` con `-enc` desde un volumen montado*. Esta regla sigue valiendo para la siguiente campaña.
 
-Ese recorrido, de 1 a 5, es literalmente en qué consiste madurar como analista.

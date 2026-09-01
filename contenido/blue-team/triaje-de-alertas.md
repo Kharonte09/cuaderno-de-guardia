@@ -5,7 +5,7 @@ subtitulo: true
 
 # Triaje de alertas
 
-El triaje es el trabajo central de un analista: pasar de "ha saltado una alerta" a una conclusión defendible en el menor tiempo posible. La diferencia entre un analista bueno y uno mediocre no es saber más herramientas, sino **tener método**.
+El triaje consiste en pasar de una alerta a una conclusión documentada en el menor tiempo posible. Lo que marca el resultado es el método, no el número de herramientas.
 
 ## Las cinco preguntas
 
@@ -45,7 +45,7 @@ Antes de pegar nada en VirusTotal, anota: hora (con zona horaria), equipo, usuar
 
 ### Paso 4 — Buscar alrededor
 
-Consultas que casi siempre aportan:
+Consultas habituales:
 
 ```
 # Todo lo del equipo en la ventana del incidente
@@ -63,7 +63,7 @@ user = jperez AND (logon OR process_creation)
 
 ### Paso 5 — Documentar
 
-Un ticket bien cerrado contiene: qué alertó, qué se comprobó, **con qué evidencias**, cuál es la conclusión y qué se recomienda. Si dentro de seis meses alguien lee tu ticket y no puede reconstruir tu razonamiento, no estaba bien cerrado.
+Un ticket bien cerrado contiene: qué alertó, qué se comprobó, **con qué evidencias**, cuál es la conclusión y qué se recomienda. El criterio: que otra persona pueda reconstruir el razonamiento seis meses después.
 
 ## Árbol de decisión rápido
 
@@ -90,7 +90,7 @@ Un ticket bien cerrado contiene: qué alertó, qué se comprobó, **con qué evi
 
 ## Señales de alta fidelidad
 
-Si ves alguna de éstas, deja de dudar y escala:
+Si aparece alguna de éstas, escala:
 
 - `vssadmin delete shadows` o `wbadmin delete catalog`.
 - Limpieza del log de seguridad (**Event ID 1102**).
