@@ -1,0 +1,18 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (sólo por si en el futuro se añade alguna herramienta)
+node_modules/
+package-lock.json
+
+# Borradores y notas locales que no se publican
+borradores/
+*.local.md

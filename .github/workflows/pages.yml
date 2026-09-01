@@ -1,0 +1,56 @@
+name: Desplegar en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un despliegue a la vez; no cancela el que ya esté en marcha.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobar que nav.json es válido
+        run: node -e "JSON.parse(require('fs').readFileSync('contenido/nav.json','utf8'))"
+
+      - name: Comprobar que todas las rutas del menú existen
+        run: |
+          node -e "
+          const fs = require('fs');
+          const nav = JSON.parse(fs.readFileSync('contenido/nav.json','utf8'));
+          const faltan = nav.grupos
+            .flatMap(g => g.paginas)
+            .filter(p => !fs.existsSync('contenido/' + p.ruta + '.md'));
+          if (faltan.length) {
+            console.error('Faltan ficheros:', faltan.map(p => p.ruta).join(', '));
+            process.exit(1);
+          }
+          console.log('Todas las rutas del menú existen.');
+          "
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Empaquetar el sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Desplegar
+        id: deployment
+        uses: actions/deploy-pages@v4
