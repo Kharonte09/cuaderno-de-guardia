@@ -415,27 +415,6 @@ pre:hover .copy-btn, .copy-btn:focus{ opacity:1; }
 a.tag.link{ color:var(--accent); border-color:color-mix(in srgb,var(--accent) 40%,transparent); }
 a.tag.link:hover{ background:color-mix(in srgb,var(--accent) 14%,transparent); text-decoration:none; }
 
-/* ---------------- Rejilla de tarjetas de portada ---------------- */
-.card-grid{
-  display:grid; gap:14px; margin:22px 0 30px;
-  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
-}
-.card{
-  display:flex; flex-direction:column; gap:5px;
-  padding:18px; border-radius:var(--radius);
-  border:1px solid var(--line); background:var(--bg-soft);
-  color:var(--txt); transition:.18s; position:relative; overflow:hidden;
-}
-.card::after{
-  content:""; position:absolute; inset:0 auto 0 0; width:3px;
-  background:linear-gradient(var(--accent), var(--accent-2)); opacity:0; transition:.18s;
-}
-.card:hover{ transform:translateY(-2px); border-color:color-mix(in srgb,var(--accent) 45%,transparent); box-shadow:var(--shadow); text-decoration:none; }
-.card:hover::after{ opacity:1; }
-.card .card-ico{ font-size:22px; line-height:1; }
-.card b{ font-size:15.5px; letter-spacing:-.01em; }
-.card span{ font-size:13.2px; color:var(--txt-dim); line-height:1.55; }
-
 /* Estadísticas de portada */
 .stats{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 26px; }
 .stat{

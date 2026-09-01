@@ -4,142 +4,42 @@ titulo: Inicio
 
 # Cuaderno de Guardia
 
+
+> [!WARNING]
+> Hay ciertas herramientas/técnicas nombradas en esta web que podrían causar daños temporales o permanentes en infraestructuras.
+>
+> Usa estas herramientas solo sobre sistemas tuyos o con autorización del dueño de dichos sistemas.
+
 ## ¿Dónde estoy?
 
-En unos apuntes de **ciberseguridad defensiva**. Hay cuatro bloques: los modelos que estructuran el oficio, cómo se organiza el trabajo en un SOC, fichas de herramientas y chuletas de consulta rápida.
+**En mis apuntes, ni más ni menos, aunque el objetivo es crear una mini Wiki sobre ciberseguridad.**
 
-Se puede leer de arriba abajo, como un curso, o ir directo a lo que necesites con el buscador (tecla <kbd>/</kbd>).
+**Está distribuida en cuatro bloques:**
+
+**Fundamentos:** Marcos y modelos teóricos, conceptos y teoría general.
+
+**El trabajo en el SOC:** Cómo se organiza el trabajo en un entorno real como un SOC.
+
+**Herramientas:** Ordenado por categorías, herramientas concretas y para qué sirven.
+
+**Cheatsheets:** Hojas de trucos de algunas herramientas que he usado y domino más.
+
+---
 
 ## Quién escribe esto
 
-Me llamo **David** y trabajo en seguridad defensiva. Esto empezó siendo mi cuaderno: lo que iba aprendiendo, las herramientas que acababa buscando dos veces y las cosas que me habría gustado tener ordenadas cuando empecé.
+Me llamo **David** y trabajo en ciberseguridad desde hace unos 2 años.
 
-Lo publico por si le sirve a alguien más. Se actualiza según voy aprendiendo, así que hay huecos y cosas sin pulir. Si ves un error, se agradece el aviso.
+Esto empezó siendo mi cuaderno (¡uno físico!): lo que iba aprendiendo, las herramientas que acababa buscando dos o más veces… Así que he decidido juntarlo de manera digital y liberarlo, ya que algo así me hubiera gustado tener cuando empecé.
 
-## Empezar aquí
+Se actualiza según voy aprendiendo y tengo tiempo, así que hay huecos y cosas sin pulir. Si ves un error, se agradece el aviso y lo corregiré cuanto antes.
 
-<div class="card-grid">
-  <a class="card" href="#/por-donde-empezar">
-    <span class="card-ico">🚀</span><b>Por dónde empezar</b>
-    <span>Qué estudiar y en qué orden, dónde practicar, qué laboratorio montar, certificaciones y entrevista.</span>
-  </a>
-  <a class="card" href="#/como-usar">
-    <span class="card-ico">🧭</span><b>Cómo usar estos apuntes</b>
-    <span>Cómo está organizado, atajos de teclado y cómo añadir una nota nueva.</span>
-  </a>
-</div>
+---
 
-## Fundamentos
+## ¿Eres nuev@ en el sector?
 
-<div class="card-grid">
-  <a class="card" href="#/fundamentos/conceptos-basicos">
-    <span class="card-ico">🧠</span><b>Conceptos básicos</b>
-    <span>CIA, amenaza vs. riesgo, IOC vs. IOA, TTP, tipos de malware, siglas.</span>
-  </a>
-  <a class="card" href="#/fundamentos/cyber-kill-chain">
-    <span class="card-ico">⛓️</span><b>Cyber Kill Chain</b>
-    <span>Las 7 fases de una intrusión y dónde romper la cadena.</span>
-  </a>
-  <a class="card" href="#/fundamentos/mitre-attack">
-    <span class="card-ico">🎯</span><b>MITRE ATT&CK</b>
-    <span>Tácticas, técnicas y procedimientos con lenguaje común.</span>
-  </a>
-  <a class="card" href="#/fundamentos/piramide-del-dolor">
-    <span class="card-ico">🔺</span><b>Pirámide del Dolor</b>
-    <span>Qué indicadores le cuestan más al atacante.</span>
-  </a>
-  <a class="card" href="#/fundamentos/modelo-diamante">
-    <span class="card-ico">💎</span><b>Modelo del Diamante</b>
-    <span>Adversario, capacidad, infraestructura y víctima.</span>
-  </a>
-  <a class="card" href="#/fundamentos/inteligencia-de-amenazas">
-    <span class="card-ico">📡</span><b>Inteligencia de amenazas</b>
-    <span>Ciclo de inteligencia, niveles, TLP, STIX/TAXII y fuentes.</span>
-  </a>
-  <a class="card" href="#/fundamentos/ia-y-ciberseguridad">
-    <span class="card-ico">🤖</span><b>IA y ciberseguridad</b>
-    <span>La IA como herramienta del defensor, del atacante, y como objetivo.</span>
-  </a>
-</div>
+Si acabas de aterrizar en este mundo y te gustaría tener un poco más claro las opciones que hay y qué puedes hacer ahora mismo para empezar a aprender:
 
-## El trabajo en el SOC
+Te recomiendo que vayas a **[Por dónde empezar](#/por-donde-empezar)**.
 
-<div class="card-grid">
-  <a class="card" href="#/blue-team/que-es-un-soc">
-    <span class="card-ico">🛡️</span><b>Qué es un SOC</b>
-    <span>Niveles, roles, turnos y métricas.</span>
-  </a>
-  <a class="card" href="#/blue-team/triaje-de-alertas">
-    <span class="card-ico">🔍</span><b>Triaje de alertas</b>
-    <span>De la alerta a una conclusión documentada.</span>
-  </a>
-  <a class="card" href="#/blue-team/respuesta-a-incidentes">
-    <span class="card-ico">🚨</span><b>Respuesta a incidentes</b>
-    <span>Las seis fases, contención y playbooks.</span>
-  </a>
-  <a class="card" href="#/blue-team/logs-y-telemetria">
-    <span class="card-ico">📊</span><b>Logs y telemetría</b>
-    <span>Event IDs de Windows, Sysmon y logs de Linux que importan.</span>
-  </a>
-  <a class="card" href="#/blue-team/deteccion-y-reglas">
-    <span class="card-ico">📝</span><b>Detección y reglas</b>
-    <span>Escribir reglas Sigma, YARA y Suricata.</span>
-  </a>
-  <a class="card" href="#/blue-team/soft-skills">
-    <span class="card-ico">🗣️</span><b>Soft skills</b>
-    <span>Diferencia con las hard skills, cuáles importan y cómo se evalúan.</span>
-  </a>
-</div>
-
-## Herramientas
-
-<div class="card-grid">
-  <a class="card" href="#/herramientas/threat-intelligence">
-    <span class="card-ico">🛰️</span><b>Threat Intelligence</b>
-    <span>Reputación de IP, dominios y hashes. Feeds, IOC y sandboxes públicos.</span>
-  </a>
-  <a class="card" href="#/herramientas/osint">
-    <span class="card-ico">🔎</span><b>OSINT</b>
-    <span>Reconocimiento de infraestructura, personas, dominios y filtraciones.</span>
-  </a>
-  <a class="card" href="#/herramientas/phishing">
-    <span class="card-ico">🎣</span><b>Phishing y correo</b>
-    <span>Cabeceras, URL, adjuntos, SPF/DKIM/DMARC y simulación.</span>
-  </a>
-  <a class="card" href="#/herramientas/red-y-trafico">
-    <span class="card-ico">🌐</span><b>Red y tráfico</b>
-    <span>PCAP, IDS, escaneo y monitorización de red.</span>
-  </a>
-  <a class="card" href="#/herramientas/dfir-y-forense">
-    <span class="card-ico">🧪</span><b>DFIR y forense</b>
-    <span>Adquisición, artefactos de Windows, memoria y línea temporal.</span>
-  </a>
-  <a class="card" href="#/herramientas/utilidades">
-    <span class="card-ico">🧰</span><b>Utilidades</b>
-    <span>Decodificar, convertir y comprobar.</span>
-  </a>
-</div>
-
-## Cheatsheets
-
-<div class="card-grid">
-  <a class="card" href="#/cheatsheets/event-ids-windows">
-    <span class="card-ico">🪟</span><b>Event IDs de Windows</b>
-    <span>Security, System, PowerShell y Sysmon, con las combinaciones que alertan.</span>
-  </a>
-  <a class="card" href="#/cheatsheets/wireshark-y-red">
-    <span class="card-ico">🦈</span><b>Wireshark y red</b>
-    <span>Filtros, tshark, tcpdump, nmap, dig y puertos de memoria.</span>
-  </a>
-  <a class="card" href="#/cheatsheets/comandos-de-triaje">
-    <span class="card-ico">⌨️</span><b>Comandos de triaje</b>
-    <span>PowerShell y Linux para mirar un equipo sospechoso. Volatility y KAPE.</span>
-  </a>
-  <a class="card" href="#/cheatsheets/analisis-de-phishing">
-    <span class="card-ico">📧</span><b>Análisis de phishing</b>
-    <span>Checklist de ocho pasos, de la cabecera al cierre del ticket.</span>
-  </a>
-</div>
-
-> [!WARNING]
-> Usa estas herramientas sólo sobre sistemas tuyos o con permiso por escrito.
+**Es un roadmap, consejos y cosas que te aseguro que valdrá la pena echarle un ojo.**
