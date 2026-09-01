@@ -4,7 +4,7 @@ Apuntes abiertos de **ciberseguridad defensiva y Blue Team**: herramientas por c
 
 Sirven para dos cosas: como **referencia rápida** en el día a día, y como **guía de entrada** para quien empieza en el sector.
 
-🔗 **[kharonte09.github.io/apuntes](https://kharonte09.github.io/apuntes/)**
+🔗 **[kharonte09.github.io/cuaderno-de-guardia](https://kharonte09.github.io/cuaderno-de-guardia/)**
 
 ---
 
@@ -67,7 +67,7 @@ Y abrir <http://localhost:4321>. Hace falta un servidor porque el sitio carga lo
 
 2. Añádela al menú en `contenido/nav.json`.
 
-Las convenciones de formato están explicadas en [Cómo usar estos apuntes](https://kharonte09.github.io/apuntes/#/como-usar).
+Las convenciones de formato están explicadas en [Cómo usar estos apuntes](https://kharonte09.github.io/cuaderno-de-guardia/#/como-usar).
 
 ## Aviso
 
