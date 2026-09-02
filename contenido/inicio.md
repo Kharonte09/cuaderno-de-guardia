@@ -14,13 +14,15 @@ titulo: Inicio
 
 **En mis apuntes, ni más ni menos, aunque el objetivo es crear una mini Wiki sobre ciberseguridad.**
 
-**Está distribuida en tres bloques:**
+**Está organizada así:**
 
-**Fundamentos:** Marcos y modelos teóricos, conceptos, cómo se organiza el trabajo en un SOC y todo lo que hay que entender antes de tocar una herramienta.
+**[Por dónde empezar](#/por-donde-empezar):** La ruta para quien aterriza de cero: qué base de informática hace falta antes de la seguridad, qué conceptos mirar primero, dónde practicar y un par de laboratorios para hacer hoy mismo.
 
-**Herramientas:** Ordenado por categorías, herramientas concretas y para qué sirven.
+**Fundamentos:** Los modelos que estructuran el oficio (Kill Chain, ATT&CK, Pirámide del Dolor, Diamante e inteligencia de amenazas) y cómo es el trabajo real en un SOC: triaje de alertas, respuesta a incidentes, IA y soft skills.
 
-**Cheatsheets:** Hojas de trucos de algunas herramientas que he usado y domino más.
+**Herramientas:** 125 fichas ordenadas por categoría: threat intel, OSINT, phishing y correo, red, DFIR y utilidades del día a día. De cada una, qué es, para qué sirve y cómo se usa lo básico.
+
+**Cheatsheets:** Tablas y comandos sin explicaciones, para tener delante mientras trabajas: Event IDs de Windows, comandos de triaje, filtros de Wireshark y el checklist de phishing.
 
 ---
 
