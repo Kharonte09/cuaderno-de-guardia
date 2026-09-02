@@ -14,11 +14,9 @@ titulo: Inicio
 
 **En mis apuntes, ni más ni menos, aunque el objetivo es crear una mini Wiki sobre ciberseguridad.**
 
-**Está distribuida en cuatro bloques:**
+**Está distribuida en tres bloques:**
 
-**Fundamentos:** Marcos y modelos teóricos, conceptos y teoría general.
-
-**El trabajo en el SOC:** Cómo se organiza el trabajo en un entorno real como un SOC.
+**Fundamentos:** Marcos y modelos teóricos, conceptos, cómo se organiza el trabajo en un SOC y todo lo que hay que entender antes de tocar una herramienta.
 
 **Herramientas:** Ordenado por categorías, herramientas concretas y para qué sirven.
 

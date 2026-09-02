@@ -114,7 +114,7 @@
           <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           <span class="nav-label-txt">${esc(g.titulo)}</span>
           <span class="nav-rule" aria-hidden="true"></span>
-          <span class="nav-count">${g.paginas.length}</span>
+          ${g.contador === false ? "" : `<span class="nav-count">${g.paginas.length}</span>`}
         </button>
         <div class="nav-items" id="grupo-${id}"><div>
           ${g.paginas.map((p) => `

@@ -4,10 +4,10 @@
   "grupos": [
     {
       "titulo": "Empezar aquí",
+      "contador": false,
       "paginas": [
         { "ruta": "inicio", "titulo": "Inicio", "icono": "🏠" },
-        { "ruta": "por-donde-empezar", "titulo": "Por dónde empezar", "icono": "🚀" },
-        { "ruta": "como-usar", "titulo": "Cómo usar estos apuntes", "icono": "🧭" }
+        { "ruta": "por-donde-empezar", "titulo": "Por dónde empezar", "icono": "🚀" }
       ]
     },
     {
@@ -19,17 +19,10 @@
         { "ruta": "fundamentos/piramide-del-dolor", "titulo": "Pirámide del Dolor", "icono": "🔺" },
         { "ruta": "fundamentos/modelo-diamante", "titulo": "Modelo del Diamante", "icono": "💎" },
         { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" },
-        { "ruta": "fundamentos/ia-y-ciberseguridad", "titulo": "IA y ciberseguridad", "icono": "🤖" }
-      ]
-    },
-    {
-      "titulo": "El trabajo en el SOC",
-      "paginas": [
         { "ruta": "blue-team/que-es-un-soc", "titulo": "Qué es un SOC", "icono": "🛡️" },
         { "ruta": "blue-team/triaje-de-alertas", "titulo": "Triaje de alertas", "icono": "🔍" },
         { "ruta": "blue-team/respuesta-a-incidentes", "titulo": "Respuesta a incidentes", "icono": "🚨" },
-        { "ruta": "blue-team/logs-y-telemetria", "titulo": "Logs y telemetría", "icono": "📊" },
-        { "ruta": "blue-team/deteccion-y-reglas", "titulo": "Detección y reglas", "icono": "📝" },
+        { "ruta": "fundamentos/ia-y-ciberseguridad", "titulo": "IA y ciberseguridad", "icono": "🤖" },
         { "ruta": "blue-team/soft-skills", "titulo": "Soft skills", "icono": "🗣️" }
       ]
     },
@@ -48,8 +41,8 @@
       "titulo": "Cheatsheets",
       "paginas": [
         { "ruta": "cheatsheets/event-ids-windows", "titulo": "Event IDs de Windows", "icono": "🪟" },
-        { "ruta": "cheatsheets/wireshark-y-red", "titulo": "Wireshark y red", "icono": "🦈" },
         { "ruta": "cheatsheets/comandos-de-triaje", "titulo": "Comandos de triaje", "icono": "⌨️" },
+        { "ruta": "cheatsheets/wireshark-y-red", "titulo": "Wireshark y red", "icono": "🦈" },
         { "ruta": "cheatsheets/analisis-de-phishing", "titulo": "Análisis de phishing", "icono": "📧" }
       ]
     }

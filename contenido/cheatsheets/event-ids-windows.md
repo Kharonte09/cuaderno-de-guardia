@@ -5,7 +5,7 @@ subtitulo: true
 
 # Event IDs de Windows
 
-Chuleta de consulta rápida. La explicación de qué es cada cosa y cómo se activa está en [Logs y telemetría](#/blue-team/logs-y-telemetria); esta página es sólo para tener la tabla a mano.
+Chuleta de consulta rápida: la tabla a mano, sin explicaciones.
 
 ## Autenticación (log Security)
 

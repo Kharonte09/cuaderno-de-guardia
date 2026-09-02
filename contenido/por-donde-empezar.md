@@ -97,7 +97,114 @@ Cuando eso ocurra, vuelve a la Wiki, busca la herramienta o concepto que necesit
 
 ---
 
-## 4. No intentes aprender todas las herramientas
+## 4. Empieza a cacharrear
+
+Leer sobre esto está bien, pero no se te queda hasta que no lo tocas con las manos.
+
+Aquí tienes dos laboratorios que puedes hacer hoy mismo, sin montar nada raro y sin gastar un euro. Van de menos a más.
+
+| Lab | Nivel | Tiempo | Qué vas a tocar |
+|---|---|---|---|
+| **1. El hash de un fichero** | 🟢 Muy fácil | 10 min | Hashes, VirusTotal, IOCs |
+| **2. Ábrele las tripas a un correo** | 🟡 Fácil | 30 min | Cabeceras, SPF/DKIM/DMARC, reputación de IPs |
+
+Hazlos en orden. Y si algo no te sale, ya sabes: Google.
+
+---
+
+### 🟢 Lab 1 — El hash de un fichero
+
+**La idea:** entender qué es un hash tocándolo, no leyéndolo.
+
+1. Crea un fichero de prueba y sácale el hash:
+
+**Windows · PowerShell**
+
+```powershell
+"hola" | Out-File prueba.txt
+Get-FileHash .\prueba.txt -Algorithm SHA256
+```
+
+**Linux**
+
+```bash
+echo "hola" > prueba.txt
+sha256sum prueba.txt
+```
+
+2. Abre `prueba.txt`, cambia la `h` por una `H`, guarda y vuelve a lanzar el mismo comando.
+
+El hash no cambia un poco. **Cambia entero.** Un byte distinto y ya es otro fichero para el mundo.
+
+Y si haces el lab en los dos sistemas, verás que el mismo `hola` te da hashes distintos en cada uno: el fichero no es idéntico byte a byte, porque cambian la codificación y el salto de línea. La misma idea que acabas de ver.
+
+3. Ahora saca el hash de un ejecutable que tengas por ahí, un instalador cualquiera de tus descargas:
+
+**Windows · PowerShell**
+
+```powershell
+Get-FileHash "C:\Users\David\Downloads\ChromeSetup.exe" -Algorithm SHA256
+```
+
+**Linux**
+
+```bash
+sha256sum /home/david/Descargas/google-chrome-stable_current_amd64.deb
+```
+
+4. Copia ese hash y pégalo en el buscador de [VirusTotal](https://www.virustotal.com/). Si alguien lo analizó antes, tienes el veredicto de decenas de motores de antivirus **sin haber subido el fichero**.
+
+5. Repite con los otros algoritmos y fíjate en cómo cambia la longitud:
+
+**Windows · PowerShell**
+
+```powershell
+Get-FileHash .\prueba.txt -Algorithm MD5
+Get-FileHash .\prueba.txt -Algorithm SHA1
+```
+
+**Linux**
+
+```bash
+md5sum prueba.txt
+sha1sum prueba.txt
+```
+
+> [!WARNING]
+> En el trabajo se busca el hash, **no se sube el fichero**. Lo que subes a VirusTotal queda ahí y es descargable por quien pague la API. Subir un documento de tu empresa es una fuga de datos con muy buena intención.
+
+**Lo que sacas de aquí:**
+
+- Un hash identifica un fichero exacto, no una familia de malware.
+- Cambiar el hash le cuesta al atacante un byte, y por eso los hashes están en la base de la [Pirámide del Dolor](#/fundamentos/piramide-del-dolor).
+- Acabas de usar tu primer IOC.
+
+---
+
+### 🟡 Lab 2 — Ábrele las tripas a un correo
+
+**La idea:** ver de dónde viene de verdad un correo, en vez de fiarte del nombre que pone arriba.
+
+Coge un correo **tuyo**, de publicidad o de una newsletter. No uses correo del trabajo.
+
+1. En Gmail: los tres puntos del correo → **Mostrar original**. En Outlook: Archivo → Propiedades → Encabezados de Internet.
+2. Busca las líneas `Received:` y léelas **de abajo hacia arriba**. La de más abajo es el primer salto: ahí tienes la IP que envió el correo de verdad.
+3. Busca `spf=`, `dkim=` y `dmarc=`. ¿Ponen `pass` o `fail`?
+4. Compara el `From:` con el `Return-Path:`. ¿Es el mismo dominio? Cuando no lo es, empieza lo divertido.
+5. Coge la IP de origen y mírala en [AbuseIPDB](https://www.abuseipdb.com/) y en VirusTotal. ¿De quién es? ¿Es un servidor de correo legítimo o una IP residencial de la otra punta del mundo?
+6. Cuando tengas tu conclusión, pega la cabecera entera en el [Header Analyzer de MXToolbox](https://mxtoolbox.com/EmailHeaders.aspx) y compara lo que has leído tú con lo que dice la herramienta.
+
+Repítelo con tres o cuatro correos distintos: uno de tu banco, una newsletter y el spam más cutre que encuentres. La diferencia se ve enseguida.
+
+**Lo que sacas de aquí:**
+
+- Buena parte del triaje de phishing es exactamente esto, repetido cien veces.
+- Aprendes a no fiarte del campo `From:`, que es tan de fiar como el remitente escrito a mano en un sobre.
+- Tienes el resto en [Análisis de phishing](#/cheatsheets/analisis-de-phishing) y en [Phishing y correo](#/herramientas/phishing).
+
+---
+
+## 5. No intentes aprender todas las herramientas
 
 Este es probablemente uno de los errores más comunes cuando empiezas.
 
@@ -119,9 +226,28 @@ La sección de [Herramientas](#/herramientas/threat-intelligence) está pensada 
 
 **No está hecha para que te la estudies de principio a fin.**
 
+### Google es tu gran aliado
+
+Y esto lo digo completamente en serio: **saber buscar es una habilidad técnica**, y de las que más se nota quién la tiene.
+
+Nadie en un SOC se sabe los cientos de Event IDs de Windows de memoria, ni todos los campos de todos los logs. Lo que sí sabe es encontrarlos en dos minutos y distinguir cuál de los resultados sirve.
+
+Cosas que ayudan:
+
+- Empieza por la pregunta tonta, tal cual la pensarías: `qué puerto usa RDP`, `cómo veo las conexiones abiertas en windows`, `qué es un hash`. La búsqueda no tiene que sonar profesional, tiene que funcionar.
+- Si quieres el resultado exacto, ponlo entre comillas: `"acceso denegado" 0x80070005`.
+- Añade al final de dónde lo quieres: `netstat site:learn.microsoft.com`.
+- Si te aparece un dominio, una IP o un nombre de fichero raro en una alerta, búscalo tal cual. Muchas veces ya hay un informe publicado sobre esa campaña.
+- Cuando una herramienta te escupa un error, pégalo entero. Probablemente alguien lo tuvo antes que tú.
+- Y lo más importante: **contrasta**. El primer resultado no siempre tiene razón, y en seguridad hay mucho blog copiado de otro blog.
+
+Con la IA es exactamente igual, pero con más cuidado: te da una respuesta muy convincente en diez segundos y la escribe igual de segura tanto si acierta como si se la inventa. Compruébala antes de meterla en un informe, porque quien firma eres tú. Sobre eso hablo en [IA y ciberseguridad](#/fundamentos/ia-y-ciberseguridad).
+
+Buscar no es hacer trampa. Es parte del trabajo.
+
 ---
 
-## 5. ¿Y después qué?
+## 6. ¿Y después qué?
 
 Cuando empieces a tener una base, probablemente descubras que alguna parte de la ciberseguridad te interesa más que otra.
 
