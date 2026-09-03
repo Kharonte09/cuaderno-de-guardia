@@ -170,11 +170,12 @@
      Post-proceso del HTML renderizado
      --------------------------------------------------------- */
 
-  /** Avisos estilo GitHub: > [!NOTE] / [!TIP] / [!WARNING] / [!CAUTION] / [!IMPORTANT] */
+  /** Avisos estilo GitHub: > [!NOTE] / [!TIP] / [!WARNING] / [!CAUTION] / [!IMPORTANT] / [!DESCARGO] */
   const CALLOUTS = {
     NOTE:      { cls: 'note',    label: 'Nota',     ico: 'ℹ️' },
     TIP:       { cls: 'tip',     label: 'Truco',    ico: '💡' },
     WARNING:   { cls: 'warning', label: 'Cuidado',  ico: '⚠️' },
+    DESCARGO:  { cls: 'warning', label: 'Descargo de responsabilidad', ico: '⚠️' },
     CAUTION:   { cls: 'danger',  label: 'Atención', ico: '🛑' },
     IMPORTANT: { cls: 'info',    label: 'Importante', ico: '📌' },
   };

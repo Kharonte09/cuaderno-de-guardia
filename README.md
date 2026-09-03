@@ -6,9 +6,12 @@ Apuntes abiertos de **ciberseguridad defensiva**, en español. Mi cuaderno de no
 
 ## Qué hay
 
-- **Fundamentos** — los modelos que estructuran el oficio (Kill Chain, ATT&CK, Pirámide del Dolor, Diamante, inteligencia de amenazas) y cómo es el trabajo real en un SOC: triaje de alertas, respuesta a incidentes, IA y soft skills.
-- **Herramientas** — 125 fichas por categoría (threat intel, OSINT, phishing, red, DFIR y utilidades del día a día). Qué es, para qué sirve y cómo se usa lo básico.
-- **Cheatsheets** — sólo tablas y comandos, para consultar con el incidente delante.
+- **Fundamentos** — tipos de control de seguridad, redes y puertos.
+- **Análisis de phishing** — el correo por dentro, tipos de ataque, técnicas y respuesta.
+- **Threat Intelligence** — niveles de inteligencia, actores y APTs, Kill Chain y Pirámide del Dolor.
+- **SIEM** — qué es, cómo procesa los logs, reglas de detección, Sigma y Splunk.
+- **Forense digital** — artefactos de Windows, Volatility, Autopsy y Scalpel.
+- **Respuesta a incidentes** — el ciclo NIST completo, MITRE ATT&CK, triaje en vivo, Wireshark e informes.
 
 Si acabas de llegar al sector, empieza por **[Por dónde empezar](contenido/por-donde-empezar.md)**.
 

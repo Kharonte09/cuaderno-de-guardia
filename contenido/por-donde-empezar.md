@@ -12,7 +12,7 @@ No necesitas aprenderlo todo antes de empezar. De hecho, probablemente te vas a 
 La idea es que tengas una **ruta orientativa** para saber qué aprender, practicar y consultar según vayas avanzando.
 
 > [!NOTE]
-> Ten en cuenta una cosa: esto es mi cuaderno de notas, no un temario cerrado. Y como yo me dedico a la parte defensiva, casi todo lo que vas a encontrar aquí tira hacia el **Blue Team**: SOC, detección, análisis de alertas, respuesta a incidentes y forense.
+> Ten en cuenta una cosa: esto es mi cuaderno de notas, no un temario cerrado. Y como yo me dedico a la parte defensiva, casi todo lo que vas a encontrar aquí tira hacia el **Blue Team**: detección, análisis de alertas, respuesta a incidentes, threat hunting y forense. Un SOC es el sitio más común donde se hace todo eso, pero ni es el único ni hace falta estar en uno.
 >
 > La ruta de aquí abajo te vale para cualquier camino que elijas, pero a partir del punto 2 los ejemplos y las herramientas son sobre todo de ese lado.
 
@@ -54,12 +54,11 @@ Una vez tengas una base de IT, empieza a entender cómo funcionan los ataques y 
 
 En esta Wiki tienes algunos conceptos que te recomiendo conocer:
 
-1. [Conceptos básicos](#/fundamentos/conceptos-basicos)
-2. [Cyber Kill Chain](#/fundamentos/cyber-kill-chain)
-3. [MITRE ATT&CK](#/fundamentos/mitre-attack)
-4. [Pirámide del Dolor](#/fundamentos/piramide-del-dolor)
-5. [Modelo del Diamante](#/fundamentos/modelo-diamante)
-6. [Qué es un SOC](#/blue-team/que-es-un-soc)
+1. [Fundamentos de seguridad](#/fundamentos/seguridad)
+2. Cyber Kill Chain — [Inteligencia operacional](#/threat-intel/operacional)
+3. [MITRE ATT&CK](#/respuesta/mitre-attack)
+4. Pirámide del Dolor — [Inteligencia operacional](#/threat-intel/operacional)
+5. [Qué es la respuesta a incidentes](#/respuesta/introduccion)
 
 No hace falta que memorices cada modelo ni que seas capaz de recitarlos.
 
@@ -176,7 +175,7 @@ sha1sum prueba.txt
 **Lo que sacas de aquí:**
 
 - Un hash identifica un fichero exacto, no una familia de malware.
-- Cambiar el hash le cuesta al atacante un byte, y por eso los hashes están en la base de la [Pirámide del Dolor](#/fundamentos/piramide-del-dolor).
+- Cambiar el hash le cuesta al atacante un byte, y por eso los hashes están en la base de la [Pirámide del Dolor](#/threat-intel/operacional).
 - Acabas de usar tu primer IOC.
 
 ---
@@ -200,7 +199,7 @@ Repítelo con tres o cuatro correos distintos: uno de tu banco, una newsletter y
 
 - Buena parte del triaje de phishing es exactamente esto, repetido cien veces.
 - Aprendes a no fiarte del campo `From:`, que es tan de fiar como el remitente escrito a mano en un sobre.
-- Tienes el resto en [Análisis de phishing](#/cheatsheets/analisis-de-phishing) y en [Phishing y correo](#/herramientas/phishing).
+- Tienes el detalle en [Tipos de phishing](#/phishing/tipos) y [Tácticas y técnicas](#/phishing/tacticas).
 
 ---
 
@@ -222,15 +221,12 @@ Buscas qué logs necesitas, qué herramienta puedes utilizar y cómo analizarlos
 
 Buscas cómo obtener información sobre ella, qué IOCs puedes sacar y cómo comprobar si aparece en otros sistemas.
 
-La sección de [Herramientas](#/herramientas/threat-intelligence) está pensada precisamente para eso.
-
-**No está hecha para que te la estudies de principio a fin.**
 
 ### Google es tu gran aliado
 
 Y esto lo digo completamente en serio: **saber buscar es una habilidad técnica**, y de las que más se nota quién la tiene.
 
-Nadie en un SOC se sabe los cientos de Event IDs de Windows de memoria, ni todos los campos de todos los logs. Lo que sí sabe es encontrarlos en dos minutos y distinguir cuál de los resultados sirve.
+Nadie se sabe los cientos de Event IDs de Windows de memoria, ni todos los campos de todos los logs. Lo que sí sabe es encontrarlos en dos minutos y distinguir cuál de los resultados sirve.
 
 Cosas que ayudan:
 
@@ -241,7 +237,7 @@ Cosas que ayudan:
 - Cuando una herramienta te escupa un error, pégalo entero. Probablemente alguien lo tuvo antes que tú.
 - Y lo más importante: **contrasta**. El primer resultado no siempre tiene razón, y en seguridad hay mucho blog copiado de otro blog.
 
-Con la IA es exactamente igual, pero con más cuidado: te da una respuesta muy convincente en diez segundos y la escribe igual de segura tanto si acierta como si se la inventa. Compruébala antes de meterla en un informe, porque quien firma eres tú. Sobre eso hablo en [IA y ciberseguridad](#/fundamentos/ia-y-ciberseguridad).
+Con la IA es exactamente igual, pero con más cuidado: te da una respuesta muy convincente en diez segundos y la escribe igual de segura tanto si acierta como si se la inventa. Compruébala antes de meterla en un informe, porque quien firma eres tú.
 
 Buscar no es hacer trampa. Es parte del trabajo.
 

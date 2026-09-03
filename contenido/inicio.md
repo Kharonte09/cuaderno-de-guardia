@@ -5,24 +5,30 @@ titulo: Inicio
 # Cuaderno de Guardia
 
 
-> [!WARNING]
+> [!DESCARGO]
 > Hay ciertas herramientas/técnicas nombradas en esta web que podrían causar daños temporales o permanentes en infraestructuras.
 >
 > Usa estas herramientas solo sobre sistemas tuyos o con autorización del dueño de dichos sistemas.
 
 ## ¿Dónde estoy?
 
-**En mis apuntes, ni más ni menos, aunque el objetivo es crear una mini Wiki sobre ciberseguridad.**
+**En mis apuntes, ni más ni menos, aunque la idea es que esto acabe siendo una mini wiki de ciberseguridad.**
 
-**Está organizada así:**
+**Lo tengo montado así:**
 
-**[Por dónde empezar](#/por-donde-empezar):** La ruta para quien aterriza de cero: qué base de informática hace falta antes de la seguridad, qué conceptos mirar primero, dónde practicar y un par de laboratorios para hacer hoy mismo.
+**[Por dónde empezar](#/por-donde-empezar):** Si aterrizas de cero, empieza por aquí. Qué base de informática necesitas antes de meterte en seguridad, qué conceptos mirar primero, dónde practicar y un par de laboratorios para ponerte hoy mismo.
 
-**Fundamentos:** Los modelos que estructuran el oficio (Kill Chain, ATT&CK, Pirámide del Dolor, Diamante e inteligencia de amenazas) y cómo es el trabajo real en un SOC: triaje de alertas, respuesta a incidentes, IA y soft skills.
+**Fundamentos:** La base que se da por sabida: tipos de control, redes y puertos.
 
-**Herramientas:** 125 fichas ordenadas por categoría: threat intel, OSINT, phishing y correo, red, DFIR y utilidades del día a día. De cada una, qué es, para qué sirve y cómo se usa lo básico.
+**Análisis de phishing:** Cómo viaja un correo, los tipos de ataque, las técnicas que usan y qué hacer cuando llega uno.
 
-**Cheatsheets:** Tablas y comandos sin explicaciones, para tener delante mientras trabajas: Event IDs de Windows, comandos de triaje, filtros de Wireshark y el checklist de phishing.
+**Threat Intelligence:** Los niveles de inteligencia, los actores y APTs, la Kill Chain y la Pirámide del Dolor.
+
+**SIEM:** Qué es, cómo procesa los logs, las reglas de detección, Sigma y Splunk.
+
+**Forense digital:** Artefactos de Windows, análisis de memoria con Volatility, y disco con Autopsy y Scalpel.
+
+**Respuesta a incidentes:** El ciclo completo, MITRE ATT&CK, triaje en vivo, Wireshark y cómo se escribe el informe.
 
 ---
 

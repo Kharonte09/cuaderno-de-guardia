@@ -6,44 +6,186 @@
       "titulo": "Empezar aquí",
       "contador": false,
       "paginas": [
-        { "ruta": "inicio", "titulo": "Inicio", "icono": "🏠" },
-        { "ruta": "por-donde-empezar", "titulo": "Por dónde empezar", "icono": "🚀" }
+        {
+          "ruta": "inicio",
+          "titulo": "Inicio",
+          "icono": "🏠"
+        },
+        {
+          "ruta": "por-donde-empezar",
+          "titulo": "Por dónde empezar",
+          "icono": "🚀"
+        }
       ]
     },
     {
       "titulo": "Fundamentos",
       "paginas": [
-        { "ruta": "fundamentos/conceptos-basicos", "titulo": "Conceptos básicos", "icono": "🧠" },
-        { "ruta": "fundamentos/cyber-kill-chain", "titulo": "Cyber Kill Chain", "icono": "⛓️" },
-        { "ruta": "fundamentos/mitre-attack", "titulo": "MITRE ATT&CK", "icono": "🎯" },
-        { "ruta": "fundamentos/piramide-del-dolor", "titulo": "Pirámide del Dolor", "icono": "🔺" },
-        { "ruta": "fundamentos/modelo-diamante", "titulo": "Modelo del Diamante", "icono": "💎" },
-        { "ruta": "fundamentos/inteligencia-de-amenazas", "titulo": "Inteligencia de amenazas", "icono": "📡" },
-        { "ruta": "blue-team/que-es-un-soc", "titulo": "Qué es un SOC", "icono": "🛡️" },
-        { "ruta": "blue-team/triaje-de-alertas", "titulo": "Triaje de alertas", "icono": "🔍" },
-        { "ruta": "blue-team/respuesta-a-incidentes", "titulo": "Respuesta a incidentes", "icono": "🚨" },
-        { "ruta": "fundamentos/ia-y-ciberseguridad", "titulo": "IA y ciberseguridad", "icono": "🤖" },
-        { "ruta": "blue-team/soft-skills", "titulo": "Soft skills", "icono": "🗣️" }
+        {
+          "ruta": "fundamentos/seguridad",
+          "titulo": "Fundamentos de seguridad",
+          "icono": "🧠"
+        }
       ]
     },
     {
-      "titulo": "Herramientas",
+      "titulo": "Análisis de phishing",
       "paginas": [
-        { "ruta": "herramientas/threat-intelligence", "titulo": "Threat Intelligence", "icono": "🛰️" },
-        { "ruta": "herramientas/osint", "titulo": "OSINT", "icono": "🔎" },
-        { "ruta": "herramientas/phishing", "titulo": "Phishing y correo", "icono": "🎣" },
-        { "ruta": "herramientas/red-y-trafico", "titulo": "Red y tráfico", "icono": "🌐" },
-        { "ruta": "herramientas/dfir-y-forense", "titulo": "DFIR y forense", "icono": "🧪" },
-        { "ruta": "herramientas/utilidades", "titulo": "Utilidades del día a día", "icono": "🧰" }
+        {
+          "ruta": "phishing/introduccion",
+          "titulo": "El correo y el phishing",
+          "icono": "📧"
+        },
+        {
+          "ruta": "phishing/tipos",
+          "titulo": "Tipos de phishing",
+          "icono": "🎣"
+        },
+        {
+          "ruta": "phishing/tacticas",
+          "titulo": "Tácticas y técnicas",
+          "icono": "🎭"
+        },
+        {
+          "ruta": "phishing/defensa",
+          "titulo": "Acciones defensivas",
+          "icono": "🛡️"
+        },
+        {
+          "ruta": "phishing/informe",
+          "titulo": "Redactar el informe",
+          "icono": "📝"
+        }
       ]
     },
     {
-      "titulo": "Cheatsheets",
+      "titulo": "Threat Intelligence",
       "paginas": [
-        { "ruta": "cheatsheets/event-ids-windows", "titulo": "Event IDs de Windows", "icono": "🪟" },
-        { "ruta": "cheatsheets/comandos-de-triaje", "titulo": "Comandos de triaje", "icono": "⌨️" },
-        { "ruta": "cheatsheets/wireshark-y-red", "titulo": "Wireshark y red", "icono": "🦈" },
-        { "ruta": "cheatsheets/analisis-de-phishing", "titulo": "Análisis de phishing", "icono": "📧" }
+        {
+          "ruta": "threat-intel/introduccion",
+          "titulo": "Qué es la threat intel",
+          "icono": "🛰️"
+        },
+        {
+          "ruta": "threat-intel/actores",
+          "titulo": "Actores y APTs",
+          "icono": "🎯"
+        },
+        {
+          "ruta": "threat-intel/operacional",
+          "titulo": "Inteligencia operacional",
+          "icono": "⛓️"
+        },
+        {
+          "ruta": "threat-intel/tactica",
+          "titulo": "Inteligencia táctica",
+          "icono": "🔍"
+        },
+        {
+          "ruta": "threat-intel/estrategica",
+          "titulo": "Inteligencia estratégica",
+          "icono": "🌍"
+        }
+      ]
+    },
+    {
+      "titulo": "SIEM",
+      "paginas": [
+        {
+          "ruta": "siem/que-es",
+          "titulo": "Qué es un SIEM",
+          "icono": "📊"
+        },
+        {
+          "ruta": "siem/logs",
+          "titulo": "Logs y agregación",
+          "icono": "📥"
+        },
+        {
+          "ruta": "siem/correlacion",
+          "titulo": "Cómo procesa el SIEM",
+          "icono": "⚙️"
+        },
+        {
+          "ruta": "siem/reglas",
+          "titulo": "Reglas y Sigma",
+          "icono": "📐"
+        },
+        {
+          "ruta": "siem/splunk",
+          "titulo": "Splunk",
+          "icono": "🔦"
+        }
+      ]
+    },
+    {
+      "titulo": "Forense digital",
+      "paginas": [
+        {
+          "ruta": "forense/artefactos-windows",
+          "titulo": "Artefactos de Windows",
+          "icono": "🪟"
+        },
+        {
+          "ruta": "forense/volatility",
+          "titulo": "Volatility",
+          "icono": "🧠"
+        },
+        {
+          "ruta": "forense/autopsy-y-scalpel",
+          "titulo": "Autopsy y Scalpel",
+          "icono": "🔬"
+        }
+      ]
+    },
+    {
+      "titulo": "Respuesta a incidentes",
+      "paginas": [
+        {
+          "ruta": "respuesta/introduccion",
+          "titulo": "Qué es la respuesta a incidentes",
+          "icono": "🚨"
+        },
+        {
+          "ruta": "respuesta/preparacion",
+          "titulo": "Preparación",
+          "icono": "📋"
+        },
+        {
+          "ruta": "respuesta/defensas",
+          "titulo": "Defensas preventivas",
+          "icono": "🛡️"
+        },
+        {
+          "ruta": "respuesta/deteccion",
+          "titulo": "Detección y análisis",
+          "icono": "🔎"
+        },
+        {
+          "ruta": "respuesta/contencion",
+          "titulo": "Contención y recuperación",
+          "icono": "🧯"
+        },
+        {
+          "ruta": "respuesta/mitre-attack",
+          "titulo": "MITRE ATT&CK",
+          "icono": "🎯"
+        },
+        {
+          "ruta": "respuesta/triaje-en-vivo",
+          "titulo": "Triaje con CMD y PowerShell",
+          "icono": "⌨️"
+        },
+        {
+          "ruta": "respuesta/wireshark",
+          "titulo": "Wireshark",
+          "icono": "🦈"
+        },
+        {
+          "ruta": "respuesta/lecciones",
+          "titulo": "Lecciones e informes",
+          "icono": "📝"
+        }
       ]
     }
   ]
