@@ -23,13 +23,17 @@
     scrim:   $('#scrim'),
     toTop:   $('#toTop'),
     ghLink:  $('#ghLink'),
+    areas:   $('#areaSwitch'),
   };
 
   /** Estado global */
   const state = {
     titulo: 'Apuntes',
-    nav: [],        // grupos del menú
-    flat: [],       // páginas en orden lineal (para prev/next)
+    areas: [],      // áreas del cuaderno (blue team, ASIR, SMR…)
+    area: null,     // id del área que se está mostrando
+    nav: [],        // grupos del menú del área actual
+    flat: [],       // páginas del área actual, en orden lineal (para prev/next)
+    todas: [],      // todas las páginas de todas las áreas (búsqueda y migas)
     index: null,    // índice de búsqueda (perezoso)
     indexing: null, // promesa en curso
     cache: new Map(),
@@ -92,9 +96,12 @@
     if (!res.ok) throw new Error('No se pudo cargar nav.json');
     const data = await res.json();
 
-    state.nav = data.grupos || [];
-    state.flat = state.nav.flatMap((g) =>
-      g.paginas.map((p) => ({ ...p, grupo: g.titulo })));
+    // Un nav.json sin áreas (formato antiguo) se trata como un cuaderno de una sola área.
+    const areas = data.areas ||
+      [{ titulo: data.titulo, inicio: DEFAULT_PAGE, grupos: data.grupos || [] }];
+    state.areas = areas.map((a) => ({ ...a, id: a.id || slug(a.titulo), grupos: a.grupos || [] }));
+    state.todas = state.areas.flatMap((a) => a.grupos.flatMap((g) =>
+      g.paginas.map((p) => ({ ...p, grupo: g.titulo, area: a.id, areaTitulo: a.titulo }))));
 
     if (data.repo) {
       el.ghLink.href = data.repo;
@@ -106,8 +113,43 @@
       document.title = data.titulo;
     }
 
+    pintarAreas();
+    mostrarArea(state.areas[0].id);
+  }
+
+  /** Botones de área. Con una sola área no se pintan. */
+  function pintarAreas() {
+    if (state.areas.length < 2) { el.areas.hidden = true; return; }
+    el.areas.hidden = false;
+    el.areas.innerHTML = state.areas.map((a) => {
+      const destino = a.inicio || a.grupos[0]?.paginas[0]?.ruta || DEFAULT_PAGE;
+      return `
+      <a class="area-btn" data-area="${a.id}" href="#/${destino}">
+        <span class="area-ico" aria-hidden="true">${a.icono || '•'}</span>
+        <span>${esc(a.titulo)}</span>
+      </a>`;
+    }).join('');
+  }
+
+  /** Cambia el menú lateral al área indicada. */
+  function mostrarArea(id) {
+    const area = state.areas.find((a) => a.id === id) || state.areas[0];
+    if (state.area === area.id) return;
+    state.area = area.id;
+    state.nav = area.grupos;
+    state.flat = area.grupos.flatMap((g) =>
+      g.paginas.map((p) => ({ ...p, grupo: g.titulo })));
+
+    $$('.area-btn', el.areas).forEach((b) =>
+      b.classList.toggle('active', b.dataset.area === area.id));
+
+    pintarGrupos();
+  }
+
+  function pintarGrupos() {
     el.nav.innerHTML = state.nav.map((g) => {
-      const id = slug(g.titulo);
+      // El id lleva el área delante: "redes" existe en ASIR y en SMR.
+      const id = `${state.area}-${slug(g.titulo)}`;
       return `
       <div class="nav-group" data-grupo="${id}">
         <button type="button" class="nav-label" aria-expanded="true" aria-controls="grupo-${id}">
@@ -170,7 +212,7 @@
      Post-proceso del HTML renderizado
      --------------------------------------------------------- */
 
-  /** Avisos estilo GitHub: > [!NOTE] / [!TIP] / [!WARNING] / [!CAUTION] / [!IMPORTANT] / [!DESCARGO] */
+  /** Avisos estilo GitHub: > [!NOTE] / [!TIP] / [!WARNING] / [!CAUTION] / [!IMPORTANT] / [!DESCARGO] / [!TAMBIEN] */
   const CALLOUTS = {
     NOTE:      { cls: 'note',    label: 'Nota',     ico: 'ℹ️' },
     TIP:       { cls: 'tip',     label: 'Truco',    ico: '💡' },
@@ -178,6 +220,7 @@
     DESCARGO:  { cls: 'warning', label: 'Descargo de responsabilidad', ico: '⚠️' },
     CAUTION:   { cls: 'danger',  label: 'Atención', ico: '🛑' },
     IMPORTANT: { cls: 'info',    label: 'Importante', ico: '📌' },
+    TAMBIEN:   { cls: 'info',    label: 'También en el cuaderno', ico: '📚' },
   };
 
   function transformCallouts(root) {
@@ -367,11 +410,12 @@
   }
 
   function renderCrumbs(ruta) {
-    const page = state.flat.find((p) => p.ruta === ruta);
-    // En la portada las migas sobran: dirían "Inicio / Empezar aquí / Inicio".
-    if (!page || ruta === DEFAULT_PAGE) { el.crumbs.innerHTML = ''; return; }
+    const page = state.todas.find((p) => p.ruta === ruta);
+    const area = state.areas.find((a) => a.id === page?.area);
+    // En la portada de un área las migas sobran: dirían "Inicio / Empezar aquí / Inicio".
+    if (!page || ruta === DEFAULT_PAGE || ruta === area?.inicio) { el.crumbs.innerHTML = ''; return; }
     el.crumbs.innerHTML = `<div class="crumbs">
-      <a href="#/${DEFAULT_PAGE}">Inicio</a>
+      <a href="#/${area?.inicio || DEFAULT_PAGE}">${esc(area?.titulo || 'Inicio')}</a>
       <span class="sep">/</span><span>${esc(page.grupo)}</span>
       <span class="sep">/</span><span>${esc(page.titulo)}</span>
     </div>`;
@@ -391,6 +435,9 @@
     const raw = location.hash.replace(/^#\/?/, '');
     const ruta = rutaActual();
     const frag = raw.split('#')[1];
+
+    const pagina = state.todas.find((p) => p.ruta === ruta);
+    if (pagina) mostrarArea(pagina.area);
 
     markActive(ruta);
     closeNav();
@@ -430,7 +477,7 @@
     renderPager(ruta);
     buildToc();
 
-    const page = state.flat.find((p) => p.ruta === ruta);
+    const page = state.todas.find((p) => p.ruta === ruta);
     document.title = `${page ? page.titulo : meta.titulo || 'Apuntes'} · ${state.titulo}`;
 
     if (frag) {
@@ -448,7 +495,7 @@
     if (state.index) return state.index;
     if (state.indexing) return state.indexing;
 
-    state.indexing = Promise.all(state.flat.map(async (p) => {
+    state.indexing = Promise.all(state.todas.map(async (p) => {
       let body = '';
       try { body = (await fetchDoc(p.ruta)).body; } catch (_) {}
       const secciones = [];
@@ -476,6 +523,7 @@
         ruta: p.ruta,
         pagina: p.titulo,
         grupo: p.grupo,
+        area: p.areaTitulo,
         titulo: s.titulo,
         id: s.id,
         texto: s.texto.replace(/\s+/g, ' ').trim(),
@@ -533,7 +581,7 @@
     }
     el.results.innerHTML = res.map((s, i) => `
       <a class="sr-item${i === 0 ? ' is-active' : ''}" href="#/${s.ruta}${s.id ? '#' + s.id : ''}">
-        <span class="sr-crumb">${esc(s.grupo)} · ${esc(s.pagina)}</span>
+        <span class="sr-crumb">${state.areas.length > 1 ? esc(s.area) + ' · ' : ''}${esc(s.grupo)} · ${esc(s.pagina)}</span>
         <span class="sr-title">${esc(s.titulo)}</span>
         <span class="sr-snip">${snippet(s.texto, q)}</span>
       </a>`).join('');

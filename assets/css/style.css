@@ -439,10 +439,13 @@ a.tag.link:hover{ background:color-mix(in srgb,var(--accent) 14%,transparent); t
 .pager .next{ text-align:right; align-items:flex-end; }
 
 .page-foot{
-  margin-top:30px; padding-top:16px;
-  font-size:12.5px; color:var(--txt-faint); max-width:var(--maxw);
+  margin-top:40px; padding-top:18px;
+  border-top:1px solid var(--line-soft);
+  font-size:12px; line-height:1.55; color:var(--txt-faint); max-width:var(--maxw);
 }
 .page-foot p{ margin:0; }
+.page-foot p + p{ margin-top:7px; }
+.page-foot a{ color:var(--txt-dim); }
 
 .loader{ color:var(--txt-faint); font-family:var(--mono); font-size:13px; padding:40px 0; }
 
@@ -491,3 +494,47 @@ a.tag.link:hover{ background:color-mix(in srgb,var(--accent) 14%,transparent); t
   main{ max-width:none; padding:0; }
   body::before{ display:none; }
 }
+
+/* ---------------- Conmutador de áreas ---------------- */
+.area-switch{
+  display:flex; align-items:center;
+  margin:-4px -12px 20px -20px; padding:0 12px 0 20px;
+  border-bottom:1px solid var(--line);
+}
+.area-switch .area-btn{
+  position:relative;
+  flex:1 1 auto; justify-content:center; gap:6px;
+  margin:0; padding:8px 6px 10px; border-left:0; border-radius:0;
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--txt-faint); white-space:nowrap;
+  transition:color .15s;
+}
+/* Separador fino entre áreas */
+.area-switch .area-btn + .area-btn::before{
+  content:''; position:absolute; left:0; top:50%; transform:translateY(-50%);
+  width:1px; height:13px; background:var(--line);
+}
+.area-switch .area-btn:hover{ background:none; color:var(--txt); }
+.area-switch .area-btn.active{ color:var(--txt); font-weight:600; }
+/* Subrayado del área activa, pisando la línea inferior */
+.area-switch .area-btn.active::after{
+  content:''; position:absolute; left:10px; right:10px; bottom:-1px;
+  height:2px; border-radius:2px 2px 0 0; background:var(--accent);
+}
+.area-switch .area-ico{ font-size:12px; opacity:.5; transition:opacity .15s; }
+.area-switch .area-btn:hover .area-ico,
+.area-switch .area-btn.active .area-ico{ opacity:1; }
+
+/* ---------------- Vídeo incrustado ---------------- */
+.prose .video{ margin:26px 0; }
+.prose .video iframe{
+  display:block; width:100%; aspect-ratio:16/9; height:auto;
+  border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg-inset);
+}
+.prose .video figcaption{
+  margin-top:9px; padding-left:2px;
+  color:var(--txt-faint); font-size:12.5px; line-height:1.5;
+}
+.prose .video figcaption a{ color:var(--txt-dim); text-decoration:underline; text-underline-offset:2px; }
+.prose .video figcaption a:hover{ color:var(--accent); }

@@ -1,190 +1,521 @@
 {
   "titulo": "Cuaderno de Guardia",
   "repo": "https://github.com/Kharonte09/cuaderno-de-guardia",
-  "grupos": [
+  "areas": [
     {
-      "titulo": "Empezar aquí",
-      "contador": false,
-      "paginas": [
+      "id": "blue-team",
+      "titulo": "Blue team",
+      "icono": "🛡️",
+      "inicio": "inicio",
+      "grupos": [
         {
-          "ruta": "inicio",
-          "titulo": "Inicio",
-          "icono": "🏠"
+          "titulo": "Empezar aquí",
+          "contador": false,
+          "paginas": [
+            {
+              "ruta": "inicio",
+              "titulo": "Inicio",
+              "icono": "🏠"
+            },
+            {
+              "ruta": "por-donde-empezar",
+              "titulo": "Por dónde empezar",
+              "icono": "🚀"
+            }
+          ]
         },
         {
-          "ruta": "por-donde-empezar",
-          "titulo": "Por dónde empezar",
-          "icono": "🚀"
+          "titulo": "Fundamentos",
+          "paginas": [
+            {
+              "ruta": "fundamentos/seguridad",
+              "titulo": "Fundamentos de seguridad",
+              "icono": "🧠"
+            }
+          ]
+        },
+        {
+          "titulo": "Análisis de phishing",
+          "paginas": [
+            {
+              "ruta": "phishing/introduccion",
+              "titulo": "El correo y el phishing",
+              "icono": "📧"
+            },
+            {
+              "ruta": "phishing/tipos",
+              "titulo": "Tipos de phishing",
+              "icono": "🎣"
+            },
+            {
+              "ruta": "phishing/tacticas",
+              "titulo": "Tácticas y técnicas",
+              "icono": "🎭"
+            },
+            {
+              "ruta": "phishing/defensa",
+              "titulo": "Acciones defensivas",
+              "icono": "🛡️"
+            },
+            {
+              "ruta": "phishing/informe",
+              "titulo": "Redactar el informe",
+              "icono": "📝"
+            }
+          ]
+        },
+        {
+          "titulo": "Threat Intelligence",
+          "paginas": [
+            {
+              "ruta": "threat-intel/introduccion",
+              "titulo": "Qué es la threat intel",
+              "icono": "🛰️"
+            },
+            {
+              "ruta": "threat-intel/actores",
+              "titulo": "Actores y APTs",
+              "icono": "🎯"
+            },
+            {
+              "ruta": "threat-intel/operacional",
+              "titulo": "Inteligencia operacional",
+              "icono": "⛓️"
+            },
+            {
+              "ruta": "threat-intel/tactica",
+              "titulo": "Inteligencia táctica",
+              "icono": "🔍"
+            },
+            {
+              "ruta": "threat-intel/estrategica",
+              "titulo": "Inteligencia estratégica",
+              "icono": "🌍"
+            }
+          ]
+        },
+        {
+          "titulo": "SIEM",
+          "paginas": [
+            {
+              "ruta": "siem/que-es",
+              "titulo": "Qué es un SIEM",
+              "icono": "📊"
+            },
+            {
+              "ruta": "siem/logs",
+              "titulo": "Logs y agregación",
+              "icono": "📥"
+            },
+            {
+              "ruta": "siem/correlacion",
+              "titulo": "Cómo procesa el SIEM",
+              "icono": "⚙️"
+            },
+            {
+              "ruta": "siem/reglas",
+              "titulo": "Reglas y Sigma",
+              "icono": "📐"
+            },
+            {
+              "ruta": "siem/splunk",
+              "titulo": "Splunk",
+              "icono": "🔦"
+            }
+          ]
+        },
+        {
+          "titulo": "Forense digital",
+          "paginas": [
+            {
+              "ruta": "forense/artefactos-windows",
+              "titulo": "Artefactos de Windows",
+              "icono": "🪟"
+            },
+            {
+              "ruta": "forense/volatility",
+              "titulo": "Volatility",
+              "icono": "🧠"
+            },
+            {
+              "ruta": "forense/autopsy-y-scalpel",
+              "titulo": "Autopsy y Scalpel",
+              "icono": "🔬"
+            }
+          ]
+        },
+        {
+          "titulo": "Respuesta a incidentes",
+          "paginas": [
+            {
+              "ruta": "respuesta/introduccion",
+              "titulo": "Qué es la respuesta a incidentes",
+              "icono": "🚨"
+            },
+            {
+              "ruta": "respuesta/preparacion",
+              "titulo": "Preparación",
+              "icono": "📋"
+            },
+            {
+              "ruta": "respuesta/defensas",
+              "titulo": "Defensas preventivas",
+              "icono": "🛡️"
+            },
+            {
+              "ruta": "respuesta/deteccion",
+              "titulo": "Detección y análisis",
+              "icono": "🔎"
+            },
+            {
+              "ruta": "respuesta/contencion",
+              "titulo": "Contención y recuperación",
+              "icono": "🧯"
+            },
+            {
+              "ruta": "respuesta/mitre-attack",
+              "titulo": "MITRE ATT&CK",
+              "icono": "🎯"
+            },
+            {
+              "ruta": "respuesta/triaje-en-vivo",
+              "titulo": "Triaje con CMD y PowerShell",
+              "icono": "⌨️"
+            },
+            {
+              "ruta": "respuesta/wireshark",
+              "titulo": "Wireshark",
+              "icono": "🦈"
+            },
+            {
+              "ruta": "respuesta/lecciones",
+              "titulo": "Lecciones e informes",
+              "icono": "📝"
+            }
+          ]
         }
       ]
     },
     {
-      "titulo": "Fundamentos",
-      "paginas": [
+      "id": "asir",
+      "titulo": "ASIR",
+      "icono": "🖧",
+      "inicio": "asir/inicio",
+      "grupos": [
         {
-          "ruta": "fundamentos/seguridad",
-          "titulo": "Fundamentos de seguridad",
-          "icono": "🧠"
+          "titulo": "Empezar aquí",
+          "contador": false,
+          "paginas": [
+            {
+              "ruta": "asir/inicio",
+              "titulo": "Inicio",
+              "icono": "🏠"
+            }
+          ]
+        },
+        {
+          "titulo": "Redes",
+          "paginas": [
+            {
+              "ruta": "asir/redes/dispositivos-de-interconexion",
+              "titulo": "Dispositivos de interconexión",
+              "icono": "🔀"
+            },
+            {
+              "ruta": "asir/redes/vlan-y-stp",
+              "titulo": "VLAN y STP",
+              "icono": "🏷️"
+            },
+            {
+              "ruta": "asir/redes/ip-arp-icmp",
+              "titulo": "IP, ARP e ICMP",
+              "icono": "📦"
+            },
+            {
+              "ruta": "asir/redes/tcp-y-puertos",
+              "titulo": "TCP y puertos",
+              "icono": "🔌"
+            },
+            {
+              "ruta": "asir/redes/wireshark-protocolos",
+              "titulo": "Protocolos con Wireshark",
+              "icono": "🦈"
+            }
+          ]
+        },
+        {
+          "titulo": "Sistemas",
+          "paginas": [
+            {
+              "ruta": "asir/sistemas/usuarios-y-permisos",
+              "titulo": "Usuarios y permisos en Linux",
+              "icono": "🔐"
+            }
+          ]
+        },
+        {
+          "titulo": "Bases de datos",
+          "paginas": [
+            {
+              "ruta": "asir/bbdd/diseno-fisico",
+              "titulo": "Diseño físico",
+              "icono": "🗃️"
+            },
+            {
+              "ruta": "asir/bbdd/edicion-de-datos",
+              "titulo": "Edición de los datos",
+              "icono": "✏️"
+            },
+            {
+              "ruta": "asir/bbdd/guiones",
+              "titulo": "Construcción de guiones",
+              "icono": "📜"
+            }
+          ]
+        },
+        {
+          "titulo": "Lenguajes de marcas",
+          "paginas": [
+            {
+              "ruta": "asir/marcas/xml-y-dtd",
+              "titulo": "XML y DTD",
+              "icono": "📐"
+            },
+            {
+              "ruta": "asir/marcas/xpath",
+              "titulo": "XPath",
+              "icono": "🧭"
+            },
+            {
+              "ruta": "asir/marcas/sass",
+              "titulo": "SASS",
+              "icono": "💅"
+            },
+            {
+              "ruta": "asir/marcas/bootstrap",
+              "titulo": "Bootstrap",
+              "icono": "🅱️"
+            }
+          ]
         }
       ]
     },
     {
-      "titulo": "Análisis de phishing",
-      "paginas": [
+      "id": "smr",
+      "titulo": "SMR",
+      "icono": "🧰",
+      "inicio": "smr/inicio",
+      "grupos": [
         {
-          "ruta": "phishing/introduccion",
-          "titulo": "El correo y el phishing",
-          "icono": "📧"
+          "titulo": "Empezar aquí",
+          "contador": false,
+          "paginas": [
+            {
+              "ruta": "smr/inicio",
+              "titulo": "Inicio",
+              "icono": "🏠"
+            }
+          ]
         },
         {
-          "ruta": "phishing/tipos",
-          "titulo": "Tipos de phishing",
-          "icono": "🎣"
+          "titulo": "Montaje y mantenimiento",
+          "paginas": [
+            {
+              "ruta": "smr/montaje/componentes",
+              "titulo": "El equipo por dentro",
+              "icono": "🖥️"
+            },
+            {
+              "ruta": "smr/montaje/procesador",
+              "titulo": "El procesador",
+              "icono": "⚙️"
+            },
+            {
+              "ruta": "smr/montaje/memoria-ram",
+              "titulo": "La memoria RAM",
+              "icono": "🧠"
+            },
+            {
+              "ruta": "smr/montaje/bios-uefi",
+              "titulo": "ROM, BIOS y UEFI",
+              "icono": "🔩"
+            },
+            {
+              "ruta": "smr/montaje/almacenamiento",
+              "titulo": "Discos duros y SSD",
+              "icono": "💾"
+            },
+            {
+              "ruta": "smr/montaje/unidades-opticas",
+              "titulo": "Unidades ópticas",
+              "icono": "💿"
+            },
+            {
+              "ruta": "smr/montaje/ensamblado",
+              "titulo": "Ensamblar un PC",
+              "icono": "🔧"
+            },
+            {
+              "ruta": "smr/montaje/presupuesto",
+              "titulo": "Elegir y presupuestar",
+              "icono": "🧾"
+            },
+            {
+              "ruta": "smr/montaje/diagnostico",
+              "titulo": "Diagnóstico y herramientas",
+              "icono": "🩺"
+            }
+          ]
         },
         {
-          "ruta": "phishing/tacticas",
-          "titulo": "Tácticas y técnicas",
-          "icono": "🎭"
+          "titulo": "Redes",
+          "paginas": [
+            {
+              "ruta": "smr/redes/comunicacion",
+              "titulo": "Elementos de la comunicación",
+              "icono": "📡"
+            },
+            {
+              "ruta": "smr/redes/cableado",
+              "titulo": "Par trenzado y latiguillos",
+              "icono": "🔌"
+            },
+            {
+              "ruta": "smr/redes/cableado-estructurado",
+              "titulo": "Cableado estructurado",
+              "icono": "🗄️"
+            },
+            {
+              "ruta": "smr/redes/direccionamiento-ipv4",
+              "titulo": "Direccionamiento IPv4",
+              "icono": "🔢"
+            },
+            {
+              "ruta": "smr/redes/subredes",
+              "titulo": "Subredes",
+              "icono": "✂️"
+            },
+            {
+              "ruta": "smr/redes/router-domestico",
+              "titulo": "El router doméstico",
+              "icono": "📶"
+            }
+          ]
         },
         {
-          "ruta": "phishing/defensa",
-          "titulo": "Acciones defensivas",
-          "icono": "🛡️"
+          "titulo": "Sistemas operativos",
+          "paginas": [
+            {
+              "ruta": "smr/sistemas/que-es-un-so",
+              "titulo": "Qué es un sistema operativo",
+              "icono": "🪟"
+            },
+            {
+              "ruta": "smr/sistemas/windows-vs-ubuntu",
+              "titulo": "Windows frente a Ubuntu",
+              "icono": "⚖️"
+            },
+            {
+              "ruta": "smr/sistemas/ubuntu-desktop-y-server",
+              "titulo": "Ubuntu Desktop y Server",
+              "icono": "🐧"
+            },
+            {
+              "ruta": "smr/sistemas/sistema-de-archivos-linux",
+              "titulo": "Sistema de archivos de Linux",
+              "icono": "🌳"
+            },
+            {
+              "ruta": "smr/sistemas/puntos-de-restauracion",
+              "titulo": "Puntos de restauración",
+              "icono": "⏪"
+            }
+          ]
         },
         {
-          "ruta": "phishing/informe",
-          "titulo": "Redactar el informe",
-          "icono": "📝"
-        }
-      ]
-    },
-    {
-      "titulo": "Threat Intelligence",
-      "paginas": [
-        {
-          "ruta": "threat-intel/introduccion",
-          "titulo": "Qué es la threat intel",
-          "icono": "🛰️"
+          "titulo": "Ofimática",
+          "paginas": [
+            {
+              "ruta": "smr/ofimatica/tipos-de-software",
+              "titulo": "Tipos de software",
+              "icono": "🧩"
+            },
+            {
+              "ruta": "smr/ofimatica/suites-ofimaticas",
+              "titulo": "Suites ofimáticas",
+              "icono": "📄"
+            },
+            {
+              "ruta": "smr/ofimatica/compresion",
+              "titulo": "Comprimir y descomprimir",
+              "icono": "🗜️"
+            }
+          ]
         },
         {
-          "ruta": "threat-intel/actores",
-          "titulo": "Actores y APTs",
-          "icono": "🎯"
+          "titulo": "Seguridad informática",
+          "paginas": [
+            {
+              "ruta": "smr/seguridad/tipos-de-ataque",
+              "titulo": "Ataques reales",
+              "icono": "💥"
+            },
+            {
+              "ruta": "smr/seguridad/identidad-digital",
+              "titulo": "Identidad digital",
+              "icono": "🪪"
+            },
+            {
+              "ruta": "smr/seguridad/tor-y-tails",
+              "titulo": "Tor y Tails",
+              "icono": "🧅"
+            }
+          ]
         },
         {
-          "ruta": "threat-intel/operacional",
-          "titulo": "Inteligencia operacional",
-          "icono": "⛓️"
+          "titulo": "Servicios en red",
+          "paginas": [
+            {
+              "ruta": "smr/servicios/windows-server",
+              "titulo": "Windows Server y DHCP",
+              "icono": "🖧"
+            },
+            {
+              "ruta": "smr/servicios/iis-sitios-web",
+              "titulo": "Sitios web con IIS",
+              "icono": "🌐"
+            },
+            {
+              "ruta": "smr/servicios/ftp",
+              "titulo": "Servidor FTP",
+              "icono": "📤"
+            }
+          ]
         },
         {
-          "ruta": "threat-intel/tactica",
-          "titulo": "Inteligencia táctica",
-          "icono": "🔍"
-        },
-        {
-          "ruta": "threat-intel/estrategica",
-          "titulo": "Inteligencia estratégica",
-          "icono": "🌍"
-        }
-      ]
-    },
-    {
-      "titulo": "SIEM",
-      "paginas": [
-        {
-          "ruta": "siem/que-es",
-          "titulo": "Qué es un SIEM",
-          "icono": "📊"
-        },
-        {
-          "ruta": "siem/logs",
-          "titulo": "Logs y agregación",
-          "icono": "📥"
-        },
-        {
-          "ruta": "siem/correlacion",
-          "titulo": "Cómo procesa el SIEM",
-          "icono": "⚙️"
-        },
-        {
-          "ruta": "siem/reglas",
-          "titulo": "Reglas y Sigma",
-          "icono": "📐"
-        },
-        {
-          "ruta": "siem/splunk",
-          "titulo": "Splunk",
-          "icono": "🔦"
-        }
-      ]
-    },
-    {
-      "titulo": "Forense digital",
-      "paginas": [
-        {
-          "ruta": "forense/artefactos-windows",
-          "titulo": "Artefactos de Windows",
-          "icono": "🪟"
-        },
-        {
-          "ruta": "forense/volatility",
-          "titulo": "Volatility",
-          "icono": "🧠"
-        },
-        {
-          "ruta": "forense/autopsy-y-scalpel",
-          "titulo": "Autopsy y Scalpel",
-          "icono": "🔬"
-        }
-      ]
-    },
-    {
-      "titulo": "Respuesta a incidentes",
-      "paginas": [
-        {
-          "ruta": "respuesta/introduccion",
-          "titulo": "Qué es la respuesta a incidentes",
-          "icono": "🚨"
-        },
-        {
-          "ruta": "respuesta/preparacion",
-          "titulo": "Preparación",
-          "icono": "📋"
-        },
-        {
-          "ruta": "respuesta/defensas",
-          "titulo": "Defensas preventivas",
-          "icono": "🛡️"
-        },
-        {
-          "ruta": "respuesta/deteccion",
-          "titulo": "Detección y análisis",
-          "icono": "🔎"
-        },
-        {
-          "ruta": "respuesta/contencion",
-          "titulo": "Contención y recuperación",
-          "icono": "🧯"
-        },
-        {
-          "ruta": "respuesta/mitre-attack",
-          "titulo": "MITRE ATT&CK",
-          "icono": "🎯"
-        },
-        {
-          "ruta": "respuesta/triaje-en-vivo",
-          "titulo": "Triaje con CMD y PowerShell",
-          "icono": "⌨️"
-        },
-        {
-          "ruta": "respuesta/wireshark",
-          "titulo": "Wireshark",
-          "icono": "🦈"
-        },
-        {
-          "ruta": "respuesta/lecciones",
-          "titulo": "Lecciones e informes",
-          "icono": "📝"
+          "titulo": "Aplicaciones web",
+          "paginas": [
+            {
+              "ruta": "smr/web/como-funciona-la-web",
+              "titulo": "Cómo funciona la web",
+              "icono": "🕸️"
+            },
+            {
+              "ruta": "smr/web/maquetar-una-web",
+              "titulo": "Maquetar una web",
+              "icono": "🎨"
+            },
+            {
+              "ruta": "smr/web/busqueda-avanzada",
+              "titulo": "Búsqueda avanzada",
+              "icono": "🔎"
+            },
+            {
+              "ruta": "smr/web/seo",
+              "titulo": "Diseño web y SEO",
+              "icono": "📈"
+            }
+          ]
         }
       ]
     }

@@ -30,6 +30,12 @@ titulo: Inicio
 
 **Respuesta a incidentes:** El ciclo completo, MITRE ATT&CK, triaje en vivo, Wireshark y cómo se escribe el informe.
 
+> [!TAMBIEN]
+> Esto no es solo seguridad: también están aquí mis apuntes de los ciclos de FP, pasados a limpio.
+>
+> - **[ASIR](#/asir/inicio)** — redes, sistemas, bases de datos y lenguajes de marcas.
+> - **[SMR](#/smr/inicio)** — montaje y mantenimiento, redes, sistemas operativos, ofimática y servicios.
+
 ---
 
 ## Quién escribe esto
