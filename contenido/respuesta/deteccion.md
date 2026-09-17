@@ -69,5 +69,3 @@ Son esenciales para dos cosas distintas:
 | **IBM Resilient** | Orientada a IR |
 | **Jira Service Management** | Adaptable, común donde ya se usa Jira |
 | **TheHive** | Open source, específica de respuesta a incidentes |
-
-En BTL1 se centran en **TheHive**, así que si cae algo en el examen será sobre esa.
