@@ -5,6 +5,10 @@ subtitulo: true
 
 # Diseño web y SEO
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Hacer una web que el buscador entienda. No es magia ni trucos: es que la página esté bien construida y tenga algo que merezca la pena leer.
 
 ## Qué es el SEO

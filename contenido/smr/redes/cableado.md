@@ -5,6 +5,10 @@ subtitulo: true
 
 # Par trenzado y latiguillos
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 El cable de red de toda la vida: ocho hilos en cuatro pares, un código de colores y dos normas que hay que saberse de memoria.
 
 ## Por qué va trenzado

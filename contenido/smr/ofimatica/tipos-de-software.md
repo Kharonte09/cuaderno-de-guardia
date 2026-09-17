@@ -5,6 +5,10 @@ subtitulo: true
 
 # Tipos de software
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Cómo se clasifica todo lo que no es hardware: desde el lenguaje que entiende el procesador hasta el programa con el que escribes una factura.
 
 ## Los lenguajes, por nivel

@@ -10,6 +10,11 @@ Apuntes del ciclo de Sistemas Microinformáticos y Redes, pasados a limpio desde
 > [!NOTE]
 > Sección en preparación. Los módulos irán apareciendo aquí a medida que los repase.
 
+> [!WARNING]
+> Puede que algo esté anticuado. Son apuntes de mis años de clase y, además, los
+> temarios oficiales van por detrás de lo que se usa hoy, así que contrasta con la
+> documentación actual antes de dar nada por bueno.
+
 ## Qué habrá
 
 - **Montaje y mantenimiento** — componentes, ensamblado, presupuesto y diagnóstico.

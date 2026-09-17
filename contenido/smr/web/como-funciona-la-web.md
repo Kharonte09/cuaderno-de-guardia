@@ -5,6 +5,10 @@ subtitulo: true
 
 # Cómo funciona la web
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Lo que pasa entre escribir una dirección y ver la página. Entenderlo es la diferencia entre arreglar un problema y probar cosas al azar.
 
 ## Internet no es la web

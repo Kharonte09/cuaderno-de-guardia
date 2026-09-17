@@ -212,7 +212,7 @@
      Post-proceso del HTML renderizado
      --------------------------------------------------------- */
 
-  /** Avisos estilo GitHub: > [!NOTE] / [!TIP] / [!WARNING] / [!CAUTION] / [!IMPORTANT] / [!DESCARGO] / [!TAMBIEN] */
+  /** Avisos estilo GitHub: > [!NOTE] / [!TIP] / [!WARNING] / [!CAUTION] / [!IMPORTANT] / [!DESCARGO] / [!TAMBIEN] / [!REVISION] */
   const CALLOUTS = {
     NOTE:      { cls: 'note',    label: 'Nota',     ico: 'ℹ️' },
     TIP:       { cls: 'tip',     label: 'Truco',    ico: '💡' },
@@ -221,6 +221,7 @@
     CAUTION:   { cls: 'danger',  label: 'Atención', ico: '🛑' },
     IMPORTANT: { cls: 'info',    label: 'Importante', ico: '📌' },
     TAMBIEN:   { cls: 'info',    label: 'También en el cuaderno', ico: '📚' },
+    REVISION:  { cls: 'revision', label: 'Pendiente de revisión humana', ico: '👀' },
   };
 
   function transformCallouts(root) {

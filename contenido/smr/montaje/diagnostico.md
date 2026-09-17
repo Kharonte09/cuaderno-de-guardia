@@ -5,6 +5,10 @@ subtitulo: true
 
 # Diagnóstico y herramientas
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Cuando un equipo va mal, lo primero es saber **qué** pieza falla. Estas son las herramientas para inventariar el hardware y para probar memoria y discos.
 
 ## Inventariar el equipo

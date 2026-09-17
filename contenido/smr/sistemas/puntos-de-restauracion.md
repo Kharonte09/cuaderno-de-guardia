@@ -5,6 +5,10 @@ subtitulo: true
 
 # Puntos de restauración
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La red de seguridad de Windows: una foto de la configuración del sistema a la que volver cuando algo lo rompe.
 
 ## Qué guarda y qué no

@@ -5,6 +5,10 @@ subtitulo: true
 
 # Tor y Tails
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Dos herramientas de anonimato que se confunden constantemente. Una es una red, la otra es un sistema operativo entero, y hacen cosas distintas.
 
 ## Tor

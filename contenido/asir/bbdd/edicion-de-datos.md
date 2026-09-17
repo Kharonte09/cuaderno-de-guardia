@@ -5,6 +5,10 @@ subtitulo: true
 
 # Edición de los datos
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Una vez creadas las tablas hay que meter datos, corregirlos y borrarlos. Y hacerlo de forma que un fallo a medias no deje la base de datos inconsistente.
 
 ## Las tres instrucciones de manipulación

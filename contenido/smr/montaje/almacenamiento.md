@@ -5,6 +5,10 @@ subtitulo: true
 
 # Discos duros y SSD
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Las dos tecnologías de almacenamiento que convives con ellas: una mecánica y barata por gigabyte, otra electrónica y mucho más rápida.
 
 ## El disco duro mecánico (HDD)

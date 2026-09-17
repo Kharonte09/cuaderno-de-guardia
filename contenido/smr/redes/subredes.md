@@ -5,6 +5,10 @@ subtitulo: true
 
 # Subredes
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Dividir una red en trozos más pequeños es robarle bits a la parte de host para dárselos a la parte de red. Todo el cálculo sale de ahí.
 
 ## El método, en cuatro pasos

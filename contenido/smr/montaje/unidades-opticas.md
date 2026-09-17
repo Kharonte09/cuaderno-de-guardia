@@ -5,6 +5,10 @@ subtitulo: true
 
 # Unidades ópticas
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 CD, DVD y Blu-ray. Cada vez menos habituales en un equipo nuevo, pero siguen apareciendo en instalaciones, copias antiguas y equipos de taller.
 
 ## Cómo funcionan

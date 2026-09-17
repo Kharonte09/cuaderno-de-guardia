@@ -5,6 +5,10 @@ subtitulo: true
 
 # Arranque y respaldo
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 De dónde arranca un equipo, quién decide qué sistema se carga, y cómo se recupera todo cuando algo se rompe.
 
 ## La BIOS

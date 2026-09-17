@@ -5,6 +5,10 @@ subtitulo: true
 
 # Línea de comandos de Linux
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Moverse por el sistema de ficheros, ver qué hay y entender de dónde sale la información de los usuarios. Es lo que se pide en cualquier examen práctico y lo que se usa a diario en un servidor.
 
 ## Rutas absolutas y relativas

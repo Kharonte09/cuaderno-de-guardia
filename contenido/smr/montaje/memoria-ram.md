@@ -5,6 +5,10 @@ subtitulo: true
 
 # La memoria RAM
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La memoria de trabajo del equipo: rápida, volátil y la ampliación más rentable que existe cuando un ordenador va justo.
 
 ## Qué es y qué hace

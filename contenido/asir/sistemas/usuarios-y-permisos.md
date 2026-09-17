@@ -5,6 +5,10 @@ subtitulo: true
 
 # Usuarios y permisos en Linux
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Quién es cada uno, a qué grupo pertenece y qué puede hacer con cada fichero. Es la base de la administración, y lo que se pregunta en cualquier examen práctico.
 
 ## Cómo se leen los permisos

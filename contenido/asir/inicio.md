@@ -10,6 +10,11 @@ Apuntes del ciclo de Administración de Sistemas Informáticos en Red, pasados a
 > [!NOTE]
 > Sección en preparación. Los módulos irán apareciendo aquí a medida que los repase.
 
+> [!WARNING]
+> Puede que algo esté anticuado. Son apuntes de mis años de clase y, además, los
+> temarios oficiales van por detrás de lo que se usa hoy, así que contrasta con la
+> documentación actual antes de dar nada por bueno.
+
 ## Qué habrá
 
 - **Redes** — direccionamiento, subredes, VLANs y enrutamiento.

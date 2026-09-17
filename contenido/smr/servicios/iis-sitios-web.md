@@ -5,6 +5,10 @@ subtitulo: true
 
 # Publicar sitios web con IIS
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Levantar varios sitios en el mismo servidor, cada uno en su puerto, uno con HTTPS y otro protegido con usuario y contraseña.
 
 ## Instalar el servidor web

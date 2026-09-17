@@ -5,6 +5,10 @@ subtitulo: true
 
 # El router doméstico
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 El router de casa es, en un solo aparato, todo lo que en una red grande son cuatro cajas distintas. Saber recorrer su configuración es la práctica más rentable del módulo.
 
 ## Qué lleva dentro

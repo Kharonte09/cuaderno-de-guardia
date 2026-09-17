@@ -5,6 +5,10 @@ subtitulo: true
 
 # Bootstrap
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Un framework de CSS: en vez de escribir estilos, se ponen clases ya hechas en el HTML. Sirve para montar algo presentable y adaptable a móvil en muy poco tiempo.
 
 ## Cómo se usa

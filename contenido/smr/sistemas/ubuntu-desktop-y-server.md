@@ -5,6 +5,10 @@ subtitulo: true
 
 # Ubuntu Desktop y Ubuntu Server
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La misma distribución en dos ediciones. La diferencia de fondo es una sola cosa, y de ahí sale todo lo demás.
 
 ## La diferencia

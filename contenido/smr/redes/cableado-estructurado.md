@@ -5,6 +5,10 @@ subtitulo: true
 
 # Cableado estructurado
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Cablear un edificio no es tirar cables de un sitio a otro: es un sistema con partes normalizadas, pensado para que dentro de diez años alguien pueda cambiar un puesto sin abrir la pared.
 
 ## Las partes del sistema

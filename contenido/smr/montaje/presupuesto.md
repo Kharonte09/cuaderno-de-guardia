@@ -5,6 +5,10 @@ subtitulo: true
 
 # Elegir componentes y presupuestar
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Montar un equipo a medida es sobre todo un problema de compatibilidades y de reparto del dinero. El orden en que se eligen las piezas importa.
 
 ## El orden de decisión

@@ -5,6 +5,10 @@ subtitulo: true
 
 # IP, ARP e ICMP
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 El protocolo que mueve los datos entre redes, el que traduce direcciones IP a direcciones físicas, y el que avisa cuando algo va mal.
 
 ## El datagrama IP

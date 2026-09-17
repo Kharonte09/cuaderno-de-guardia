@@ -5,6 +5,10 @@ subtitulo: true
 
 # Diseño físico
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La última fase del diseño de una base de datos: traducir el modelo relacional a instrucciones SQL que crean las estructuras de verdad.
 
 ## Dónde encaja esta fase

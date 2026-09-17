@@ -5,6 +5,10 @@ subtitulo: true
 
 # Servidor FTP
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Dar a cada cliente una carpeta donde subir su web por FTP, con su usuario y sus permisos. Es el montaje clásico de un pequeño alojamiento.
 
 ## Qué es FTP

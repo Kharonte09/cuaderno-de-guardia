@@ -5,6 +5,10 @@ subtitulo: true
 
 # Maquetar una web
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Un sitio de varias páginas con HTML y CSS, sin frameworks ni nada instalado: un editor de texto y el navegador.
 
 ## La estructura de un fichero HTML

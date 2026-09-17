@@ -5,6 +5,10 @@ subtitulo: true
 
 # Ataques reales y qué enseñan
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Tres casos que salieron en la prensa española, contados por el mecanismo que usaron. Ninguno necesitó nada exótico: los tres explotaron un proceso mal montado.
 
 ## El cambio de número de cuenta

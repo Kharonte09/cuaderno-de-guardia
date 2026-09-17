@@ -5,6 +5,10 @@ subtitulo: true
 
 # Comprimir y descomprimir
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Juntar muchos ficheros en uno y hacerlos más pequeños. Parece trivial y tiene más opciones de las que la gente usa.
 
 ## Para qué sirve

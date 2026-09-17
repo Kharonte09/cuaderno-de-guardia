@@ -5,6 +5,10 @@ subtitulo: true
 
 # XML y DTD
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 XML sirve para guardar datos con su estructura, y DTD para definir qué estructura es válida. Es la base de casi todos los formatos de intercambio.
 
 ## Qué es XML

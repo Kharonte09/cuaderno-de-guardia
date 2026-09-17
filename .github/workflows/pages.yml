@@ -33,14 +33,42 @@ jobs:
           node -e "
           const fs = require('fs');
           const nav = JSON.parse(fs.readFileSync('contenido/nav.json','utf8'));
-          const faltan = nav.grupos
-            .flatMap(g => g.paginas)
-            .filter(p => !fs.existsSync('contenido/' + p.ruta + '.md'));
+          const rutas = new Set();
+          for (const area of nav.areas) {
+            if (area.inicio) rutas.add(area.inicio);
+            for (const grupo of area.grupos || []) {
+              for (const pagina of grupo.paginas || []) rutas.add(pagina.ruta);
+            }
+          }
+          const faltan = [...rutas].filter(r => !fs.existsSync('contenido/' + r + '.md'));
           if (faltan.length) {
-            console.error('Faltan ficheros:', faltan.map(p => p.ruta).join(', '));
+            console.error('Faltan ficheros:', faltan.join(', '));
             process.exit(1);
           }
-          console.log('Todas las rutas del menú existen.');
+          console.log('Todas las rutas del menu existen (' + rutas.size + ').');
+          "
+
+      - name: Avisar de páginas que no salen en el menú
+        run: |
+          node -e "
+          const fs = require('fs');
+          const nav = JSON.parse(fs.readFileSync('contenido/nav.json','utf8'));
+          const rutas = new Set();
+          for (const area of nav.areas) {
+            if (area.inicio) rutas.add(area.inicio);
+            for (const grupo of area.grupos || []) {
+              for (const pagina of grupo.paginas || []) rutas.add(pagina.ruta);
+            }
+          }
+          const recorrer = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap(
+            (e) => e.isDirectory() ? recorrer(dir + '/' + e.name)
+                 : e.name.endsWith('.md') ? [dir + '/' + e.name] : []
+          );
+          const sueltas = recorrer('contenido')
+            .map(f => f.replace(/^contenido\//, '').replace(/\.md\$/, ''))
+            .filter(r => !rutas.has(r));
+          if (sueltas.length) console.log('::warning::Sin enlazar en el menu: ' + sueltas.join(', '));
+          else console.log('Todas las paginas estan enlazadas.');
           "
 
       - name: Configurar Pages

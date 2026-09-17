@@ -5,6 +5,10 @@ subtitulo: true
 
 # Qué es un sistema operativo
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 El programa que está por debajo de todos los demás: reparte el hardware entre ellos y les da una forma común de usarlo.
 
 ## Qué hace

@@ -5,6 +5,10 @@ subtitulo: true
 
 # El equipo por dentro
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Abrir un ordenador y saber nombrar lo que hay dentro, para qué sirve cada pieza y con qué se conecta a las demás.
 
 ## Las piezas

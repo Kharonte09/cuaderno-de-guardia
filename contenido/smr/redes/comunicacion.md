@@ -5,6 +5,10 @@ subtitulo: true
 
 # Elementos de la comunicación
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Antes de hablar de cables y protocolos: toda comunicación, de un semáforo a una petición HTTP, tiene las mismas seis piezas.
 
 ## Las seis piezas

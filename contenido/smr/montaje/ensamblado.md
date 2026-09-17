@@ -5,6 +5,10 @@ subtitulo: true
 
 # Ensamblar un PC
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 El montaje completo, en el orden que menos problemas da: primero lo que se hace con la placa fuera de la caja, luego el chasis.
 
 ## Herramientas

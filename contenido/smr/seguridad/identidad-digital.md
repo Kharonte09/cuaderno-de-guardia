@@ -5,6 +5,10 @@ subtitulo: true
 
 # Identidad digital
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Firma electrónica, certificado digital y tarjetas inteligentes: las tres formas de demostrar quién eres ante una máquina, y lo que puede salir mal con cada una.
 
 ## Las tres tecnologías

@@ -5,6 +5,10 @@ subtitulo: true
 
 # Windows Server y DHCP
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Montar un servidor Windows en una máquina virtual y darle su primer papel: repartir direcciones a la red.
 
 ## Conseguir el sistema

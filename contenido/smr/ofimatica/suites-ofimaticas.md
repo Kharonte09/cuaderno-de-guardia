@@ -5,6 +5,10 @@ subtitulo: true
 
 # Suites ofimáticas
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Qué trae cada edición de una suite, qué pide para funcionar y cómo se elige la que le toca a un cliente.
 
 ## Las ediciones de Microsoft Office

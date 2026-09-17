@@ -5,6 +5,10 @@ subtitulo: true
 
 # Alta disponibilidad
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Que un servicio siga en pie cuando algo falla. Se consigue duplicando lo que se puede romper: discos, fuentes, corriente y máquinas enteras.
 
 ## Virtualización de servidores

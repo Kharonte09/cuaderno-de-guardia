@@ -5,6 +5,10 @@ subtitulo: true
 
 # XPath
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 El lenguaje para señalar partes de un documento XML. Se aprende resolviendo consultas, así que esta página es sobre todo ejemplos.
 
 ## La idea

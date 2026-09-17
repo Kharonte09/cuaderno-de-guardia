@@ -247,6 +247,11 @@
           "titulo": "Sistemas",
           "paginas": [
             {
+              "ruta": "asir/sistemas/linea-de-comandos",
+              "titulo": "Línea de comandos",
+              "icono": "⌨️"
+            },
+            {
               "ruta": "asir/sistemas/usuarios-y-permisos",
               "titulo": "Usuarios y permisos en Linux",
               "icono": "🔐"
@@ -270,6 +275,21 @@
               "ruta": "asir/bbdd/guiones",
               "titulo": "Construcción de guiones",
               "icono": "📜"
+            }
+          ]
+        },
+        {
+          "titulo": "Hardware",
+          "paginas": [
+            {
+              "ruta": "asir/hardware/arranque-y-respaldo",
+              "titulo": "Arranque y respaldo",
+              "icono": "💽"
+            },
+            {
+              "ruta": "asir/hardware/alta-disponibilidad",
+              "titulo": "Alta disponibilidad",
+              "icono": "♻️"
             }
           ]
         },

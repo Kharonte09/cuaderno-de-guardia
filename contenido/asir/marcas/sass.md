@@ -5,6 +5,10 @@ subtitulo: true
 
 # SASS
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Un preprocesador de CSS: le da a las hojas de estilo lo que les falta de un lenguaje de programación —variables, funciones, anidación— y genera el CSS final automáticamente.
 
 ## Qué es un preprocesador

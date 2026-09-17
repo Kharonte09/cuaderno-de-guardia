@@ -5,6 +5,10 @@ subtitulo: true
 
 # Dispositivos de interconexión
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Los equipos que trabajan en el nivel de enlace: leen las tramas, entienden direcciones MAC y deciden por dónde sale cada cosa.
 
 ## Qué significa "de enlace"

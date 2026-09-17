@@ -5,6 +5,10 @@ subtitulo: true
 
 # Estudiar protocolos con Wireshark
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Capturar una navegación normal y reconocer, paquete a paquete, todo lo que hace falta para abrir una simple página web.
 
 ## Preparar la captura

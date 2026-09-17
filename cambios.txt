@@ -1,16 +1,15 @@
-comentar que tal vez este anticuado  ya sea por el añoq ue hize los apuntes ocmo que los propios temariaso oficiales están un poco desfasados, comentarlo en el inicio de ambos, ASIR SMR
+HECHO
+- Aviso de "puede estar anticuado" en el inicio de ASIR y en el de SMR.
+- Banner "Pendiente de revisión humana" ([!REVISION]) en las 49 páginas de ASIR y
+  SMR. Los "Empezar aquí" se quedan sin banner, como estaba pensado.
+- Enlazadas en el menú tres páginas de ASIR que estaban escritas pero sueltas:
+  línea de comandos (en Sistemas) y arranque y respaldo + alta disponibilidad
+  (grupo Hardware nuevo, que el inicio de ASIR ya anunciaba).
+- Arreglado el despliegue de Pages: la comprobación del menú seguía leyendo
+  nav.grupos y el JSON pasó a nav.areas[].grupos[], así que reventaba.
+  Añadido además un aviso si queda alguna página sin enlazar.
 
-
-
-PLantear si tal vez es buena opción lo de seguridad elimanro lo añadirlo a blue team si correpsonde y ayq ue e smas dedciado (que opción ves mejor tu Claude?)
-
-
-Añadir a todas una bnner que sea Pendeinte de revisión humana en alss que no haya leído yo enteras (De momento los empezar aquí de los 3 blqoues no lo llevaran )
-
-
-
-¿PLanaer borar lenguiaje d emarcas o ofimatica o dejarlo por sia yuda ?
-
-
-
-
+PENDIENTE DE DECIDIR
+- ¿El banner de revisión va también en blue team, o esas ya las has leído enteras?
+- Seguridad informática de SMR: ¿se queda donde está o se mueve a blue team?
+- ¿Borrar lenguajes de marcas y ofimática, o dejarlos por si ayudan?

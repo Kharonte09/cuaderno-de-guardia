@@ -5,6 +5,10 @@ subtitulo: true
 
 # VLAN y STP
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Dos protocolos de nivel 2 que resuelven dos problemas distintos: separar redes sin cambiar el cableado, y evitar que los bucles tumben la red.
 
 ## Qué es una VLAN

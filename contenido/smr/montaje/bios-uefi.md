@@ -5,6 +5,10 @@ subtitulo: true
 
 # ROM, BIOS y UEFI
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 El programa que arranca el ordenador antes de que exista sistema operativo, y la memoria donde vive.
 
 ## La memoria ROM

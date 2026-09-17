@@ -5,6 +5,10 @@ subtitulo: true
 
 # El sistema de archivos de Linux
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Cómo guarda Linux los datos y cómo está organizado su árbol de directorios. Saberse los directorios de memoria ahorra muchísimo tiempo después.
 
 ## La familia ext

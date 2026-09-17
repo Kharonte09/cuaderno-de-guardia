@@ -5,6 +5,10 @@ subtitulo: true
 
 # TCP y puertos
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Cómo se identifica cada conversación dentro de un mismo equipo, y cómo se abre y se cierra una conexión fiable.
 
 ## Los puertos

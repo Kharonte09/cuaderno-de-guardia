@@ -5,6 +5,10 @@ subtitulo: true
 
 # Construcción de guiones
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Agrupar instrucciones SQL en secuencia, y dar el salto a programar dentro de la propia base de datos con la extensión procedimental de MySQL.
 
 ## Por qué hacen falta

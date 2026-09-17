@@ -5,6 +5,10 @@ subtitulo: true
 
 # Windows frente a Ubuntu
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Comparar los dos sistemas que se usan en el día a día: qué piden para funcionar, qué cuestan y para qué es mejor cada uno.
 
 ## De dónde vienen

@@ -5,6 +5,10 @@ subtitulo: true
 
 # Búsqueda avanzada
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Los operadores del buscador. Se aprenden en diez minutos y cambian por completo la velocidad a la que se encuentra cualquier cosa.
 
 ## Los operadores

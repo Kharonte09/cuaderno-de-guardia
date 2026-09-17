@@ -5,6 +5,10 @@ subtitulo: true
 
 # El procesador
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Lo que se mira de una CPU al comprarla o al comparar dos, y de dónde sale cada número de la ficha técnica.
 
 ## Qué dice la ficha

@@ -5,6 +5,10 @@ subtitulo: true
 
 # Direccionamiento IPv4
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Una IPv4 son 32 bits en cuatro octetos. Lo que cambia de una dirección a otra es dónde se parte: cuánto es red y cuánto es host.
 
 ## Cómo se lee una dirección

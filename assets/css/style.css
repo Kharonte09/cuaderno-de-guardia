@@ -346,6 +346,7 @@ pre:hover .copy-btn, .copy-btn:focus{ opacity:1; }
 .callout.warning{ --c:var(--warn); }
 .callout.danger { --c:var(--danger); }
 .callout.info   { --c:var(--tip); }
+.callout.revision{ --c:var(--txt-dim); }
 
 /* ---------------- Esquemas SVG ----------------
    Van en línea dentro del Markdown para poder usar las variables del tema.
