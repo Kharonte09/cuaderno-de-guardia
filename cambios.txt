@@ -9,7 +9,8 @@ HECHO
   nav.grupos y el JSON pasó a nav.areas[].grupos[], así que reventaba.
   Añadido además un aviso si queda alguna página sin enlazar.
 
-PENDIENTE DE DECIDIR
-- ¿El banner de revisión va también en blue team, o esas ya las has leído enteras?
-- Seguridad informática de SMR: ¿se queda donde está o se mueve a blue team?
-- ¿Borrar lenguajes de marcas y ofimática, o dejarlos por si ayudan?
+DECIDIDO (no volver a plantearlo)
+- El contenido de FP se queda en el módulo de su ciclo. Seguridad informática
+  sigue en SMR, no se mueve a blue team.
+- Lenguajes de marcas y ofimática se quedan donde están, no se borran.
+- El banner de revisión es solo para ASIR y SMR. Blue team no lo lleva.
