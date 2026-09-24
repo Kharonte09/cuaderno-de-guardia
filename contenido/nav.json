@@ -58,6 +58,11 @@
               "icono": "🛡️"
             },
             {
+              "ruta": "phishing/analisis",
+              "titulo": "Analizar un correo",
+              "icono": "🔬"
+            },
+            {
               "ruta": "phishing/informe",
               "titulo": "Redactar el informe",
               "icono": "📝"
