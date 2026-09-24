@@ -5,6 +5,10 @@ subtitulo: true
 
 # Qué es la respuesta a incidentes
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La **metodología que usa una organización para responder y gestionar un ciberataque**.
 
 **Objetivo:** analizar, contener, erradicar y recuperar los sistemas lo más rápido posible.

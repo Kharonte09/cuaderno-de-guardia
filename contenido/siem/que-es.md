@@ -5,6 +5,10 @@ subtitulo: true
 
 # Qué es un SIEM
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Un SIEM es la suma de dos cosas que antes se vendían por separado: **SIM** y **SEM**. Entender de dónde viene explica por qué hace lo que hace.
 
 ## SIM — Security Information Management

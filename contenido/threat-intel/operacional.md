@@ -5,6 +5,10 @@ subtitulo: true
 
 # Inteligencia operacional
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La que estudia **cómo trabaja el adversario**: sus fases, sus técnicas y qué rastros deja en cada una. Dos modelos la estructuran, y los dos aparecen constantemente en informes y en entrevistas.
 
 ## Cyber Kill Chain

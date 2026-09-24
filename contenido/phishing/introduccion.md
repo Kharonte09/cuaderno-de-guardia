@@ -5,6 +5,10 @@ subtitulo: true
 
 # El correo y el phishing
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Antes de analizar un correo malicioso hay que saber cómo viaja un correo normal. Casi todas las técnicas de suplantación se apoyan en algún hueco de este recorrido.
 
 ## Cómo llega un correo de A a B

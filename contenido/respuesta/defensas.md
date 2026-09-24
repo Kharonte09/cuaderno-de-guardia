@@ -5,6 +5,10 @@ subtitulo: true
 
 # Defensas preventivas
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Los controles que se despliegan antes del incidente, agrupados por dónde actúan: host, red, correo, físico y humano.
 
 ---

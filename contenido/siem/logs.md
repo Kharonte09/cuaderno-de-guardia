@@ -5,6 +5,10 @@ subtitulo: true
 
 # Logs y agregación
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Los **logs** registran lo que pasa en un sistema: usuarios, red, errores. Sirven para detectar ataques porque muestran lo que se sale de lo normal — muchos intentos de inicio de sesión seguidos, un escaneo de puertos.
 
 > [!IMPORTANT]

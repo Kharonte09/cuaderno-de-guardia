@@ -5,6 +5,10 @@ subtitulo: true
 
 # Tipos de phishing
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Casi todos los ataques por correo buscan lo mismo —que descargues un fichero o que escribas tus credenciales en una web falsa— pero hay varias formas de conseguirlo, y unas funcionan bastante mejor que otras.
 
 | Tipo | Objetivo | Volumen |

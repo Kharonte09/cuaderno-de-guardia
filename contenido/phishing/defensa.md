@@ -5,6 +5,10 @@ subtitulo: true
 
 # Acciones defensivas
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Las medidas se dividen en dos bloques: las **preventivas**, que se montan antes de que pase nada, y las **reactivas**, que son lo que haces cuando el correo ya está en los buzones.
 
 ---

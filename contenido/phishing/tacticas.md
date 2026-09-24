@@ -5,6 +5,10 @@ subtitulo: true
 
 # Tácticas y técnicas
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Las técnicas que usan los atacantes para que sus correos parezcan legítimos, aumenten la probabilidad de que alguien interactúe, esquiven los sistemas de análisis y dificulten la respuesta del equipo de seguridad.
 
 ## Spear phishing

@@ -5,6 +5,10 @@ subtitulo: true
 
 # Volatility
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Herramienta forense de **análisis de memoria RAM**, open source y escrita en Python. Se usa en respuesta a incidentes y en análisis de malware, y funciona sobre volcados de Windows, Linux y macOS.
 
 Con ella puedes:

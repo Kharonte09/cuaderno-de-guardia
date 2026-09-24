@@ -5,6 +5,10 @@ subtitulo: true
 
 # Contención, erradicación y recuperación
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La fase tres del ciclo, y la que más presión tiene encima: hay que parar el daño sin destruir las pruebas que necesitas después.
 
 ---

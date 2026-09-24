@@ -5,6 +5,10 @@ subtitulo: true
 
 # Redactar el informe
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Plantilla de lo que tiene que llevar el informe de un análisis de phishing. Tres partes: **qué era**, **qué hiciste** y **qué hay que hacer ahora**.
 
 ## Primera parte: cabeceras, artefactos y cuerpo

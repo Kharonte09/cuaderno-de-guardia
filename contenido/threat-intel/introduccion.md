@@ -5,6 +5,10 @@ subtitulo: true
 
 # Qué es la inteligencia de amenazas
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Conjunto de **información útil sobre amenazas actuales o potenciales**, usada para mejorar las defensas, reducir riesgos y detectar actividad maliciosa.
 
 Se apoya en **indicadores de compromiso (IOC)** —IPs, dominios, direcciones de correo, hashes de fichero— y sirve para entender **quién ataca, por qué y cómo**.

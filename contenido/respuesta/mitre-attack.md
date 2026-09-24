@@ -5,6 +5,10 @@ subtitulo: true
 
 # MITRE ATT&CK
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Guía completa de **tácticas y técnicas usadas por adversarios**, útil tanto para defensores como para equipos ofensivos.
 
 **Para el defensor:** identificar en qué áreas tienes buena o mala visibilidad, mejorar la detección con alertas y reglas, y apoyar la caza proactiva dentro de la red.

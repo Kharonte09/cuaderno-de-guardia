@@ -5,6 +5,10 @@ subtitulo: true
 
 # Cómo procesa el SIEM
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Lo que le pasa a un log entre que entra y que tú lo buscas. Cinco pasos, en orden.
 
 ```text

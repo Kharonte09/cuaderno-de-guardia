@@ -5,6 +5,10 @@ subtitulo: true
 
 # Detección y análisis
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La fase donde se decide qué es ruido y qué es un incidente.
 
 ## Eventos comunes

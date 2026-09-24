@@ -5,6 +5,10 @@ subtitulo: true
 
 # Splunk
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Notas de práctica con el dataset **BOTSv1** (*Boss of the SOC*), que es el que se usa para aprender a buscar sobre datos reales.
 
 ## Búsquedas básicas

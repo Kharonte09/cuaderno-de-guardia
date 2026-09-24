@@ -5,6 +5,10 @@ subtitulo: true
 
 # Triaje en vivo con CMD y PowerShell
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Lo que se ejecuta en una máquina sospechosa para hacerse una idea rápida de qué está pasando, sin instalar nada.
 
 > [!WARNING]

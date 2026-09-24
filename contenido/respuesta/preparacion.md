@@ -5,6 +5,10 @@ subtitulo: true
 
 # Preparación
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La fase que se trabaja **antes** de que pase nada, y la única que se hace sin prisa. Todo lo que no esté resuelto aquí habrá que improvisarlo con el incidente encima.
 
 ## El plan de respuesta (IRP)

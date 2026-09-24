@@ -5,6 +5,10 @@ subtitulo: true
 
 # Inteligencia táctica
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La parte técnica e inmediata: los indicadores que entran en tus herramientas y las comprobaciones que se hacen con ellos.
 
 ## Threat exposure checks

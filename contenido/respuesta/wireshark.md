@@ -5,6 +5,10 @@ subtitulo: true
 
 # Wireshark
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Análisis de paquetes: cómo quedarse solo con lo que importa de una captura y qué ventanas de estadísticas delatan una exfiltración.
 
 ## Filtros de visualización

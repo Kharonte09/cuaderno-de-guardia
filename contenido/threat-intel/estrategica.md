@@ -5,6 +5,10 @@ subtitulo: true
 
 # Inteligencia estratégica
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La inteligencia estratégica se centra en entender **amenazas a nivel global**: sobre todo actividad geopolítica y APTs de países hostiles.
 
 El analista estratégico recoge información de muchas fuentes, la analiza, la comparte internamente y con socios externos, y ayuda a **anticipar posibles aumentos de riesgo**.

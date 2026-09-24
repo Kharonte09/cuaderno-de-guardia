@@ -5,6 +5,10 @@ subtitulo: true
 
 # Autopsy y Scalpel
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Las dos herramientas para trabajar sobre **disco**, no sobre memoria. Una analiza la imagen entera con interfaz gráfica; la otra recupera ficheros que ya no están.
 
 ---

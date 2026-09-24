@@ -5,6 +5,10 @@ subtitulo: true
 
 # Actores y APTs
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 ## Amenaza, vulnerabilidad y riesgo
 
 Tres palabras que se usan como sinónimos y no lo son:

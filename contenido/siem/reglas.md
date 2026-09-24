@@ -5,6 +5,10 @@ subtitulo: true
 
 # Reglas de detección y Sigma
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 ## Qué son las reglas de un SIEM
 
 Son **consultas de búsqueda** que buscan actividad concreta dentro de los logs, en tiempo real o de forma programada. Si encuentran coincidencia pueden generar una alerta, enviar un correo o registrar el evento en otro sitio.

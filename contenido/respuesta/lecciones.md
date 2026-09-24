@@ -5,6 +5,10 @@ subtitulo: true
 
 # Lecciones aprendidas e informes
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La fase posterior a la recuperación. El objetivo es analizar **qué salió bien, qué se puede mejorar** y cómo reforzar los controles y los procesos para la próxima vez.
 
 ## La reunión post-incidente

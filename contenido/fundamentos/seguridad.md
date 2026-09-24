@@ -5,6 +5,10 @@ subtitulo: true
 
 # Fundamentos de seguridad
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 La base que se da por sabida antes de entrar en cualquier disciplina defensiva: qué tipos de control existen, cómo se organizan y el mínimo de redes que hace falta para leer un log sin perderse.
 
 ## Tipos de control de seguridad

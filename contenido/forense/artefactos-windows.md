@@ -5,6 +5,10 @@ subtitulo: true
 
 # Artefactos de Windows
 
+> [!REVISION]
+> Apuntes pasados a limpio que todavía no he releído enteros. Puede haber erratas
+> o cosas explicadas a medias.
+
 Windows deja rastro de casi todo lo que hace el usuario, aunque el fichero original ya no esté. Estos son los artefactos que más se usan para reconstruir actividad.
 
 ## Ficheros LNK
