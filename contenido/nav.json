@@ -4,7 +4,7 @@
   "areas": [
     {
       "id": "blue-team",
-      "titulo": "Blue team",
+      "titulo": "Blue Team",
       "icono": "🛡️",
       "inicio": "inicio",
       "grupos": [
