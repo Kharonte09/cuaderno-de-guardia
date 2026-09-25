@@ -11,6 +11,20 @@ subtitulo: true
 
 El recorrido de un análisis real, de principio a fin: conseguir el correo sin romperlo, leer las cabeceras, sacar URLs y adjuntos sin ejecutar nada, y solo al final, si hace falta, detonarlos en una sandbox. Cada paso deja datos que acaban en el [informe](#/phishing/informe).
 
+## En la práctica: herramientas que lo automatizan
+
+En una empresa no se suele hacer todo esto a mano correo por correo. Lo normal es trabajar con una plataforma que recibe los correos que reportan los usuarios, saca las cabeceras, las URLs y los adjuntos, los contrasta con fuentes de reputación (VirusTotal y similares) y te devuelve un **informe con un veredicto**. Algunas, además, borran el mismo correo del buzón de todos los que lo recibieron.
+
+| Herramienta | Qué hace |
+|---|---|
+| **PhishTool** | Subes el `.eml` y te lo desmonta: cabeceras, autenticación, URLs y adjuntos, con consultas a reputación ya hechas. Tiene versión gratuita, útil para practicar. |
+| **IRONSCALES** | Protección anti-phishing para Microsoft 365 y Google Workspace. Analiza los correos entrantes y los reportados y los retira de todos los buzones. |
+| **Microsoft Defender for Office 365** | Si la empresa usa Microsoft 365, lo más habitual. Los correos que reportan los usuarios pueden lanzar una investigación automática (*AIR*) que busca los correos parecidos y propone qué hacer con ellos. |
+| **KnowBe4 PhishER**, **Cofense Triage** | Gestionan la cola de correos reportados: los agrupan, los priorizan y marcan lo que ya se conoce, para que el analista mire solo lo que importa. |
+
+> [!IMPORTANT]
+> La herramienta te ahorra el trabajo manual, pero **no piensa por ti**. Te dirá `spf=fail` o que un dominio tiene tres días; tienes que saber por qué eso importa, cuándo un veredicto "limpio" no lo es (un análisis antiguo en VirusTotal, un enlace de Google Drive, una cuenta comprometida) y qué comprobar a mano cuando la herramienta no llega. Eso es lo que explica el resto de la página.
+
 ## 0. Antes de empezar
 
 - **Trabaja con el original.** Un `.eml` (texto plano) o un `.msg` (formato binario de Outlook). Un reenvío no vale: pierde las cabeceras originales.
@@ -58,6 +72,8 @@ Reply-To: soporte.banco@correo-gratuito.example
 
 Tres dominios distintos en tres campos que deberían contar la misma historia es la señal más clara que vas a encontrar. Las plataformas legítimas de envío masivo también usan un `Return-Path` propio, así que la diferencia sola no condena; el `Reply-To` a un correo gratuito sí suele hacerlo.
 
+Un ejemplo típico: alguien abre una cuenta gratuita con el mismo apellido que un empleado de un proveedor y escribe diciendo que ya ha emitido la factura y que hay que pagarla en tal cuenta. En el `Reply-To` pone la dirección **real** del empleado del proveedor, para que la respuesta no levante sospechas. Aun así, un `From` distinto del `Reply-To` no basta para decir que es phishing: hay que juntarlo con el resto (adjunto malicioso, URL, contenido engañoso).
+
 ### Por dónde ha pasado: `Received`
 
 Cada servidor añade su `Received:` **encima** de los anteriores, así que se leen de abajo arriba. Lo que te interesa es la IP que entregó el correo a tu organización:
@@ -72,15 +88,34 @@ Received: from mail.facturas-envio.example (unknown [203.0.113.45])
 
 Con esa IP:
 
-- **Reputación:** AbuseIPDB, Cisco Talos Intelligence, VirusTotal.
+- **Reputación:** AbuseIPDB, Cisco Talos Intelligence, VirusTotal. Si la IP está en listas negras pero pertenece a un servidor que parece normal, lo más probable es que el atacante esté usando un **servidor comprometido**.
 - **Propietario:** `whois 203.0.113.45`. Un proveedor de hosting barato o una IP residencial para un "banco" ya es un dato.
 - **DNS inverso** del nombre que aparece en el `Received:`, y si cuadra con quien dice ser.
+
+### ¿Salió del servidor que toca?
+
+La pregunta de fondo es si esa IP pertenece de verdad al dominio que aparece en el `From:`. Para comprobarlo a mano, consulta los registros DNS del dominio en **MXToolbox** (o con `nslookup` / `dig`):
+
+- **SPF** (`TXT` que empieza por `v=spf1`): la lista de servidores autorizados a **enviar** en nombre del dominio. Es la comprobación buena: si la IP no está ahí ni en ninguno de sus `include:`, no la ha autorizado el dominio.
+- **MX**: los servidores que **reciben** correo para el dominio. No son exactamente los que envían, pero suelen ser del mismo proveedor. Si el dominio usa Google o Microsoft y el correo llegó desde un hosting cualquiera, algo no cuadra.
+
+```text
+nslookup -type=txt banco.example
+nslookup -type=mx banco.example
+```
+
+Las organizaciones grandes con servidores de correo propios tienen sus propios rangos de IP. En ese caso, el `whois` de la IP debería devolver el nombre de la organización.
+
+> [!IMPORTANT]
+> Que el remitente **no** esté falsificado no significa que el correo sea seguro. Si el atacante ha **comprometido la cuenta real** de alguien, el correo sale del servidor correcto y pasa SPF, DKIM y DMARC. Las cabeceras limpias descartan la suplantación, pero no el phishing. Hay que seguir con el cuerpo y los adjuntos.
 
 ### Otros detalles que suman
 
 | Cabecera | Qué mirar |
 |---|---|
-| `Message-ID` | El dominio tras la `@` suele ser el del sistema que generó el correo. Si no tiene nada que ver con el remitente, se apunta. |
+| `To` / `Cc` | A quién más se envió. Muchos destinatarios de la misma empresa en copia son una pista de campaña. (Los de `Bcc`, copia oculta, no aparecen en las cabeceras.) |
+| `Message-ID` | Identificador único de cada correo: no hay dos iguales. El dominio tras la `@` suele ser el del sistema que generó el correo. Si no tiene nada que ver con el remitente, se apunta. |
+| `MIME-Version` / `Content-Type` | Cómo va montado el mensaje (texto, HTML, adjuntos). Sirve para saber qué partes hay que decodificar en el paso 2. |
 | `Date` | Zona horaria y hora de envío frente a lo que se espera del remitente. |
 | `Subject` | Si viene como `=?UTF-8?B?...?=` está codificado (base64). Se decodifica antes de copiarlo al informe. |
 | `X-Mailer` / `User-Agent` | El programa que lo envió. Un script de envío masivo para un correo "personal" desentona. |
@@ -110,8 +145,21 @@ Con cada URL:
 |---|---|
 | Captura de la página sin visitarla | urlscan.io (en modo *Unlisted* o *Private*), URL2PNG |
 | Reputación | VirusTotal, urlscan.io |
-| Antigüedad del dominio | `whois dominio.example`. Un dominio de días para un servicio conocido es la señal más fiable que hay. |
+| Antigüedad del dominio | `whois dominio.example`. Un dominio de días para un servicio conocido es la señal más fiable que hay: la mayoría de campañas registran un dominio nuevo y lo usan solo unos días. |
 | Parecido con el legítimo | Letras cambiadas (`rn` por `m`, `0` por `o`), subdominios engañosos (`banco.example.dominio-raro.example`) |
+
+> [!CAUTION]
+> Mira **la fecha** del resultado de VirusTotal. Si alguien ya analizó esa URL o ese fichero, VirusTotal enseña el análisis antiguo en vez de hacer uno nuevo. Un truco conocido es que el atacante suba su dominio **antes** de meterle el contenido malicioso: sale limpio y ese resultado se queda ahí. Si el análisis tiene semanas o meses, pulsa en volver a analizar. Además, que alguien lo subiera antes de la campaña ya es sospechoso: puede ser el atacante comprobando cuántos antivirus lo detectan.
+
+### Servicios legítimos usados de tapadera
+
+No todas las URLs maliciosas están en dominios raros. Los atacantes usan servicios conocidos precisamente porque su reputación es buena:
+
+- **Almacenamiento en la nube** (Google Drive, OneDrive): el enlace es de Google o Microsoft, pero lo que descarga es malicioso.
+- **Subdominios gratuitos** (WordPress, Blogspot, Wix, servicios de Microsoft): `algo.wixsite.com` es de quien lo creó, no de Wix. El `whois` solo funciona con el dominio principal, así que devuelve los datos de Wix, con años de antigüedad, y parece de fiar.
+- **Formularios** (Google Forms y similares): no hace falta montar una web falsa, el formulario recoge las contraseñas. El dominio es de Google y los antivirus no lo bloquean.
+
+En estos casos la reputación del dominio no sirve. Lo que hay que mirar es el **contenido**: qué pide la página y quién la ha creado.
 
 > [!WARNING]
 > urlscan.io publica por defecto los escaneos que hace la gente con cuenta gratuita, con la URL completa. Si la URL lleva el correo de la víctima o un token, **quítalo antes** o usa el modo privado.
@@ -177,11 +225,51 @@ Si el análisis estático no te ha dado un veredicto claro, se ejecuta el ficher
 |---|---|
 | ANY.RUN | Interactiva: puedes hacer clic dentro. Los análisis gratuitos son públicos. |
 | Hybrid Analysis | Automática, informe detallado. Los envíos son públicos. |
+| Joe Sandbox, VMRay | Más completas. Joe Sandbox tiene versión gratuita limitada; VMRay es de pago. |
 | VM propia | Lo único privado de verdad. Con Wireshark o Procmon de fondo. |
+
+### Solo para ver una web: navegadores remotos
+
+Para echar un vistazo rápido a una URL sin montar nada, hay navegadores en línea como **Browserling**: la página se abre en su máquina y tú ves la imagen.
+
+- **Ventaja:** si la web aprovecha un fallo del navegador (incluso uno sin parche todavía), el afectado es su equipo, no el tuyo.
+- **Inconveniente:** si la web descarga un fichero, no lo puedes ejecutar ahí, y el análisis se queda a medias.
+
+### Antes de abrir la URL, límpiala
+
+Muchas URLs de phishing llevan el correo de la víctima o un identificador suyo en un parámetro:
+
+```text
+hxxps://tienda-popular[.]example/login?email=victima@empresa.example
+```
+
+Con solo visitarla, aunque no escribas ninguna contraseña, el atacante sabe que **esa dirección existe y alguien ha pulsado**. La apunta como víctima válida y la usará en ataques más trabajados. Antes de abrirla en la sandbox, cambia el correo por uno inventado o quita el parámetro.
+
+### Cosas que engañan al análisis
+
+- **Malware que espera.** Algunos no hacen nada durante unos minutos para que la sandbox termine y lo dé por bueno. Deja correr el análisis el tiempo suficiente antes de concluir que el fichero está limpio.
+- **Correos sin URL ni adjunto.** No son seguros por eso. El atacante puede meter todo el mensaje (y el enlace o el QR) en una **imagen** para que las herramientas no encuentren texto que analizar.
 
 Lo que salga de aquí (dominios, IPs, hashes de lo que descarga) son más indicadores para el informe y para bloquear.
 
-## 5. Qué te llevas
+## 5. Alcance: ¿a quién más le ha llegado?
+
+Un correo reportado casi nunca es el único. Con los datos que has sacado, busca en la **pasarela de correo** (o en el SIEM) todos los que se parezcan:
+
+| Buscar por | Por qué |
+|---|---|
+| Dirección del remitente | El caso más directo |
+| IP del servidor SMTP | Encuentra envíos desde la misma máquina aunque cambie el remitente |
+| Dominio (`@dominio.example`) | Otras cuentas del mismo dominio del atacante |
+| Nombre de usuario | Si escribía desde `usuario@gmail.com`, puede haber usado también `usuario@hotmail.com` |
+| Asunto | El remitente y la IP pueden cambiar de un envío a otro; el asunto a menudo no |
+
+De cada resultado apunta **quién lo recibió y cuándo**. Eso dice cuántas personas hay que avisar, a quién hay que borrarle el correo del buzón y si alguien pulsó.
+
+> [!TIP]
+> Si los mismos usuarios reciben estos correos una y otra vez, puede que sus direcciones se hayan **filtrado** y estén publicadas (en Pastebin y sitios parecidos). Los atacantes también las recogen de las webs con herramientas como **theHarvester** (viene en Kali). Publicar direcciones personales en la web corporativa se lo pone fácil.
+
+## 6. Qué te llevas
 
 Al acabar deberías tener, como mínimo:
 
@@ -193,17 +281,6 @@ Al acabar deberías tener, como mínimo:
 | URLs saneadas y sus dominios | Cuerpo y adjuntos |
 | Nombre y hashes de cada adjunto | Paso 3 |
 | Lo que hizo en la sandbox | Paso 4 |
+| Destinatarios afectados y horas | Paso 5 |
 
 Con eso se rellena el [informe](#/phishing/informe) y se aplican las [medidas reactivas](#/phishing/defensa).
-
-## Fuentes
-
-- RFC 5322, formato del mensaje y cabeceras: <https://www.rfc-editor.org/rfc/rfc5322>
-- RFC 7208 (SPF), RFC 6376 (DKIM), RFC 7489 (DMARC).
-- RFC 8601, cabecera `Authentication-Results`: <https://www.rfc-editor.org/rfc/rfc8601>
-- RFC 2047, asuntos codificados `=?UTF-8?B?...?=`: <https://www.rfc-editor.org/rfc/rfc2047>
-- oletools: <https://github.com/decalage2/oletools>
-- pdfid y pdf-parser (Didier Stevens): <https://blog.didierstevens.com/programs/pdf-tools/>
-- Privacidad de los envíos a VirusTotal: <https://docs.virustotal.com/docs/privacy-policy>
-- Visibilidad de los escaneos en urlscan.io: <https://urlscan.io/docs/api/>
-- CyberChef: <https://gchq.github.io/CyberChef/>

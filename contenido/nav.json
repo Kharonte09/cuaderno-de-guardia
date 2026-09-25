@@ -53,14 +53,14 @@
               "icono": "🎭"
             },
             {
-              "ruta": "phishing/defensa",
-              "titulo": "Acciones defensivas",
-              "icono": "🛡️"
-            },
-            {
               "ruta": "phishing/analisis",
               "titulo": "Analizar un correo",
               "icono": "🔬"
+            },
+            {
+              "ruta": "phishing/defensa",
+              "titulo": "Acciones defensivas",
+              "icono": "🛡️"
             },
             {
               "ruta": "phishing/informe",
