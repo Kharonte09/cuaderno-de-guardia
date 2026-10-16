@@ -64,8 +64,3 @@ La conclusión práctica: **bloquear hashes e IPs es barato para ti pero tambié
 
 > [!IMPORTANT]
 > Las dos ideas se combinan bien. La Kill Chain te dice **en qué momento** puedes detectar; la Pirámide, **con qué tipo de indicador** merece la pena hacerlo. Una detección por TTP en la fase 4 vale por cien listas de IPs.
-
----
-
-> [!NOTE]
-> En tus apuntes originales esta lección eran solo dos diagramas del curso. Aquí están reconstruidos con texto y tablas: el contenido conceptual es público —la Kill Chain es de Lockheed Martin y la Pirámide del Dolor de David Bianco— pero las tablas de "dónde lo ves tú" y "qué le cuesta cambiarlo" son interpretación, no literal del temario. Revísalas antes de darlas por buenas.

@@ -4,7 +4,7 @@ Apuntes abiertos de **ciberseguridad defensiva**, en español.
 
 📖 **[kharonte09.github.io/cuaderno-de-guardia](https://kharonte09.github.io/cuaderno-de-guardia/)** — versión web, con buscador. También son ficheros Markdown en `contenido/`.
 
-Temas: fundamentos, análisis de phishing, threat intelligence, SIEM, forense digital y respuesta a incidentes. Si acabas de llegar al sector, empieza por **[Por dónde empezar](contenido/por-donde-empezar.md)**.
+Temas: fundamentos, análisis de phishing, análisis de malware, ataques web, threat intelligence, SIEM, forense digital y respuesta a incidentes. Si acabas de llegar al sector, empieza por **[Por dónde empezar](contenido/por-donde-empezar.md)**.
 
 ## Aviso
 

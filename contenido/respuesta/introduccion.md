@@ -79,7 +79,7 @@ Identificar los eventos activos y determinar cuáles son incidentes de verdad.
 Mejorar procesos y defensas. Reconstruir qué pasó y cuándo.
 
 > [!IMPORTANT]
-> La fase 1 es la que más rinde y la que menos se hace, porque es la única que se trabaja cuando no hay urgencia. Todo lo que no esté preparado antes —contactos, permisos, herramientas, accesos— habrá que improvisarlo con el incidente encima.
+> La fase 1 es la que más rinde y la que menos se hace, porque es la única que se trabaja cuando no hay urgencia. Qué incluye está en [Preparación](#/respuesta/preparacion).
 
 ## CERT y CSIRT
 

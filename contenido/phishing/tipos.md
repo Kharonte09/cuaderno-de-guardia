@@ -21,7 +21,7 @@ Casi todos los ataques por correo buscan lo mismo —que descargues un fichero o
 | **Fichero malicioso** | Ejecutar código en tu equipo | Alto |
 | **Spam** | Vender algo, o preparar el terreno | Muy alto |
 
-## Recon
+## Reconocimiento (recon)
 
 Buscan confirmar que una dirección está activa y que el usuario abre o interactúa con el mensaje, para preparar ataques posteriores: phishing dirigido, BEC o envío de malware.
 
@@ -36,7 +36,7 @@ Buscan confirmar que una dirección está activa y que el usuario abre o interac
 > [!TIP]
 > Es el motivo por el que los clientes de correo bloquean las imágenes remotas por defecto. No es estética: es evitar que abrir un correo confirme al atacante que estás ahí.
 
-## Credential harvester
+## Robo de credenciales (credential harvesting)
 
 El más común con diferencia.
 

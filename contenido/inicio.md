@@ -22,9 +22,13 @@ titulo: Inicio
 
 **Análisis de phishing:** Cómo viaja un correo, los tipos de ataque, las técnicas que usan y qué hacer cuando llega uno.
 
+**Análisis de malware:** Los tipos, cómo se analiza una muestra sin perder el tiempo y los documentos de Office maliciosos.
+
+**Ataques web:** El OWASP Top 10, las inyecciones, los accesos a ficheros y la fuerza bruta, vistos desde el log.
+
 **Threat Intelligence:** Los niveles de inteligencia, los actores y APTs, la Kill Chain y la Pirámide del Dolor.
 
-**SIEM:** Qué es, cómo procesa los logs, las reglas de detección, Sigma y Splunk.
+**SIEM:** Qué es, cómo procesa los logs, los logs de red, las reglas de detección, el ciclo de vida de una alerta, Sigma y Splunk.
 
 **Forense digital:** Artefactos de Windows, análisis de memoria con Volatility, y disco con Autopsy y Scalpel.
 

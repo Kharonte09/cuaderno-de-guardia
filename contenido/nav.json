@@ -70,6 +70,51 @@
           ]
         },
         {
+          "titulo": "Análisis de malware",
+          "paginas": [
+            {
+              "ruta": "malware/tipos",
+              "titulo": "Tipos de malware",
+              "icono": "🦠"
+            },
+            {
+              "ruta": "malware/analisis",
+              "titulo": "Analizar una muestra",
+              "icono": "🔬"
+            },
+            {
+              "ruta": "malware/documentos-office",
+              "titulo": "Documentos de Office maliciosos",
+              "icono": "📄"
+            }
+          ]
+        },
+        {
+          "titulo": "Ataques web",
+          "paginas": [
+            {
+              "ruta": "ataques-web/introduccion",
+              "titulo": "Ataques web y OWASP",
+              "icono": "🌐"
+            },
+            {
+              "ruta": "ataques-web/inyecciones",
+              "titulo": "Inyecciones",
+              "icono": "💉"
+            },
+            {
+              "ruta": "ataques-web/ficheros-y-accesos",
+              "titulo": "Ficheros y accesos",
+              "icono": "📂"
+            },
+            {
+              "ruta": "ataques-web/fuerza-bruta",
+              "titulo": "Fuerza bruta",
+              "icono": "🔨"
+            }
+          ]
+        },
+        {
           "titulo": "Threat Intelligence",
           "paginas": [
             {
@@ -113,6 +158,11 @@
               "icono": "📥"
             },
             {
+              "ruta": "siem/logs-de-red",
+              "titulo": "Logs de red",
+              "icono": "📡"
+            },
+            {
               "ruta": "siem/correlacion",
               "titulo": "Cómo procesa el SIEM",
               "icono": "⚙️"
@@ -121,6 +171,11 @@
               "ruta": "siem/reglas",
               "titulo": "Reglas y Sigma",
               "icono": "📐"
+            },
+            {
+              "ruta": "siem/alertas",
+              "titulo": "El ciclo de vida de una alerta",
+              "icono": "🚨"
             },
             {
               "ruta": "siem/splunk",

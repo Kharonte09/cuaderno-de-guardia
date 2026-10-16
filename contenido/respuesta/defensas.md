@@ -115,19 +115,7 @@ Intermediario entre el usuario e Internet. Bloquea el acceso a sitios maliciosos
 
 # Defensas de correo
 
-## Autenticación
-
-- **SPF** — qué servidores pueden enviar en nombre del dominio.
-- **DKIM** — firma criptográfica que verifica integridad y remitente.
-- **DMARC** — qué hacer si SPF o DKIM fallan: `none`, `quarantine`, `reject`.
-
-## Marcado de correo externo
-
-Etiquetar con **[EXTERNO]** en asunto o cuerpo. Aumenta la atención del usuario antes de abrir adjuntos o enlaces.
-
-## Filtros de spam
-
-**Gateway** (detrás del firewall, tipo Barracuda), **alojados** (en nube, tipo SpamTitan) y **de escritorio** (en el equipo del usuario).
+SPF, DKIM y DMARC, el marcado de correo externo, los filtros de spam y de adjuntos y la formación del usuario están desarrollados en [Acciones defensivas](#/phishing/defensa). Aquí quedan los dos controles que no salen allí.
 
 ## DLP
 
@@ -136,18 +124,6 @@ Detecta o bloquea el envío de información confidencial hacia fuera, apoyándos
 ## Sandboxing de adjuntos
 
 Ejecuta el adjunto en un entorno virtual aislado y observa su comportamiento **antes** de entregárselo al usuario.
-
-## Restricciones de adjuntos
-
-Bloquear solo los tipos de alto riesgo que usa el malware:
-
-```text
-.exe  .vbs  .js  .iso  .bat  .ps1  .htm  .html
-```
-
-## Concienciación
-
-Formación rutinaria sobre phishing, campañas simuladas para medir la respuesta, y **reentrenamiento** para quien cae.
 
 ---
 

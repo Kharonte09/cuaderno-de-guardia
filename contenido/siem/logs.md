@@ -26,6 +26,9 @@ Protocolo estándar (RFC 5424) que centraliza los eventos de muchos dispositivos
 
 Por sí mismo **no incluye cifrado ni autenticación**, y de ahí el 6514.
 
+> [!TIP]
+> Por UDP, Syslog **no garantiza la entrega**: si un paquete se pierde, ese evento no llega y nadie se entera. Para las fuentes críticas se usa TCP o un agente propio.
+
 ### Estructura del mensaje
 
 | Parte | Contenido |
@@ -34,7 +37,7 @@ Por sí mismo **no incluye cifrado ni autenticación**, y de ahí el 6514.
 | **Cabecera** | Fecha, host, aplicación, ID |
 | **Mensaje** | Etiquetas de función y gravedad, más la acción |
 
-## Windows Event Logs
+## Registros de eventos de Windows
 
 Ficheros `.evtx` que almacenan localmente los eventos del sistema, de las aplicaciones y de seguridad.
 
@@ -65,7 +68,7 @@ Ficheros `.evtx` que almacenan localmente los eventos del sistema, de las aplica
 | **4634** | Cierre de sesión |
 | **4647** | Cierre de sesión iniciado por el usuario |
 
-Un **4624 seguido inmediatamente de un 4672** significa que quien acaba de entrar tiene privilegios administrativos. Es la pareja que más se vigila.
+Un **4624 seguido inmediatamente de un 4672** significa que quien acaba de entrar tiene privilegios administrativos. Los campos de cada evento, los Logon Types y el 4625 de los intentos fallidos están en [Artefactos de Windows](#/forense/artefactos-windows).
 
 ### Event Viewer y vistas personalizadas
 

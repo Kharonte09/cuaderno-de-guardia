@@ -30,7 +30,7 @@ MITRE mantiene además **[D3FEND](https://d3fend.mitre.org/)**, el catálogo equ
 
 ---
 
-## 1. Initial Access — TA0001
+## 1. Acceso inicial (Initial Access) — TA0001
 
 Cómo entra el adversario por primera vez en la red.
 
@@ -42,7 +42,7 @@ Cómo entra el adversario por primera vez en la red.
 
 MITRE da para cada técnica sus **mitigaciones y recomendaciones de detección**.
 
-## 2. Execution — TA0002
+## 2. Ejecución (Execution) — TA0002
 
 Cómo ejecuta el código malicioso una vez dentro.
 
@@ -51,7 +51,7 @@ Cómo ejecuta el código malicioso una vez dentro.
 | **T1047** — WMI | Ejecutar código en remoto aprovechando servicios legítimos de administración |
 | **T1204** — Ejecución de usuario | Engañar al usuario para que abra el enlace o el fichero |
 
-## 3. Persistence
+## 3. Persistencia (Persistence)
 
 Mantener el acceso de forma encubierta.
 
@@ -60,7 +60,7 @@ Mantener el acceso de forma encubierta.
 | **T1547** — Arranque o inicio de sesión automático | Claves del registro o carpetas de inicio que relanzan el malware |
 | **T1133** — Servicios remotos externos | Reconectarse con credenciales válidas por RDP, SSH o VPN |
 
-## 4. Privilege Escalation
+## 4. Escalada de privilegios (Privilege Escalation)
 
 Conseguir más permisos: de usuario estándar a administrador, o a administrador de dominio.
 
@@ -69,7 +69,7 @@ Conseguir más permisos: de usuario estándar a administrador, o a administrador
 | **T1078** — Cuentas válidas | Credenciales privilegiadas obtenidas por phishing o reutilización de contraseñas |
 | **T1068** — Explotación de vulnerabilidad | Ejecutar código con privilegios elevados: SYSTEM en Windows, root en Linux |
 
-## 5. Defense Evasion
+## 5. Evasión de defensas (Defense Evasion)
 
 Evadir o desactivar las defensas —antivirus, EDR, firewalls, logging y analistas— para permanecer oculto el mayor tiempo posible.
 
@@ -81,7 +81,7 @@ Evadir o desactivar las defensas —antivirus, EDR, firewalls, logging y analist
 > [!WARNING]
 > T1070 es la razón por la que los logs se envían a un SIEM externo en vez de dejarlos solo en la máquina. Un atacante con privilegios borra el `Security.evtx` local; lo que ya salió de la máquina, no.
 
-## 6. Credential Access
+## 6. Acceso a credenciales (Credential Access)
 
 Robar usuarios y contraseñas para moverse por la red **sin levantar sospechas**, usando accesos legítimos.
 
@@ -90,7 +90,7 @@ Robar usuarios y contraseñas para moverse por la red **sin levantar sospechas**
 | **T1003** — OS Credential Dumping | Extraer credenciales de la memoria de LSASS en Windows, o de `/etc/passwd` y `/etc/shadow` en Linux para crackearlas offline |
 | **T1110** — Brute Force | Probar combinaciones hasta encontrar una válida |
 
-## 7. Discovery
+## 7. Descubrimiento (Discovery)
 
 Recopilar información sobre la red, los sistemas y los usuarios, ya estando dentro.
 
@@ -100,7 +100,7 @@ Recopilar información sobre la red, los sistemas y los usuarios, ya estando den
 | **T1046** — Network Service Scanning | Identificar equipos y servicios activos |
 | **T1083** — File and Directory Discovery | Buscar ficheros valiosos: credenciales, documentos, diagramas de red |
 
-## 8. Lateral Movement
+## 8. Movimiento lateral (Lateral Movement)
 
 Desplazarse entre sistemas para ampliar el control hasta alcanzar lo crítico.
 
@@ -111,7 +111,7 @@ Desplazarse entre sistemas para ampliar el control hasta alcanzar lo crítico.
 
 T1534 es de lo más difícil de detectar: el remitente es real, el dominio es el tuyo y pasa toda la autenticación.
 
-## 9. Collection
+## 9. Recolección (Collection)
 
 Identificar, recopilar y preparar la información valiosa antes de sacarla.
 
@@ -122,7 +122,7 @@ Identificar, recopilar y preparar la información valiosa antes de sacarla.
 | **T1113** — Captura de pantalla | Para espiar la actividad del usuario |
 | **T1005** — Datos del sistema local | Buscar y preparar los ficheros de interés |
 
-## 10. Command and Control
+## 10. Mando y control (Command and Control)
 
 Mantener la comunicación con los sistemas comprometidos.
 
@@ -130,7 +130,7 @@ Para ocultarse usa **protocolos comunes** (HTTP, HTTPS, DNS), **servicios web le
 
 **Mitigación:** NIDS/NIPS, proxies, firewalls y segmentación de red. Junto al análisis de flujos sospechosos, certificados anómalos y uso de puertos inusuales. **Suricata**, **Snort** o **Zeek** permiten detectar estos comportamientos y cortar la comunicación.
 
-## 11. Exfiltration
+## 11. Exfiltración (Exfiltration)
 
 Sacar los datos, normalmente **comprimidos, cifrados o codificados** antes de enviarlos.
 
@@ -140,7 +140,7 @@ Puede usar el propio **canal de C2** para pasar desapercibido, enviando los fich
 
 **Mitigación:** NIDS/NIPS (Snort, Zeek) para alertar o bloquear, y análisis de frecuencias de conexión y patrones de tráfico.
 
-## 12. Impact
+## 12. Impacto (Impact)
 
 Dañar la disponibilidad o la integridad de los sistemas.
 

@@ -42,8 +42,3 @@ La inteligencia estratégica **no detecta nada**. Lo que hace es decidir dónde 
 
 > [!TIP]
 > Es el nivel donde peor sienta la jerga. Un informe estratégico que empieza hablando de TTPs y hashes no lo lee nadie de dirección. Impacto, probabilidad y qué decisión hay que tomar: en ese orden.
-
----
-
-> [!NOTE]
-> Esta lección era de las más escuetas en los apuntes originales — dos párrafos. Los dos primeros son tuyos; el resto lo he desarrollado a partir de la definición de inteligencia estratégica que ya estaba en la [introducción](#/threat-intel/introduccion). Repásalo y quítale lo que no encaje con lo que viste en el curso.

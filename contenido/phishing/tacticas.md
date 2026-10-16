@@ -19,7 +19,7 @@ Al estar adaptado al destinatario, sube muchísimo la probabilidad de que pulse 
 
 Se suele combinar con suplantación del remitente o typosquatting. Un caso típico: localizar a un empleado en LinkedIn, encontrar su Facebook, y usar detalles personales para construir un correo que le convenza de abrir un fichero.
 
-## Impersonation
+## Suplantación de identidad (impersonation)
 
 Fingir ser otra persona para ganarse la confianza del objetivo. Puede ser un amigo, un compañero o alguien con autoridad dentro de la empresa: un responsable, el CEO.
 
@@ -43,13 +43,13 @@ Con ese dominio ya puede enviar correos que parecen auténticos: por ejemplo sup
 > [!WARNING]
 > Un ataque homógrafo bien hecho **no se detecta a simple vista**, ni con formación ni con buena voluntad. La defensa aquí no puede ser el usuario: tiene que ser tecnología de seguridad del correo que analice los enlaces y compruebe si el dominio es malicioso.
 
-## Sender spoofing
+## Falsificación del remitente (sender spoofing)
 
 El campo `From:` se manipula para que parezca venir de una fuente de confianza. El protocolo **SMTP permite fijar cualquier dirección de remitente**, así que técnicamente es trivial.
 
 A menudo se acompaña de un `Reply-To:` distinto, para que las respuestas lleguen a una cuenta que el atacante sí controla.
 
-## HTML styling
+## Diseño HTML que imita a la marca
 
 Se usa código HTML e imágenes para que el correo parezca profesional y con la marca correcta. Los recolectores de credenciales lo copian para ganar credibilidad.
 

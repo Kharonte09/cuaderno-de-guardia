@@ -26,8 +26,6 @@ Un **IRP** define cómo responder a un incidente de forma clara y ordenada.
 
 ### 1. Preparación
 
-> La fase más importante, y ocurre antes del incidente.
-
 - Definir planes para distintos tipos: **malware, phishing, intrusión, fuga de datos**.
 - **Simulacros** y ejercicios de mesa (*tabletop*).
 - Roles y responsabilidades claras.

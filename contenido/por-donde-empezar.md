@@ -75,8 +75,6 @@ Hay muchas plataformas donde puedes practicar sin tener que montar todo desde ce
 | Plataforma | Coste |
 |---|---|
 | **TryHackMe — SOC Level 1** | Freemium |
-| **LetsDefend** | Freemium |
-| **Blue Team Labs Online** | Freemium |
 | **CyberDefenders** | Freemium |
 | **Malware-Traffic-Analysis.net** | Gratis |
 

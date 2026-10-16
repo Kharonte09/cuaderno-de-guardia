@@ -34,7 +34,7 @@ El SIEM aparece en varias familias a la vez porque no protege: **recoge y correl
 > [!NOTE]
 > Las tres se confunden constantemente. Un usuario que entra con credenciales robadas pasa la autenticación perfectamente: el fallo no está ahí, está en que la autorización le dejaba llegar demasiado lejos y en que el accounting no lo detectó a tiempo.
 
-## Networking 101
+## Redes: lo mínimo
 
 ### Rangos privados
 
@@ -64,16 +64,11 @@ Ojo con el rango de 172: **no** es todo el `172.x`, solo del 16 al 31. Es el err
 
 ### Syslog
 
-Un servidor Syslog escucha en el **puerto 514 UDP** las notificaciones que le mandan los sistemas remotos configurados para reenviarle información.
-
-Es la forma habitual de que dispositivos de red, servidores Linux y appliances hagan llegar sus eventos a una plataforma SIEM, para que puedan monitorizarse desde un único sitio.
-
-> [!TIP]
-> Al ser UDP, Syslog **no garantiza la entrega**: si un paquete se pierde, ese evento no llega y nadie se entera. Por eso muchos entornos usan syslog sobre TCP o un agente propio para las fuentes críticas.
+Es la forma habitual de que dispositivos de red, servidores Linux y appliances manden sus eventos a un servidor central o a un SIEM, por defecto al **puerto 514 UDP**. Los puertos, la estructura del mensaje y sus límites están en [Logs y agregación](#/siem/logs).
 
 ## Las soft skills también son fundamento
 
-Las que el temario coloca aquí desde el principio, y con razón:
+Las que conviene trabajar desde el principio:
 
 - Comunicación
 - Trabajo en equipo

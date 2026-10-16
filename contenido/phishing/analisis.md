@@ -247,7 +247,7 @@ Con solo visitarla, aunque no escribas ninguna contraseña, el atacante sabe que
 
 ### Cosas que engañan al análisis
 
-- **Malware que espera.** Algunos no hacen nada durante unos minutos para que la sandbox termine y lo dé por bueno. Deja correr el análisis el tiempo suficiente antes de concluir que el fichero está limpio.
+- **Malware que espera.** Algunos no hacen nada hasta que la sandbox termina. Que no pase nada no lo convierte en limpio: las causas habituales están en [Analizar una muestra](#/malware/analisis).
 - **Correos sin URL ni adjunto.** No son seguros por eso. El atacante puede meter todo el mensaje (y el enlace o el QR) en una **imagen** para que las herramientas no encuentren texto que analizar.
 
 Lo que salga de aquí (dominios, IPs, hashes de lo que descarga) son más indicadores para el informe y para bloquear.

@@ -81,8 +81,10 @@ Dice **qué usuario se conectó, cómo y cuándo**. Lo importante es el **Logon 
 | **7** | Desbloqueo de sesión |
 | **8** | NetworkClearText — credenciales en claro |
 | **9** | NewCredentials — `RunAs /netonly` |
+| **10** | RemoteInteractive — Escritorio remoto (RDP) |
+| **11** | CachedInteractive — credenciales en caché, sin contactar con el controlador de dominio |
 
-Los que más importan: el **3** porque es el del movimiento lateral, el **8** porque las credenciales viajaron sin cifrar, y el **9** porque es la forma habitual de usar credenciales robadas contra otro sistema.
+Los que más importan: el **3** porque es el del movimiento lateral, el **8** porque las credenciales viajaron sin cifrar, el **9** porque es la forma habitual de usar credenciales robadas contra otro sistema, y el **10** porque un RDP desde una IP o a una hora rara es de lo primero que se mira.
 
 ## 4672 — Inicio de sesión especial
 

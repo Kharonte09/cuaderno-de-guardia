@@ -21,9 +21,11 @@ Etiquetar como `[EXTERNAL]` todo correo recibido desde fuera de los dominios de 
 
 Es de las medidas más baratas que existen y de las que más rinde: la mayoría de los fraudes de suplantación interna se caen solos cuando el usuario ve que el supuesto correo del CEO viene marcado como externo.
 
-## SPF
+## SPF, DKIM y DMARC
 
-Registro **TXT en DNS** que indica qué servidores o IPs pueden enviar correo en nombre del dominio. Evita que un atacante falsifique el dominio con impunidad.
+Qué es cada uno y qué comprueba está en [El correo y el phishing](#/phishing/introduccion). Aquí va lo que toca como defensor: cómo se publican en el DNS de tu dominio.
+
+### SPF
 
 ```text
 v=spf1 <IP o dominio autorizado> <regla de cumplimiento>
@@ -37,17 +39,13 @@ v=spf1 a: include:mailgun.org include:protection.outlook.com -all
 
 Permite el correo desde Mailgun y desde Outlook, y **rechaza cualquier otro remitente** — eso es lo que significa el `-all` del final.
 
-## DKIM
-
-Autentica el correo mediante **firma criptográfica**, verificando integridad y origen. El servidor emisor firma con su clave privada; el receptor usa la clave pública publicada en el DNS para comprobar que nada se ha alterado.
+### DKIM
 
 ```text
 v=DKIM1 <tipo de clave> <clave pública>
 ```
 
-## DMARC
-
-Combina SPF y DKIM y añade **política de acción e informes**. Define qué hacer con los correos que fallan la autenticación: nada, cuarentena o rechazo.
+### DMARC
 
 ```text
 v=DMARC1; p=<acción>; rua=<correo para los informes>

@@ -11,7 +11,7 @@ subtitulo: true
 
 La parte técnica e inmediata: los indicadores que entran en tus herramientas y las comprobaciones que se hacen con ellos.
 
-## Threat exposure checks
+## Comprobación de exposición a amenazas (threat exposure checks)
 
 Usar el **SIEM** y el **EDR** para buscar si algún IOC reciente —IPs, dominios, hashes— aparece ya en tu red.
 
@@ -29,7 +29,7 @@ La diferencia con el punto anterior: el *exposure check* es una búsqueda puntua
 > [!WARNING]
 > Toda watchlist necesita fecha de caducidad. Un indicador táctico se pudre en días, y una lista que nadie revisa acaba generando alertas por IPs que ahora pertenecen a un CDN legítimo. Eso quema al equipo más que no tener la lista.
 
-## Public exposure checks
+## Comprobación de exposición pública (public exposure checks)
 
 Buscar **qué información de la empresa está disponible online** y podría explotarse.
 
@@ -43,7 +43,7 @@ Qué se revisa:
 
 Es OSINT aplicado contra uno mismo: mirar tu propia empresa con los ojos con los que la miraría el atacante antes de preparar un spear phishing.
 
-## Threat Intelligence Platform (TIP)
+## Plataformas de Threat Intelligence (TIP)
 
 Una plataforma que **centraliza, organiza y distribuye** toda la inteligencia de la organización. Permite agregar fuentes, normalizar los datos, analizarlos y **enviarlos a las herramientas de seguridad**: firewalls, EDR, SIEM.
 
